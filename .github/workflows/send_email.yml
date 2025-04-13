@@ -1,5 +1,5 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Send Email
+run-name: ${{ github.actor }} is testing out GitHub Actions
 on:
   # Trigger the workflow every time you push to the `main` branch
   # Using a different branch name? Replace `main` with your branch’s name
@@ -7,7 +7,7 @@ on:
     branches: [ main, master ]
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
-    
+
 jobs:
   SendMail:
     runs-on: ubuntu-latest
@@ -28,7 +28,7 @@ jobs:
           # Server port, default 25:
           server_port: 993
           # Optional whether this connection use TLS (default is true if server_port is 465)
-          secure: true
+          secure: false
           # Optional (recommended) mail server username:
           username: ${{secrets.MAIL_USERNAME}}
           # Optional (recommended) mail server password:
