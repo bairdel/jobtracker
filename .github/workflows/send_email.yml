@@ -26,7 +26,6 @@ jobs:
       - name: Run Python script
         id: checkchanges
         run: YOUR_VARIABLE=$(python checkchanges.py)
-             echo "${YOUR_VARIABLE}"
              echo "email=${YOUR_VARIABLE}" >> $GITHUB_OUTPUT
              echo "test=test" >> $GITHUB_OUTPUT
 
@@ -65,8 +64,8 @@ jobs:
           # Required sender full name (address can be skipped):
           from: Jobs Tracker # <user@example.com>
           # Optional plain body:
-          # body: Build job of ${{github.repository}} completed successfully!
-          body: body ${{env.emailcontent}} ${{env.test }}
+          body: Build job of ${{github.repository}} completed successfully!
+          # body: body ${{env.emailcontent}} ${{env.test }}
           # Optional HTML body read from file:
           # html_body: file://README.md
           # html_body: ${{env.emailcontent}}
