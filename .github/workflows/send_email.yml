@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       emailcontent: ${{ steps.checkchanges.outputs.email }}
+      test: ${{ steps.checkchanges.outputs.test }} 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -25,7 +26,9 @@ jobs:
       - name: Run Python script
         id: checkchanges
         run: YOUR_VARIABLE=$(python checkchanges.py)
+             echo "${YOUR_VARIABLE}"
              echo "email=${YOUR_VARIABLE}" >> $GITHUB_OUTPUT
+             echo "test=test" >> $GITHUB_OUTPUT
 
   SendMail:
     runs-on: ubuntu-latest
@@ -35,6 +38,7 @@ jobs:
         uses: dawidd6/action-send-mail@v4
         env:
           emailcontent: ${{needs.CheckWebsites.outputs.emailcontent}}
+          test: ${{ needs.CheckWebsites.outputs.test }}
         with:
           # Specify connection via URL (replaces server_address, server_port, secure,
           # username and password)
@@ -62,7 +66,7 @@ jobs:
           from: Jobs Tracker # <user@example.com>
           # Optional plain body:
           # body: Build job of ${{github.repository}} completed successfully!
-          body: body ${{env.emailcontent}}
+          body: body ${{env.emailcontent}} ${{env.test }}
           # Optional HTML body read from file:
           # html_body: file://README.md
           # html_body: ${{env.emailcontent}}
