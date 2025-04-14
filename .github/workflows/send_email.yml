@@ -26,8 +26,10 @@ jobs:
       - name: Run Python script
         id: checkchanges
         run: |
-          FILE_CONTENT="$(<${python checkchanges.py})"
-          printf "email<<EOF\n%s\nEOF\n" "${FILE_CONTENT}" >> "$GITHUB_OUTPUT"
+          YOUR_VARIABLE=$(python checkchanges.py)
+          echo "email=email" >> $GITHUB_OUTPUT
+          echo "test=test" >> $GITHUB_OUTPUT
+
       - run: mkdir -p emailcontent
       - run: python checkchanges.py > emailcontent/email.txt
       - uses: actions/upload-artifact@v4
@@ -117,38 +119,38 @@ jobs:
           # # Optional custom SMTP RCPT TO addresses (overrides to, cc, bcc):
           # envelope_to: mailer@example.com,admin@example.com
 
-  pushfiles:
-    runs-on: windows-latest
+  # pushfiles:
+  #   runs-on: windows-latest
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v1
-      with:
-        python-version: '3.x'
-    - name: Install dependencies
-      run: |
-        dir
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        python update.py
-        dir
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #   - name: Set up Python
+  #     uses: actions/setup-python@v1
+  #     with:
+  #       python-version: '3.x'
+  #   - name: Install dependencies
+  #     run: |
+  #       dir
+  #       python -m pip install --upgrade pip
+  #       pip install -r requirements.txt
+  #       python update.py
+  #       dir
 
-    - name: Commit files
-      id: commit
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "github-actions"
-        git add --all
-        if [-z "$(git status --porcelain)"]; then
-          echo "::set-output name=push::false"
-        else
-          git commit -m "Add changes" -a
-          echo "::set-output name=push::true"
-        fi
-      shell: bash
-    - name: Push changes
-      if: steps.commit.outputs.push == 'true'
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+  #   - name: Commit files
+  #     id: commit
+  #     run: |
+  #       git config --local user.email "action@github.com"
+  #       git config --local user.name "github-actions"
+  #       git add --all
+  #       if [-z "$(git status --porcelain)"]; then
+  #         echo "::set-output name=push::false"
+  #       else
+  #         git commit -m "Add changes" -a
+  #         echo "::set-output name=push::true"
+  #       fi
+  #     shell: bash
+  #   - name: Push changes
+  #     if: steps.commit.outputs.push == 'true'
+  #     uses: ad-m/github-push-action@master
+  #     with:
+  #       github_token: ${{ secrets.GITHUB_TOKEN }}
