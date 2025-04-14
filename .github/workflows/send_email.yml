@@ -24,8 +24,7 @@ jobs:
       
       - name: Run Python script
         id: checkchanges
-        run: python checkchanges.py
-             YOUR_VARIABLE=$(checkchanges.py)
+        run: YOUR_VARIABLE=$(python checkchanges.py)
              echo "email=${YOUR_VARIABLE}" >> $GITHUB_OUTPUT
 
   SendMail:
