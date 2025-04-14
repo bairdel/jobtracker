@@ -14,7 +14,13 @@ for w in websites:
     name = urlparse(w).netloc
     with open("./latest-content/"+ name + ".html", "wb") as f:
         f.write(page.read())
+
+        
 print("sending this to you in an email")
+print("example: this website " + websites[0] + " has changed. wow!")
+print("another line here!")
+print("")
+print(" that was a gap")
 
 
 # env_file = os.getenv('GITHUB_ENV')
