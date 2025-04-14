@@ -6,9 +6,10 @@ with open("./websitesToCheck.txt", "r") as f:
 
 changed = []
 
-print(websites)
+# print(websites)
 for w in websites:
     page = urllib.request.urlopen(w)
     name = urlparse(w).netloc
     with open("./latest-content/"+ name + ".html", "wb") as f:
         f.write(page.read())
+print("sending this to you in an email")
