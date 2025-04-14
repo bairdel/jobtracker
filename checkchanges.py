@@ -1,5 +1,4 @@
 import urllib.request
-import requests
 from urllib.parse import urlparse
 
 with open("./websitesToCheck.txt", "r") as f:
@@ -9,9 +8,7 @@ changed = []
 
 print(websites)
 for w in websites:
-    page = requests.get(w)
-    # page = urllib.request.urlopen(w).text
+    page = urllib.request.urlopen(w)
     name = urlparse(w).netloc
-    # print(page.read())
-    with open("./latest-content/"+ name + ".html", "w", encoding="utf-8") as f:
-        f.write(page.text)
+    with open("./latest-content/"+ name + ".html", "wb") as f:
+        f.write(page.read())
