@@ -46,15 +46,18 @@ jobs:
         with:
           name: email.txt
           path: emailcontent
-      - run: cat emailcontent/email.txt
-      - name: Read README.md
-        id: package
-        uses: jaywcjlove/github-action-read-file@main
-        with:
-          path: emailcontent/email.txt
+      - run: |
+          echo 'CONTENT_ENV<<EOF' >> $GITHUB_ENV
+          cat emailcontent/email.txt >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+      # - name: Read README.md
+      #   id: package
+      #   uses: jaywcjlove/github-action-read-file@main
+      #   with:
+      #     path: emailcontent/email.txt
 
-      - name: Echo emailcontent/email.txt
-        run: echo "${{ steps.package.outputs.content }}"
+      # - name: Echo emailcontent/email.txt
+      #   run: echo "${{ steps.package.outputs.content }}"
 
       - name: Send mail
         uses: dawidd6/action-send-mail@v4
@@ -89,7 +92,7 @@ jobs:
           # Optional plain body:
           # body: Build job of ${{github.repository}} completed successfully!
           # body: body ${{env.emailcontent}} 
-          body: ${{ steps.package.outputs.content }}
+          body: ${{ env.CONTENT_ENV }}
           # Optional HTML body read from file:
           # html_body: file://README.md
           # html_body: ${{env.emailcontent}}
