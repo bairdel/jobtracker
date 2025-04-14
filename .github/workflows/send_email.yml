@@ -26,9 +26,6 @@ jobs:
       - name: Run Python script
         id: checkchanges
         run: |
-          # YOUR_VARIABLE=$(python checkchanges.py)
-          # echo "email=${YOUR_VARIABLE}" >> $GITHUB_OUTPUT
-          # echo "test=test" >> $GITHUB_OUTPUT
           FILE_CONTENT="$(<${python checkchanges.py})"
           printf "email<<EOF\n%s\nEOF\n" "${FILE_CONTENT}" >> "$GITHUB_OUTPUT"
 
