@@ -26,9 +26,10 @@ jobs:
       - name: Run Python script
         id: checkchanges
         run: |
-          YOUR_VARIABLE=$(python checkchanges.py)
-          echo "email=email" >> $GITHUB_OUTPUT
-          echo "test=test" >> $GITHUB_OUTPUT
+          echo 'email<<EOF' >> $GITHUB_OUTPUT
+          python checkchanges.py >> $GITHUB_OUTPUT
+          echo 'EOF' >> $GITHUB_OUTPUT
+
 
       - run: mkdir -p emailcontent
       - run: python checkchanges.py > emailcontent/email.txt
@@ -50,15 +51,6 @@ jobs:
           echo 'CONTENT_ENV<<EOF' >> $GITHUB_ENV
           cat emailcontent/email.txt >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-      # - name: Read README.md
-      #   id: package
-      #   uses: jaywcjlove/github-action-read-file@main
-      #   with:
-      #     path: emailcontent/email.txt
-
-      # - name: Echo emailcontent/email.txt
-      #   run: echo "${{ steps.package.outputs.content }}"
-
       - name: Send mail
         uses: dawidd6/action-send-mail@v4
         env:
@@ -92,7 +84,7 @@ jobs:
           # Optional plain body:
           # body: Build job of ${{github.repository}} completed successfully!
           # body: body ${{env.emailcontent}} 
-          body: ${{ env.CONTENT_ENV }}
+          body: ${{ env.CONTENT_ENV }} \n \n ${{env.emailcontent}} 
           # Optional HTML body read from file:
           # html_body: file://README.md
           # html_body: ${{env.emailcontent}}
