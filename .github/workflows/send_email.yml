@@ -28,11 +28,32 @@ jobs:
         run: |
           FILE_CONTENT="$(<${python checkchanges.py})"
           printf "email<<EOF\n%s\nEOF\n" "${FILE_CONTENT}" >> "$GITHUB_OUTPUT"
+      - run: mkdir -p emailcontent
+      - run: python checkchanges.py > emailcontent/email.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: email.txt
+          path: emailcontent
 
   SendMail:
     runs-on: ubuntu-latest
     needs: CheckWebsites
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: email.txt
+          path: emailcontent
+      - run: cat emailcontent/email.txt
+      - name: Read README.md
+        id: package
+        uses: jaywcjlove/github-action-read-file@main
+        with:
+          path: emailcontent/email.txt
+
+      - name: Echo emailcontent/email.txt
+        run: echo "${{ steps.package.outputs.content }}"
+
       - name: Send mail
         uses: dawidd6/action-send-mail@v4
         env:
@@ -65,7 +86,8 @@ jobs:
           from: Jobs Tracker # <user@example.com>
           # Optional plain body:
           # body: Build job of ${{github.repository}} completed successfully!
-          body: body ${{env.emailcontent}} 
+          # body: body ${{env.emailcontent}} 
+          body: ${{ steps.package.outputs.content }}
           # Optional HTML body read from file:
           # html_body: file://README.md
           # html_body: ${{env.emailcontent}}
@@ -94,3 +116,39 @@ jobs:
           # envelope_from: mailer@example.com
           # # Optional custom SMTP RCPT TO addresses (overrides to, cc, bcc):
           # envelope_to: mailer@example.com,admin@example.com
+
+  pushfiles:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        dir
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        python update.py
+        dir
+
+    - name: Commit files
+      id: commit
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "github-actions"
+        git add --all
+        if [-z "$(git status --porcelain)"]; then
+          echo "::set-output name=push::false"
+        else
+          git commit -m "Add changes" -a
+          echo "::set-output name=push::true"
+        fi
+      shell: bash
+    - name: Push changes
+      if: steps.commit.outputs.push == 'true'
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
