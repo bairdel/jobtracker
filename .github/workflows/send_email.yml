@@ -11,6 +11,8 @@ on:
 jobs:
   CheckWebsites:
     runs-on: ubuntu-latest
+    outputs:
+      emailcontent: ${{ steps.checkchanges.outputs.email }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -21,13 +23,17 @@ jobs:
           python-version: '3.10'
       
       - name: Run Python script
-        run: python checkchanges.py
-        
+        id: checkchanges
+        run: python checkchanges.py >> "$GITHUB_OUTPUT"
+
   SendMail:
     runs-on: ubuntu-latest
+    needs: CheckWebsites
     steps:
       - name: Send mail
         uses: dawidd6/action-send-mail@v4
+        env:
+          emailcontent: ${{needs.CheckWebsites.outputs.emailcontent}}
         with:
           # Specify connection via URL (replaces server_address, server_port, secure,
           # username and password)
@@ -56,8 +62,9 @@ jobs:
           # Optional plain body:
           body: Build job of ${{github.repository}} completed successfully!
           # Optional HTML body read from file:
-          html_body: file://README.md
+          # html_body: file://README.md
           # html_body: "hello world"
+          html_body: $emailcontent
           # Optional carbon copy recipients:
           # cc: kyloren@example.com,leia@example.com
           # Optional blind carbon copy recipients:
