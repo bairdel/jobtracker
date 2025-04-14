@@ -62,10 +62,10 @@ jobs:
           from: Jobs Tracker # <user@example.com>
           # Optional plain body:
           # body: Build job of ${{github.repository}} completed successfully!
-          body: ${{env.emailcontent}}
+          body: body ${{env.emailcontent}}
           # Optional HTML body read from file:
           # html_body: file://README.md
-          html_body: ${{env.emailcontent}}
+          # html_body: ${{env.emailcontent}}
           # html_body: echo $emailcontent
           # Optional carbon copy recipients:
           # cc: kyloren@example.com,leia@example.com
