@@ -65,7 +65,7 @@ jobs:
           body: ${{env.emailcontent}}
           # Optional HTML body read from file:
           # html_body: file://README.md
-          html_body: "hello world"
+          html_body: ${{env.emailcontent}}
           # html_body: echo $emailcontent
           # Optional carbon copy recipients:
           # cc: kyloren@example.com,leia@example.com
