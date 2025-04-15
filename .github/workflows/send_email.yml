@@ -48,7 +48,7 @@ jobs:
         id: commit
         run: |
           git config --local user.email "bairdel@outlook.com"
-          git config --local user.name "bairdel
+          git config --local user.name "bairdel"
           git add /latest-content
           if [-z "$(git status --porcelain)"]; then
             echo "::set-output name=push::false"
