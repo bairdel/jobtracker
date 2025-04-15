@@ -11,9 +11,9 @@ on:
 jobs:
   CheckWebsites:
     runs-on: ubuntu-latest
-    outputs:
-      emailcontent: ${{ steps.checkchanges.outputs.email }}
-      test: ${{ steps.checkchanges.outputs.test }} 
+    # outputs:
+    #   emailcontent: ${{ steps.checkchanges.outputs.email }}
+    #   test: ${{ steps.checkchanges.outputs.test }} 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -54,15 +54,15 @@ jobs:
         with:
           name: email.txt
           path: emailcontent
-      - run: |
-          echo 'CONTENT_ENV<<EOF' >> $GITHUB_ENV
-          cat emailcontent/email.txt >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
+      # - run: |
+      #     echo 'CONTENT_ENV<<EOF' >> $GITHUB_ENV
+      #     cat emailcontent/email.txt >> $GITHUB_ENV
+      #     echo 'EOF' >> $GITHUB_ENV
       - name: Send mail
         uses: dawidd6/action-send-mail@v4
-        env:
-          emailcontent: ${{needs.CheckWebsites.outputs.emailcontent}}
-          test: ${{ needs.CheckWebsites.outputs.test }}
+        # env:
+        #   emailcontent: ${{needs.CheckWebsites.outputs.emailcontent}}
+        #   test: ${{ needs.CheckWebsites.outputs.test }}
         with:
           # Specify connection via URL (replaces server_address, server_port, secure,
           # username and password)
@@ -91,10 +91,10 @@ jobs:
           # Optional plain body:
           # body: Build job of ${{github.repository}} completed successfully!
           # body: body ${{env.emailcontent}} 
-          body: ${{ env.CONTENT_ENV }} \n \n ${{env.emailcontent}} 
+          # body: ${{ env.CONTENT_ENV }} \n \n ${{env.emailcontent}} 
           # Optional HTML body read from file:
           # html_body: file://README.md
-          # html_body: ${{env.emailcontent}}
+          html_body: file://emailcontent/email.txt
           # html_body: echo $emailcontent
           # Optional carbon copy recipients:
           # cc: kyloren@example.com,leia@example.com
