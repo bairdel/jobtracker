@@ -44,6 +44,24 @@ jobs:
         with:
           name: email.html
           path: emailcontent
+      - name: Commit files
+        id: commit
+        run: |
+          git config --local user.email "bairdel@outlook.com"
+          git config --local user.name "bairdel
+          git add /latest-content
+          if [-z "$(git status --porcelain)"]; then
+            echo "::set-output name=push::false"
+          else
+            git commit -m "Update Website Contents" -a
+            echo "::set-output name=push::true"
+          fi
+        shell: bash
+      - name: Push changes
+        if: steps.commit.outputs.push == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
   SendMail:
     runs-on: ubuntu-latest
@@ -123,6 +141,7 @@ jobs:
 
   # pushfiles:
   #   runs-on: windows-latest
+  #   needs: CheckWebsites
 
   #   steps:
   #   - uses: actions/checkout@v2
@@ -147,7 +166,7 @@ jobs:
   #       if [-z "$(git status --porcelain)"]; then
   #         echo "::set-output name=push::false"
   #       else
-  #         git commit -m "Add changes" -a
+  #         git commit -m "Update Website Contents" -a
   #         echo "::set-output name=push::true"
   #       fi
   #     shell: bash
