@@ -1,0 +1,1392 @@
+<body class="claro branding">
+
+<div class="recommended-browser-banner" data-automation-id="recommendedBrowserBanner" id="recommendedBrowserBanner">
+<div class="CanPortalIcon_RecommendedBrowserLogo"></div>
+<div class="recommended-browser-text">To access this website at its best, use the latest version of Chrome, Safari, Firefox or Edge.</div>
+</div>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="cp-dialog" data-automation-id="cpWCAGDialog" data-dojo-attach-point="cpWCAGDialog" data-dojo-props="
+            draggable:false,
+            jobBoardXrefCode: 'CANDIDATEPORTAL',
+            namespace:&quot;caciltd&quot;,
+            isFacebookAuthEnabled: true,
+            isLinkedInEnabled: 'False',
+            isSeekEnabled: 'False',
+            seekAdvertiserId: ''" data-dojo-type="CandidatePortal/CPWCAGDialog" id="cpDialogPlaceHolder">
+</div>
+<div class="content-wrapper">
+<div class="content">
+<header>
+<div class="header">
+<div class="logo-wrapper">
+<img alt="CACI Logo 200 x 200" class="company-logo" id="company-logo" src="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/CPBrandingLogo?item=9641cc99-cec6-4924-adf4-b7a00073c320"/>
+</div>
+<div class="header-content-wrapper">
+<div class="flex-container-branding culture-login-wrapper">
+<section aria-label="Register and candidate login pop-up" class="login-section" data-automation-id="loginSection">
+<button class="btn-secondary defaultButtonClass" data-automation-id="btnRegister" disabled="" id="registerButtonDesktop" style="display:none;">Register</button>
+<button class="btn-primary defaultButtonClass signInButtonDesktop" data-automation-id="btnSignIn" disabled="" id="signInButtonDesktop">Sign In</button>
+</section>
+</div>
+<div class="flex-container-branding header-links-wrapper">
+<nav class="header-links">
+<ol class="context-bar">
+<li class="context-bar-link">
+<a class="careers-header" href="/CandidatePortal/en-GB/caciltd" target="_self" title="Careers">Careers</a>
+</li>
+<li class="context-bar-link">
+<a class="" href="https://www.caci.co.uk/about-caci/" target="_blank" title="About CACI">About CACI</a>
+</li>
+</ol>
+<div aria-haspopup="true" aria-label="More Header Links" class="dropdown" id="dropDown" role="region">
+<a class="grouped-link more" href="javascript:void(0);" id="groupedLink"><span class="visibility-hidden">Grouped Link</span></a>
+<nav class="dropdown-content">
+</nav>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</header>
+<nav aria-label="Career Portal" class="toolbar">
+<div data-dojo-type="CandidatePortal/CandidateLogin/LoginToolbar"></div>
+<div class="toolbar-content main-content-width">
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Menu" class="mobile-menu-toggle" type="button">
+<span aria-hidden="true" class="icon cp-i-hamburger"></span>
+<span>Menu</span>
+</button>
+<ul class="breadcrumb">
+<li class="active">
+<a class="jobSearchHref" href="/CandidatePortal/en-GB/caciltd">Job Search</a>
+</li>
+</ul>
+</div>
+</nav>
+<nav id="mobile-menu">
+<ol>
+<li>
+<i aria-hidden="true" class="icon cp-i-plus"></i>
+<a aria-controls="mobile-careers-menu" aria-expanded="false" href="javascript:void(0)" title="Careers">
+                            Careers
+                        </a>
+<i aria-hidden="true" class="icon cp-i-plus"></i>
+<i aria-hidden="true" class="icon cp-i-minus"></i>
+<nav aria-label="Careers" id="mobile-careers-menu">
+<ul class="">
+<li class="active">
+<a class="jobSearchHref" href="/CandidatePortal/en-GB/caciltd">Job Search</a>
+</li>
+</ul>
+</nav>
+</li>
+<li>
+<a href="https://www.caci.co.uk/about-caci/" target="_blank" title="About CACI">About CACI</a>
+</li>
+<li class="account-menu">
+<span class="registerLink" data-automation-id="linkRegister" disabled="" id="registerLinkMobile">Register</span>
+<br/>
+<span class="signInLink" data-automation-id="linkSignIn" disabled="" id="signInLinkMobile">Sign In</span>
+</li>
+</ol>
+<button aria-label="Close menu" class="btn-close-menu" type="button">
+<i aria-hidden="true" class="icon cp-i-close"></i>
+</button>
+</nav>
+<script type="text/javascript">
+            $(function () {
+                //By default, jQuery timestamps asynchronous requests to avoid them being cached by the browser.
+                //You’ll want to disable this functionality using the ajaxSetup() method, so that the SDK is cached locally between pages.
+                $.ajaxSetup({ cache: true });
+
+                //load Facebook Javascript API.
+                $.getScript('//connect.facebook.net/en_GB/all.js', function () {
+                    FB.init({
+                        locale: 'en_GB',
+                        appId: '886299428104118',
+                        xfbml: true, // parse social plugins on this page
+                        version: 'v2.2',
+                    });
+                });
+            });
+
+    function onLogout() {
+        if (FB && FB.getAccessToken()) {
+            FB.logout();
+        }
+
+        if (sessionStorage) {
+            for (var i = 0, itemKey = ''; itemKey = sessionStorage.key(i); ) {
+                if (itemKey.match(/^cp-app-/)) {
+                    sessionStorage.removeItem(itemKey);
+                } else {
+                    ++i;
+                }
+            }
+        }
+    }
+    </script>
+<div class="page-content-wrapper" id="page-content-wrapper">
+<main class="page-content" id="main-content">
+<div class="main-content-width">
+<h1 id="viewTitle">Job Search</h1>
+</div>
+<form autocomplete="off" class="main-content job-search" data-dojo-props="searchUrl: '/CandidatePortal/en-GB/caciltd', jobBoardXrefCode: 'CANDIDATEPORTAL', useJobSearchService: 'True'" data-dojo-type="CandidatePortal/JobPostingSearchForm" id="search-form">
+<div class="filter-wrapper">
+<div class="primary-filter">
+<div class="filter-input">
+<span id="lblSearchInputBox">Job Title, Keywords, Req ID</span>
+<input aria-label="Job Title, Keywords, Req ID" class="txt-keyword k-textbox k-widget" placeholder=""/>
+</div>
+<div class="filter-input location-search-dropdown" id="div-location-search">
+<span id="lblLocationSearchDropDown">Location</span>
+<input aria-label="Location" class="txt-location k-textbox k-widget" id="input-LocationSearch" placeholder=""/>
+</div>
+<div class="filter-input distance-search-dropdown" id="div-distance" style="display:none">
+<span id="lblDistanceDropDown">Distance</span>
+<input aria-label="Distance" class="txt-distance k-textbox k-widget" id="input-distance" placeholder=""/>
+<input id="input-hidden-unitOfMeasure" type="hidden" value="kms"/>
+</div>
+</div>
+<div class="advanced-search">
+<a aria-expanded="false" aria-haspopup="true" class="job-posting-filter-toggle" data-automation-id="btnAdvancedSearchToggle" href="javascript:;">Advanced Search</a>
+</div>
+<div class="secondary-filter" style="display: none">
+<div class="secondary-filter-filters">
+<div class="filter-input">
+<span class="secondary-filter-label" for="input-pay-class">Pay Class</span>
+<input aria-label="Select a Pay Class" class="txt-pay-class k-textbox k-widget" id="input-pay-class" placeholder=""/>
+</div>
+<div class="filter-input">
+<span class="secondary-filter-label" for="input-travel-required">Travel Required</span>
+<input aria-label="Travel Required" class="txt-travel-required k-textbox k-widget" id="input-travel-required" placeholder=""/>
+</div>
+<div class="filter-input">
+<span class="secondary-filter-label" for="input-pay-type">Pay Type</span>
+<input aria-label="Select a Pay Type" class="txt-pay-type k-textbox k-widget" id="input-pay-type" placeholder=""/>
+</div>
+<div class="filter-input">
+<span class="secondary-filter-label" for="input-department">Department</span>
+<input aria-label="Select a Department" class="txt-department k-textbox k-widget" id="input-department" placeholder=""/>
+</div>
+<div class="filter-input">
+<span class="secondary-filter-label" for="input-posted-within">Posted Within</span>
+<input aria-label="Posted Within" class="txt-when-posted k-textbox k-widget" id="input-posted-within" placeholder=""/>
+</div>
+</div>
+<button class="job-posting-search-reset btn-primary" type="button">Reset</button>
+</div>
+</div>
+<div class="job-posting-search-actions">
+<button class="job-posting-search-button btn-primary" data-automation-id="btnCPJobSearch" type="submit">Search</button>
+</div>
+<script class="job-search-meta" type="application/json">
+        {"JobLocation":[{"Id":"-9999999","Name":"Virtual","ClassName":null},{"Id":"2","Name":"Bristol, UK","ClassName":"loc-google"},{"Id":"30","Name":"C9JM+8H3, Silpa Gram Craft Village, HITEC City, Hyderabad, Telangana 500081, India","ClassName":"loc-google"},{"Id":"11","Name":"Cheltenham, UK","ClassName":"loc-google"},{"Id":"27","Name":"Corsham, UK","ClassName":"loc-google"},{"Id":"4","Name":"Kensington, London, UK","ClassName":"loc-google"},{"Id":"3","Name":"London W14 8TS, UK","ClassName":"loc-google"},{"Id":"1","Name":"London, UK","ClassName":"loc-google"},{"Id":"10","Name":"Manchester, UK","ClassName":"loc-google"},{"Id":"14","Name":"Northallerton, UK","ClassName":"loc-google"},{"Id":"13","Name":"Pune, Maharashtra, India","ClassName":"loc-google"},{"Id":"12","Name":"York, UK","ClassName":"loc-google"}],"PayClassGroups":[{"Id":1,"ShortName":"Full-time","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"Full-time"}],"States":[],"Cities":[],"PayTypeGroups":[{"Id":2,"ShortName":"Salary","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"Salary"}],"Departments":[{"Id":6,"ShortName":"C&MI Sales","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"C&MI Sales"},{"Id":50,"ShortName":"CACI India","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"CACI India"},{"Id":43,"ShortName":"CEO","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"CEO"},{"Id":40,"ShortName":"Client & Project Governance","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"Client & Project Governance"},{"Id":7,"ShortName":"Customer Experience","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"Customer Experience"},{"Id":2,"ShortName":"Data Products","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"Data Products"},{"Id":61,"ShortName":"Digital Experience","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"Digital Experience"},{"Id":22,"ShortName":"Digital Solutions","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"Digital Solutions"},{"Id":11,"ShortName":"Enterprise Central","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"Enterprise Central"},{"Id":35,"ShortName":"Enterprise Systems","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"Enterprise Systems"},{"Id":4,"ShortName":"Geospatial Engineering","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"Geospatial Engineering"},{"Id":18,"ShortName":"II - Mission Solutions","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"II - Mission Solutions"},{"Id":19,"ShortName":"II - MooD","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"II - MooD"},{"Id":64,"ShortName":"Information Security and Quality Governance","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"Information Security and Quality Governance"},{"Id":5,"ShortName":"Market Planning","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"Market Planning"},{"Id":9,"ShortName":"MarTech","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"MarTech"},{"Id":14,"ShortName":"Network Services - Financial","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"Network Services - Financial"},{"Id":1,"ShortName":"Technology Department","SortOrder":null,"UniqueName":null,"XRefCode":null,"BoolValue":null,"CultureCode":null,"XrefCodeShortName":"","Description":"Technology Department"}],"JobSearchServiceUnavailable":false,"abbr":{"Query":"q","LocationId":"l","LocationSearch":"ls","Distance":"di","DistanceUnit":"du","PayClassGroupId":"pc","TravelRequired":"tr","StateName":"s","CityName":"c","PayTypeGroupId":"pt","DepartmentId":"d","TimeFrame":"t"}}
+    </script>
+</form>
+<div class="main-content job-listing" id="jobListingList">
+<div class="loading-mask">
+<div aria-atomic="true" aria-label="Loading…" aria-live="polite" class="loading-message">Loading…</div>
+</div>
+<ul aria-labelledby="viewTitle" class="search-results">
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/2019">Technical Project Manager </a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>Kensington, London, UK ● Req #1077</div>
+</div>
+<div class="posting-date" data-label="Posted:">15 April 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>
+
+
+
+
+
+CACI Network Services is a rapidly expanding specialist IT and Networks consultancy offering a wide variety ofopportunities to work within challenging and exciting environments with our major clients in Global Media, Banking, Government, Telecoms &amp; Utilities.
+Location: London/Hybrid
+German -Speaking
+The Technical Project Manager will be responsible for ratifying business requirements, project scope and deliverables, managing and leading network and infrastructure projects in line with defi ...</span>
+<div class="hidden">Read more about Technical Project Manager </div>
+<a aria-label="Read more about Technical Project Manager " href="/CandidatePortal/en-GB/caciltd/Posting/View/2019">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Technical Project Manager " href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=2019&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D2019%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Technical Project Manager " class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(2019)" onfocusout="closeShareMenu(2019)" onkeydown="showShareMenu(2019)">Share</a>
+<div class="share-post" id="share-post_2019" onfocusout="closeShareMenu(2019)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Technical Project Manager " st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/2019?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Technical Project Manager " st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/2019?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Technical Project Manager " st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/2019?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Technical Project Manager " st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/2019?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Technical Project Manager " st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/2019?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/2014">Technical Project Manager </a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>Kensington, London, UK ● Req #1065</div>
+</div>
+<div class="posting-date" data-label="Posted:">08 April 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>CACI Network Services is a rapidly expanding specialist IT and Networks consultancy offering a wide variety of opportunities to work within challenging and exciting environments with our major clients in Global Media, Banking, Government, Telecoms &amp; Utilities.
+Job Overview:
+Programme Manager
+We are seeking an experienced Programme Manager to lead the design, deployment, and management of a robust Zero Trust Architecture (ZTA) for our enterprise network. This role will involve developing a strate ...</span>
+<div class="hidden">Read more about Technical Project Manager </div>
+<a aria-label="Read more about Technical Project Manager " href="/CandidatePortal/en-GB/caciltd/Posting/View/2014">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Technical Project Manager " href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=2014&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D2014%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Technical Project Manager " class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(2014)" onfocusout="closeShareMenu(2014)" onkeydown="showShareMenu(2014)">Share</a>
+<div class="share-post" id="share-post_2014" onfocusout="closeShareMenu(2014)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Technical Project Manager " st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/2014?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Technical Project Manager " st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/2014?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Technical Project Manager " st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/2014?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Technical Project Manager " st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/2014?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Technical Project Manager " st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/2014?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1982">Senior Software Engineer - National Security</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>Bristol, UK ● Cheltenham, UK ● Manchester, UK ● Req #982</div>
+</div>
+<div class="posting-date" data-label="Posted:">31 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>About Us:
+We are the Information Intelligence Group (IIG) of CACI UK, a specialist software consultancy providing new bespoke solutions to solve our customers complex operational problems. As our business continues to grow, we are interested in speaking with an experienced Software Engineer to join one of our live projects within the National Security team.
+We are looking for candidates that ideally hold hold high level security clearance, able to support customers from locations in Bristol, Che ...</span>
+<div class="hidden">Read more about Senior Software Engineer - National Security</div>
+<a aria-label="Read more about Senior Software Engineer - National Security" href="/CandidatePortal/en-GB/caciltd/Posting/View/1982">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Senior Software Engineer - National Security" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1982&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1982%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Senior Software Engineer - National Security" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1982)" onfocusout="closeShareMenu(1982)" onkeydown="showShareMenu(1982)">Share</a>
+<div class="share-post" id="share-post_1982" onfocusout="closeShareMenu(1982)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior Software Engineer - National Security" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1982?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior Software Engineer - National Security" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1982?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior Software Engineer - National Security" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1982?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior Software Engineer - National Security" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1982?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior Software Engineer - National Security" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1982?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1972">Data Product Engineer</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>Kensington, London, UK ● Req #1043</div>
+</div>
+<div class="posting-date" data-label="Posted:">26 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>The role
+The purpose of this role is:
+
+Perform regular data product refreshes
+Help improve the existing data product refresh processes
+Help the migration of data products
+
+From SAS to Python
+From on-premises to AWS
+
+
+
+ 
+Key Responsibilities 
+
+Follow existing workflows to refresh a subset of our existing data products
+
+Refresh existing internal and external input data sets, often sourced from surveys
+Source control figures from both industry and government sources
+Re-fit ML models on the latest d ...</span>
+<div class="hidden">Read more about Data Product Engineer</div>
+<a aria-label="Read more about Data Product Engineer" href="/CandidatePortal/en-GB/caciltd/Posting/View/1972">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Data Product Engineer" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1972&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1972%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Data Product Engineer" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1972)" onfocusout="closeShareMenu(1972)" onkeydown="showShareMenu(1972)">Share</a>
+<div class="share-post" id="share-post_1972" onfocusout="closeShareMenu(1972)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Data Product Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1972?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Data Product Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1972?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Data Product Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1972?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Data Product Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1972?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Data Product Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1972?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1960">Senior Software Engineer</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>Bristol, UK ● Cheltenham, UK ● London, UK ● Manchester, UK ● Req #1045</div>
+</div>
+<div class="posting-date" data-label="Posted:">24 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>About Us:
+We are the Information Intelligence Group (IIG) of CACI UK, a specialist software consultancy providing new bespoke solutions to solve our customers complex operational problems. As our business continues to grow, we are interested in speaking with an experienced Software Engineer to join one of our live projects within the Central Government team.
+Working in hybrid way, you can choose how often you work from one of our offices located in Bristol, Cheltenham or Manchester. There will h ...</span>
+<div class="hidden">Read more about Senior Software Engineer</div>
+<a aria-label="Read more about Senior Software Engineer" href="/CandidatePortal/en-GB/caciltd/Posting/View/1960">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Senior Software Engineer" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1960&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1960%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Senior Software Engineer" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1960)" onfocusout="closeShareMenu(1960)" onkeydown="showShareMenu(1960)">Share</a>
+<div class="share-post" id="share-post_1960" onfocusout="closeShareMenu(1960)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior Software Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1960?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior Software Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1960?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior Software Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1960?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior Software Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1960?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior Software Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1960?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1958">Software Engineer</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>Bristol, UK ● Cheltenham, UK ● Manchester, UK ● Req #1044</div>
+</div>
+<div class="posting-date" data-label="Posted:">24 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>About Us:
+We are the Information Intelligence Group (IIG) of CACI UK, a specialist software consultancy providing new bespoke solutions to solve our customers complex operational problems. As our business continues to grow, we are interested in speaking with an experienced Software Engineer to join one of our live projects within the Central Government team.
+Working in hybrid way, you can choose how often you work from one of our offices located in Bristol, Cheltenham or Manchester. There will h ...</span>
+<div class="hidden">Read more about Software Engineer</div>
+<a aria-label="Read more about Software Engineer" href="/CandidatePortal/en-GB/caciltd/Posting/View/1958">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Software Engineer" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1958&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1958%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Software Engineer" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1958)" onfocusout="closeShareMenu(1958)" onkeydown="showShareMenu(1958)">Share</a>
+<div class="share-post" id="share-post_1958" onfocusout="closeShareMenu(1958)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Software Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1958?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Software Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1958?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Software Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1958?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Software Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1958?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Software Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1958?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1956">Network Solution Architect (Defence)</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>Bristol, UK ● Corsham, UK ● Req #1046</div>
+</div>
+<div class="posting-date" data-label="Posted:">24 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>About us:
+We are the Information Intelligence Group (IIG) of CACI UK, a specialist software consultancy providing bespoke solutions to solve complex operational problems. Due to some exciting growth within our Defence business, we are interested in speaking with an experienced Network Solution Architect to join one of our live projects within our Defence Team.
+ 
+Role Location:
+You can work from any of our 6 offices in the UK (including Bristol, Cheltenham &amp; London) or from home, you decide. The  ...</span>
+<div class="hidden">Read more about Network Solution Architect (Defence)</div>
+<a aria-label="Read more about Network Solution Architect (Defence)" href="/CandidatePortal/en-GB/caciltd/Posting/View/1956">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Network Solution Architect (Defence)" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1956&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1956%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Network Solution Architect (Defence)" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1956)" onfocusout="closeShareMenu(1956)" onkeydown="showShareMenu(1956)">Share</a>
+<div class="share-post" id="share-post_1956" onfocusout="closeShareMenu(1956)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Network Solution Architect (Defence)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1956?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Network Solution Architect (Defence)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1956?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Network Solution Architect (Defence)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1956?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Network Solution Architect (Defence)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1956?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Network Solution Architect (Defence)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1956?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1951">Digital Solutions - Digital Forensics Analyst</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>Northallerton, UK ● Req #1037</div>
+</div>
+<div class="posting-date" data-label="Posted:">20 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>POSITION SUMMARY
+Provide digital forensic investigation and proficiency testing services in line with quality management system requirements. Duties involve performing acquistion, processing and analysis tasks on wide variety of data sources/digital devices, such as mobile phones, personal computers, digital storage devices, corporate computer networks and cloud hosted content, and producing reports containing findings and proficiency testing results. 
+PRINCIPAL RESPONSIBILITIES
+
+Utilise digital ...</span>
+<div class="hidden">Read more about Digital Solutions - Digital Forensics Analyst</div>
+<a aria-label="Read more about Digital Solutions - Digital Forensics Analyst" href="/CandidatePortal/en-GB/caciltd/Posting/View/1951">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Digital Solutions - Digital Forensics Analyst" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1951&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1951%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Digital Solutions - Digital Forensics Analyst" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1951)" onfocusout="closeShareMenu(1951)" onkeydown="showShareMenu(1951)">Share</a>
+<div class="share-post" id="share-post_1951" onfocusout="closeShareMenu(1951)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Digital Solutions - Digital Forensics Analyst" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1951?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Digital Solutions - Digital Forensics Analyst" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1951?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Digital Solutions - Digital Forensics Analyst" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1951?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Digital Solutions - Digital Forensics Analyst" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1951?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Digital Solutions - Digital Forensics Analyst" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1951?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1947">Digital Experience - Lead DevOps Engineer</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>Kensington, London, UK ● London W14 8TS, UK ● Req #1039</div>
+</div>
+<div class="posting-date" data-label="Posted:">20 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>As a Lead DevOps Engineer, you will be responsible for providing leadership and technical expertise in designing, implementing, and maintaining our Cloud Infrastructure practices. You will play a critical role in shaping the infrastructure, deployment processes, and automation strategies for our web-based projects (mainly websites, web platforms and API middleware solutions using open-source frameworks). This position requires a combination of technical prowess and strategic thinking, and effect ...</span>
+<div class="hidden">Read more about Digital Experience - Lead DevOps Engineer</div>
+<a aria-label="Read more about Digital Experience - Lead DevOps Engineer" href="/CandidatePortal/en-GB/caciltd/Posting/View/1947">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Digital Experience - Lead DevOps Engineer" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1947&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1947%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Digital Experience - Lead DevOps Engineer" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1947)" onfocusout="closeShareMenu(1947)" onkeydown="showShareMenu(1947)">Share</a>
+<div class="share-post" id="share-post_1947" onfocusout="closeShareMenu(1947)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Digital Experience - Lead DevOps Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1947?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Digital Experience - Lead DevOps Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1947?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Digital Experience - Lead DevOps Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1947?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Digital Experience - Lead DevOps Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1947?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Digital Experience - Lead DevOps Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1947?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1931">Platform Solution Architect</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>Bristol, UK ● Corsham, UK ● Req #1032</div>
+</div>
+<div class="posting-date" data-label="Posted:">12 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>About us:
+We are the Information Intelligence Group (IIG) of CACI UK, a specialist software consultancy providing bespoke solutions to solve complex operational problems. Due to some exciting growth within our Defence business, we are interested in speaking with an experienced Platform Solution Architect to join one of our live projects within our Defence Team.
+ 
+Role Location:
+You can work from any of our 6 offices in the UK (including Bristol, Cheltenham &amp; London) or from home, you decide. The ...</span>
+<div class="hidden">Read more about Platform Solution Architect</div>
+<a aria-label="Read more about Platform Solution Architect" href="/CandidatePortal/en-GB/caciltd/Posting/View/1931">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Platform Solution Architect" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1931&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1931%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Platform Solution Architect" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1931)" onfocusout="closeShareMenu(1931)" onkeydown="showShareMenu(1931)">Share</a>
+<div class="share-post" id="share-post_1931" onfocusout="closeShareMenu(1931)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Platform Solution Architect" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1931?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Platform Solution Architect" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1931?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Platform Solution Architect" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1931?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Platform Solution Architect" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1931?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Platform Solution Architect" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1931?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1929">Senior DevSecOps Engineer</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>Bristol, UK ● Corsham, UK ● Req #1033</div>
+</div>
+<div class="posting-date" data-label="Posted:">12 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>About us:
+We are the Information Intelligence Group (IIG) of CACI UK, a specialist software consultancy providing bespoke solutions to solve complex operational problems. Due to some exciting growth within our Defence business, we are interested in speaking with an experienced DevSecOps Engineer to join one of our live projects within our Defence Team.
+ 
+Role Location:
+You can work from any of our 6 offices in the UK (including Bristol, Cheltenham &amp; London) or from home, you decide. The role wil ...</span>
+<div class="hidden">Read more about Senior DevSecOps Engineer</div>
+<a aria-label="Read more about Senior DevSecOps Engineer" href="/CandidatePortal/en-GB/caciltd/Posting/View/1929">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Senior DevSecOps Engineer" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1929&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1929%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Senior DevSecOps Engineer" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1929)" onfocusout="closeShareMenu(1929)" onkeydown="showShareMenu(1929)">Share</a>
+<div class="share-post" id="share-post_1929" onfocusout="closeShareMenu(1929)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior DevSecOps Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1929?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior DevSecOps Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1929?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior DevSecOps Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1929?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior DevSecOps Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1929?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior DevSecOps Engineer" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1929?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1920">Customer Experience - Experience Strategist</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>London W14 8TS, UK ● Req #1030</div>
+</div>
+<div class="posting-date" data-label="Posted:">12 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>About the job: 
+ 
+We are looking for an enthusiastic experience strategist to drive the growth of CACI Customer Experience Strategy services. Reporting to a Principal Consultant within the team, you will help shape our offering, and ensure we offer best-in-class, customer-first strategies that focus on client performance, driving excellence in delivery and execution. Our Customer Experience team helps clients reach their performance targets by offering a full range of services – from channel opt ...</span>
+<div class="hidden">Read more about Customer Experience - Experience Strategist</div>
+<a aria-label="Read more about Customer Experience - Experience Strategist" href="/CandidatePortal/en-GB/caciltd/Posting/View/1920">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Customer Experience - Experience Strategist" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1920&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1920%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Customer Experience - Experience Strategist" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1920)" onfocusout="closeShareMenu(1920)" onkeydown="showShareMenu(1920)">Share</a>
+<div class="share-post" id="share-post_1920" onfocusout="closeShareMenu(1920)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Customer Experience - Experience Strategist" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1920?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Customer Experience - Experience Strategist" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1920?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Customer Experience - Experience Strategist" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1920?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Customer Experience - Experience Strategist" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1920?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Customer Experience - Experience Strategist" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1920?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1917">Technical Project Manager</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>London W14 8TS, UK ● Req #1029</div>
+</div>
+<div class="posting-date" data-label="Posted:">12 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>
+
+Job Summary: As a Technical Project Manager, you are responsible for the day-to-day delivery of our clients’ digital transformation workstreams. You will be working with a handful of Tier 1 clients on their website/webapp ecosystem in both the public and private sector, across a wide range of industries. You will manage the engagement with key customers and partners, being the primary point of contact for all product/project-related matters. You will support those clients with their web ecosys ...</span>
+<div class="hidden">Read more about Technical Project Manager</div>
+<a aria-label="Read more about Technical Project Manager" href="/CandidatePortal/en-GB/caciltd/Posting/View/1917">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Technical Project Manager" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1917&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1917%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Technical Project Manager" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1917)" onfocusout="closeShareMenu(1917)" onkeydown="showShareMenu(1917)">Share</a>
+<div class="share-post" id="share-post_1917" onfocusout="closeShareMenu(1917)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Technical Project Manager" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1917?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Technical Project Manager" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1917?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Technical Project Manager" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1917?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Technical Project Manager" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1917?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Technical Project Manager" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1917?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1913">Software Developer (App Logic - UI/UX)</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>C9JM+8H3, Silpa Gram Craft Village, HITEC City, Hyderabad, Telangana 500081, India ● Req #1023</div>
+</div>
+<div class="posting-date" data-label="Posted:">11 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>We seek a Frontend Engineer who specializes in application logic to ensure a seamless and highly interactive user experience.
+Key ResponsibilitiesDevelop Dynamic UI Components: Build and optimise complex, interactive UI elements using React and ReactDnD.Application Logic &amp; State Management: Implement robust state management solutions (e.g., Redux, Zustand, or React Context) to handle complex application logic efficiently.Workflow &amp; Business Logic Implementation: Work closely with backend and wor ...</span>
+<div class="hidden">Read more about Software Developer (App Logic - UI/UX)</div>
+<a aria-label="Read more about Software Developer (App Logic - UI/UX)" href="/CandidatePortal/en-GB/caciltd/Posting/View/1913">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Software Developer (App Logic - UI/UX)" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1913&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1913%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Software Developer (App Logic - UI/UX)" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1913)" onfocusout="closeShareMenu(1913)" onkeydown="showShareMenu(1913)">Share</a>
+<div class="share-post" id="share-post_1913" onfocusout="closeShareMenu(1913)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Software Developer (App Logic - UI/UX)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1913?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Software Developer (App Logic - UI/UX)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1913?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Software Developer (App Logic - UI/UX)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1913?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Software Developer (App Logic - UI/UX)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1913?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Software Developer (App Logic - UI/UX)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1913?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1909">Solutions Architect (Devops, Cloud-Native Architecture)</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>C9JM+8H3, Silpa Gram Craft Village, HITEC City, Hyderabad, Telangana 500081, India ● Req #1021</div>
+</div>
+<div class="posting-date" data-label="Posted:">11 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>We are seeking a skilled Solutions Architect to provide a low-level design for a web-based low/no-code application development tool, ensuring that the platform is scalable, secure, and highly performant. The role requires expertise in on-premises and modern cloud-native architectures, container orchestration, DevOps, and enterprise authentication and authorisation.
+Key Responsibilities:Architectural Design: Develop a low-level design for Mood Fabric, ensuring alignment with best practices in mic ...</span>
+<div class="hidden">Read more about Solutions Architect (Devops, Cloud-Native Architecture)</div>
+<a aria-label="Read more about Solutions Architect (Devops, Cloud-Native Architecture)" href="/CandidatePortal/en-GB/caciltd/Posting/View/1909">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Solutions Architect (Devops, Cloud-Native Architecture)" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1909&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1909%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Solutions Architect (Devops, Cloud-Native Architecture)" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1909)" onfocusout="closeShareMenu(1909)" onkeydown="showShareMenu(1909)">Share</a>
+<div class="share-post" id="share-post_1909" onfocusout="closeShareMenu(1909)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Solutions Architect (Devops, Cloud-Native Architecture)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1909?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Solutions Architect (Devops, Cloud-Native Architecture)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1909?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Solutions Architect (Devops, Cloud-Native Architecture)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1909?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Solutions Architect (Devops, Cloud-Native Architecture)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1909?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Solutions Architect (Devops, Cloud-Native Architecture)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1909?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1902">Configuration Analyst</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>C9JM+8H3, Silpa Gram Craft Village, HITEC City, Hyderabad, Telangana 500081, India ● Req #1016</div>
+</div>
+<div class="posting-date" data-label="Posted:">07 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>What does an IE Configuration Analyst do: As an IE configuration analyst, you will configure and deliver SaaS instances to client requirements.  IE systems enable clients to undertake key demographic analysis of current and proposed locations with on-the-fly catchment creation through a variety of travel models and also enables the demographic profiling of customers to gain valuable insights into preferences and activities. Information and data are delivered through an interactive mapping interf ...</span>
+<div class="hidden">Read more about Configuration Analyst</div>
+<a aria-label="Read more about Configuration Analyst" href="/CandidatePortal/en-GB/caciltd/Posting/View/1902">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Configuration Analyst" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1902&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1902%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Configuration Analyst" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1902)" onfocusout="closeShareMenu(1902)" onkeydown="showShareMenu(1902)">Share</a>
+<div class="share-post" id="share-post_1902" onfocusout="closeShareMenu(1902)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Configuration Analyst" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1902?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Configuration Analyst" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1902?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Configuration Analyst" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1902?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Configuration Analyst" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1902?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Configuration Analyst" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1902?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1884">Geospatial Engineering - Business Analyst</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>London W14 8TS, UK ● Req #1008</div>
+</div>
+<div class="posting-date" data-label="Posted:">05 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>Key Responsibilities:
+The successful candidate will be a BA (Business Analyst) with the ability to understand and elicit requirements for complex enterprise projects that often involve one or all of: business process modelling, defining new solutions, system/technical analysis, and user story design in the World of Location Intelligence data soft and delivery tools.
+Working for the Product Strategy &amp; Implementation team, but part of a broad and hybrid team of staff in the UK and India, the Digit ...</span>
+<div class="hidden">Read more about Geospatial Engineering - Business Analyst</div>
+<a aria-label="Read more about Geospatial Engineering - Business Analyst" href="/CandidatePortal/en-GB/caciltd/Posting/View/1884">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Geospatial Engineering - Business Analyst" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1884&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1884%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Geospatial Engineering - Business Analyst" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1884)" onfocusout="closeShareMenu(1884)" onkeydown="showShareMenu(1884)">Share</a>
+<div class="share-post" id="share-post_1884" onfocusout="closeShareMenu(1884)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Geospatial Engineering - Business Analyst" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1884?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Geospatial Engineering - Business Analyst" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1884?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Geospatial Engineering - Business Analyst" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1884?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Geospatial Engineering - Business Analyst" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1884?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Geospatial Engineering - Business Analyst" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1884?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1880">Geospatial Engineering - Scrum Master</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>London W14 8TS, UK ● Req #1009</div>
+</div>
+<div class="posting-date" data-label="Posted:">05 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>Key Responsibilities:
+As part of our growth strategy, we are looking to build on our existing presence in the Location Intelligence industry and related organisations. As an Agile Scrum Master working for the Product Strategy &amp; Implementation team, and as part of a broad and hybrid team of staff in the UK and India, you will be responsible for high level planning, project deliverables and ensuring high quality levels are maintained from both a project and people perspective. Reporting into the H ...</span>
+<div class="hidden">Read more about Geospatial Engineering - Scrum Master</div>
+<a aria-label="Read more about Geospatial Engineering - Scrum Master" href="/CandidatePortal/en-GB/caciltd/Posting/View/1880">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Geospatial Engineering - Scrum Master" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1880&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1880%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Geospatial Engineering - Scrum Master" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1880)" onfocusout="closeShareMenu(1880)" onkeydown="showShareMenu(1880)">Share</a>
+<div class="share-post" id="share-post_1880" onfocusout="closeShareMenu(1880)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Geospatial Engineering - Scrum Master" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1880?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Geospatial Engineering - Scrum Master" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1880?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Geospatial Engineering - Scrum Master" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1880?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Geospatial Engineering - Scrum Master" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1880?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Geospatial Engineering - Scrum Master" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1880?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1877">Corporate Social Responsibility and Sustainability Apprentice</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>Bristol, UK ● Req #962</div>
+</div>
+<div class="posting-date" data-label="Posted:">05 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>
+
+We are CACI UK, a leading UK technology consultancy, with a keen focus on helping our clients transform their businesses through data, software and expertise. We deliver cutting-edge IT and digital marketing solutions across a wide range of sectors, including utilities, defence, retail, and social care. We seek to enrich and enhance our client’s offerings, through shared insight, innovation, and ideation. As part of our ongoing growth, we are looking to appoint a Corporate Social Responsibilit ...</span>
+<div class="hidden">Read more about Corporate Social Responsibility and Sustainability Apprentice</div>
+<a aria-label="Read more about Corporate Social Responsibility and Sustainability Apprentice" href="/CandidatePortal/en-GB/caciltd/Posting/View/1877">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Corporate Social Responsibility and Sustainability Apprentice" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1877&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1877%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Corporate Social Responsibility and Sustainability Apprentice" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1877)" onfocusout="closeShareMenu(1877)" onkeydown="showShareMenu(1877)">Share</a>
+<div class="share-post" id="share-post_1877" onfocusout="closeShareMenu(1877)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Corporate Social Responsibility and Sustainability Apprentice" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1877?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Corporate Social Responsibility and Sustainability Apprentice" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1877?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Corporate Social Responsibility and Sustainability Apprentice" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1877?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Corporate Social Responsibility and Sustainability Apprentice" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1877?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Corporate Social Responsibility and Sustainability Apprentice" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1877?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1863">Account Director - Fixed Term Contract</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>Kensington, London, UK ● Req #1012</div>
+</div>
+<div class="posting-date" data-label="Posted:">04 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>CACI is looking to bring on a talented Account Director within the Experience &amp; Transformation (E&amp;T) team, in a fixed term maternity leave role, reporting to the Group Account Director. The ideal candidate will have ownership and day-to-day management of up 5-6 key CACI accounts, delivering retained and project services, ensuring quality, value-based delivery for our clients and efficient, profitable delivery for the company. 
+ 
+Experience &amp; Transformation - Core Business Activities
+The Experien ...</span>
+<div class="hidden">Read more about Account Director - Fixed Term Contract</div>
+<a aria-label="Read more about Account Director - Fixed Term Contract" href="/CandidatePortal/en-GB/caciltd/Posting/View/1863">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Account Director - Fixed Term Contract" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1863&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1863%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Account Director - Fixed Term Contract" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1863)" onfocusout="closeShareMenu(1863)" onkeydown="showShareMenu(1863)">Share</a>
+<div class="share-post" id="share-post_1863" onfocusout="closeShareMenu(1863)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Account Director - Fixed Term Contract" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1863?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Account Director - Fixed Term Contract" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1863?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Account Director - Fixed Term Contract" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1863?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Account Director - Fixed Term Contract" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1863?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Account Director - Fixed Term Contract" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1863?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1859">Digital Experience - Senior Developer (Laravel)</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>Kensington, London, UK ● Req #1010</div>
+</div>
+<div class="posting-date" data-label="Posted:">04 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span> 
+What you'll be doing
+
+Run code reviews, pair with the development team, review deliverables and continually improve the process with the other Tech Leads.
+Collaborate with our project managers to oversee the technical delivery for a range of clients, from initial scoping, architecture and project delivery.
+Manage a team of developers. This could involve some travel to Europe to collaborate with the remote teams.
+Support the QA team to improve process and embrace automation to find &amp; fix bugs d ...</span>
+<div class="hidden">Read more about Digital Experience - Senior Developer (Laravel)</div>
+<a aria-label="Read more about Digital Experience - Senior Developer (Laravel)" href="/CandidatePortal/en-GB/caciltd/Posting/View/1859">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Digital Experience - Senior Developer (Laravel)" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1859&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1859%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Digital Experience - Senior Developer (Laravel)" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1859)" onfocusout="closeShareMenu(1859)" onkeydown="showShareMenu(1859)">Share</a>
+<div class="share-post" id="share-post_1859" onfocusout="closeShareMenu(1859)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Digital Experience - Senior Developer (Laravel)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1859?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Digital Experience - Senior Developer (Laravel)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1859?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Digital Experience - Senior Developer (Laravel)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1859?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Digital Experience - Senior Developer (Laravel)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1859?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Digital Experience - Senior Developer (Laravel)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1859?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1846">HR Associate</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>C9JM+8H3, Silpa Gram Craft Village, HITEC City, Hyderabad, Telangana 500081, India ● Req #992</div>
+</div>
+<div class="posting-date" data-label="Posted:">02 March 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>We are looking for a proactive HR Associate who can support HR operations while handling basic IT and administrative tasks. This role involves assisting with recruitment, onboarding, and HR compliance, along with managing office administration and IT coordination with the UK team.
+ 
+Key Responsibilities:
+HR Support:
+Assist in end-to-end recruitment by sourcing candidates, scheduling interviews, and coordinating with Senior Recruiter.
+Conduct background verification checks for new hires.
+Maintain ...</span>
+<div class="hidden">Read more about HR Associate</div>
+<a aria-label="Read more about HR Associate" href="/CandidatePortal/en-GB/caciltd/Posting/View/1846">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply HR Associate" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1846&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1846%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share HR Associate" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1846)" onfocusout="closeShareMenu(1846)" onkeydown="showShareMenu(1846)">Share</a>
+<div class="share-post" id="share-post_1846" onfocusout="closeShareMenu(1846)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - HR Associate" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1846?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - HR Associate" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1846?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - HR Associate" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1846?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - HR Associate" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1846?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - HR Associate" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1846?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1844">Campaign Specialist (Braze)</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>C9JM+8H3, Silpa Gram Craft Village, HITEC City, Hyderabad, Telangana 500081, India ● Req #1005</div>
+</div>
+<div class="posting-date" data-label="Posted:">27 February 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>Integrated Marketing Group - Core Business Activities 
+The Integrated Marketing Group of CACI leads the way in customer management (both digital and offline), by helping clients acquire, develop and retain customers through effective customer strategy planning, optimising marketing campaigns and customer insight. Our work is underpinned by high quality consumer and market data and leading edge technology. Our core business activities are detailed below: 
+ 
+Strategy &amp; consulting 
+Marketing system ...</span>
+<div class="hidden">Read more about Campaign Specialist (Braze)</div>
+<a aria-label="Read more about Campaign Specialist (Braze)" href="/CandidatePortal/en-GB/caciltd/Posting/View/1844">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Campaign Specialist (Braze)" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1844&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1844%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Campaign Specialist (Braze)" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1844)" onfocusout="closeShareMenu(1844)" onkeydown="showShareMenu(1844)">Share</a>
+<div class="share-post" id="share-post_1844" onfocusout="closeShareMenu(1844)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Campaign Specialist (Braze)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1844?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Campaign Specialist (Braze)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1844?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Campaign Specialist (Braze)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1844?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Campaign Specialist (Braze)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1844?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Campaign Specialist (Braze)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1844?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1836">Practice Lead (Performance Management, Training &amp; Development, Career Development)</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>Pune, Maharashtra, India ● Req #993</div>
+</div>
+<div class="posting-date" data-label="Posted:">25 February 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>About the Role: 
+We are looking for a Practice Lead with a strong technology background to oversee the engineering practice at our Pune location. This individual will be responsible for understanding the teams’ capability, and foster their career growth, thereby aiding the organization’s growth. This individual will be responsible for mentoring and grooming the team to meet the needs of the organization. 
+This individual’s functional line manager is the Senior Practice Manager for the Network Se ...</span>
+<div class="hidden">Read more about Practice Lead (Performance Management, Training &amp; Development, Career Development)</div>
+<a aria-label="Read more about Practice Lead (Performance Management, Training &amp; Development, Career Development)" href="/CandidatePortal/en-GB/caciltd/Posting/View/1836">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Practice Lead (Performance Management, Training &amp; Development, Career Development)" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1836&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1836%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Practice Lead (Performance Management, Training &amp; Development, Career Development)" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1836)" onfocusout="closeShareMenu(1836)" onkeydown="showShareMenu(1836)">Share</a>
+<div class="share-post" id="share-post_1836" onfocusout="closeShareMenu(1836)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Practice Lead (Performance Management, Training &amp; Development, Career Development)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1836?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Practice Lead (Performance Management, Training &amp; Development, Career Development)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1836?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Practice Lead (Performance Management, Training &amp; Development, Career Development)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1836?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Practice Lead (Performance Management, Training &amp; Development, Career Development)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1836?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Practice Lead (Performance Management, Training &amp; Development, Career Development)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1836?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+<li class="search-result">
+<div class="header-container">
+<div class="main-header-info">
+<div class="posting-title">
+<h2>
+<a href="/CandidatePortal/en-GB/caciltd/Posting/View/1831">Senior Devops Engineer (AWS Serverless - Lambda, Step Funs, DynamoDB, SQS, SNS)</a>
+</h2>
+</div>
+<div class="posting-subtitle">
+<div>C9JM+8H3, Silpa Gram Craft Village, HITEC City, Hyderabad, Telangana 500081, India ● Req #996</div>
+</div>
+<div class="posting-date" data-label="Posted:">25 February 2025</div>
+</div>
+<div class="meta-header-info">
+</div>
+</div>
+<div class="posting-description">
+<span>What you’ll be doing
+This is an exciting opportunity to join the Cloud Engineering team as a DevOps engineer. We have wide-ranging software products that are used by some of the biggest and innovative brands in the UK across utilities, gaming, publishing, retail and consumer packaged goods, leisure, financial services and beyond. 
+ 
+Working as the DevOps engineer, you will play a critical role in the development, deployment, and management of our software infrastructure. You will collaborate clo ...</span>
+<div class="hidden">Read more about Senior Devops Engineer (AWS Serverless - Lambda, Step Funs, DynamoDB, SQS, SNS)</div>
+<a aria-label="Read more about Senior Devops Engineer (AWS Serverless - Lambda, Step Funs, DynamoDB, SQS, SNS)" href="/CandidatePortal/en-GB/caciltd/Posting/View/1831">More</a>
+</div>
+<div class="posting-actions">
+<a aria-label="Apply Senior Devops Engineer (AWS Serverless - Lambda, Step Funs, DynamoDB, SQS, SNS)" href="/CandidatePortal/en-GB/caciltd/JobApplication?postingid=1831&amp;referralPage=Posting&amp;url=https%3A%2F%2Fglobaleur242.dayforcehcm.com%2FCandidatePortal%2Fen-GB%2Fcaciltd%2FJobApplication%3FpostingId%3D1831%26referralPage%3DPosting">Apply</a>
+<span class="hidden-share-this-option hidden">|</span>
+<a aria-label="Share Senior Devops Engineer (AWS Serverless - Lambda, Step Funs, DynamoDB, SQS, SNS)" class="share-this-link hidden-share-this-option hidden" href="javascript:void(0);" onclick="showShareMenu(1831)" onfocusout="closeShareMenu(1831)" onkeydown="showShareMenu(1831)">Share</a>
+<div class="share-post" id="share-post_1831" onfocusout="closeShareMenu(1831)">
+<div class="share-this">
+<span aria-haspopup="true" aria-label="Share job posting on LinkedIn" class="st_linkedin_large" displaytext='value: "LinkedIn"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior Devops Engineer (AWS Serverless - Lambda, Step Funs, DynamoDB, SQS, SNS)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1831?src=linkedin" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Tweet" class="st_twitter_large" displaytext='value: "Tweet"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior Devops Engineer (AWS Serverless - Lambda, Step Funs, DynamoDB, SQS, SNS)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1831?src=twitter" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Facebook" class="st_facebook_large" displaytext='value: "Facebook"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior Devops Engineer (AWS Serverless - Lambda, Step Funs, DynamoDB, SQS, SNS)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1831?src=facebook" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Google +" class="st_googleplus_large" displaytext='value: "Google +"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior Devops Engineer (AWS Serverless - Lambda, Step Funs, DynamoDB, SQS, SNS)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1831?src=googleplus" tabindex="0"></span>
+<span aria-haspopup="true" aria-label="Share job posting on Email" class="st_email_large" displaytext='value: "Email"' role="button" st_summary="" st_title="Job opportunity at CACI Ltd - Senior Devops Engineer (AWS Serverless - Lambda, Step Funs, DynamoDB, SQS, SNS)" st_url="https://globaleur242.dayforcehcm.com/CandidatePortal/en-GB/caciltd/Posting/View/1831?src=email" tabindex="0"></span>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<nav aria-label="Pagination" class="pagination" role="navigation">
+<ul>
+<li class="active">
+<span aria-current="true" aria-label="Current page, Go to page 1" data-current-page="true" data-page-no="1">1</span>
+</li>
+<li class="">
+<a aria-current="false" aria-label=" Go to page 2" data-page-no="2" href="/CandidatePortal/en-GB/caciltd?page=2">2</a>
+</li>
+<li class="">
+<a aria-current="false" aria-label=" Go to page 3" data-page-no="3" href="/CandidatePortal/en-GB/caciltd?page=3">3</a>
+</li>
+<li>
+<a aria-label="Next Page" data-page-no="2" href="/CandidatePortal/en-GB/caciltd?page=2">Next</a>
+</li>
+</ul>
+</nav>
+<script type="text/javascript">
+    var shareKeyPressed = false;
+
+    function showShareMenu(postingId) {
+        if (event.type == 'click' || event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            $('#share-post_' + postingId).toggleClass("expanded");
+            shareKeyPressed = event.key === "Enter" || event.key === " ";
+        }
+        else {
+            shareKeyPressed = false;
+        }
+    }
+
+    function closeShareMenu(postingId) {
+        if (!shareKeyPressed) {
+            setTimeout(function () {
+                var isfocused = false;
+                $('#share-post_' + postingId + '> .share-this > span').each(function () {
+                    if ($(this).is(":focus") || verifyChildElements(this)) {
+                        isfocused = true;
+                        return false;
+                    };
+                });
+                if (!isfocused) {
+                    $('#share-post_' + postingId).removeClass('expanded');
+                }
+            }, 100);
+        }
+    }
+
+    function verifyChildElements(scope) {
+        if ($(document.activeElement).closest("." + scope.className)[0] == scope) {
+            return $(document.activeElement).is(":focus");
+        }
+    }
+
+    require(["Framework/UI/Toaster", "Framework/Modules/Localize"]);
+
+    var toggleStar = function(star){
+        const isSaved = star.hasClass('cp-i-star_notfilled');
+        let url = star.data('url');
+        if (false) {
+            if (isSaved) {
+                star.addClass('cp-i-star_fill').removeClass('cp-i-star_notfilled');
+                url += '/AddSavedJob';
+                star.attr("aria-checked","true");
+            } else {
+                star.addClass('cp-i-star_notfilled').removeClass('cp-i-star_fill');
+                url += '/DeleteSavedJob';
+                star.attr("aria-checked", "false");
+            }
+
+            $.ajax({
+                    type: 'POST',
+                    url: url,
+                data: { jobPostingId: star.data('jobpostingid'), jobBoardXRefCode: star.data('jobboardxrefcode') },
+                    success: function(){
+                        const successMessage = isSaved ? Localize().getLabel('lblSavedJobToasterMessage') : Localize().getLabel('lblRemoveJobToasterMessage');
+                        Toaster().success(successMessage);
+                    }
+                });
+        } else {
+            if (window.top !== window.self) {
+                window.open(star.data('jobpostingurl'), '_blank').focus(); 
+            } else {
+                if ($('#signInLinkMobile').length) {
+                    $('#signInLinkMobile').trigger('click');
+                } else if ($('#signInButtonDesktop').length) {
+                    $('#signInButtonDesktop').trigger('click');
+                }
+            }
+        }
+    };
+
+    $('i.save-job-star').click(function() {
+        toggleStar($(this));
+    });
+    $('i.save-job-star').keypress(function() {
+        if (event.which == 32 || event.which == 13) {
+            event.preventDefault();
+            toggleStar($(this));
+        }
+    });
+</script></div>
+</main>
+</div>
+<div data-dojo-props='_ga:{"Name":"CandidatePortalAnalytics-Prod","AccountName":null,"UserName":null,"Password":null,"HostName":null,"Port":0,"RemoteDirectory":null,"SshKey":null,"PublicPgpKey":"UA-93199126-2","PrivatePgpKey":null,"EnableAbruptConnectionClose":false,"EnableParallelTransferMode":true,"IsEncrypted":false,"ServiceUrl":null,"RetryAttempts":0,"RetryWaitSeconds":90,"ProtocolType":null,"NumberOfConnections":null,"ConnectionTimeoutInSec":null,"OutputType":0},
+                                      cultureCode: "en-GB",
+                                      clientName:"CACI Ltd",
+                                      namespace:"caciltd",
+                                      major: 67,
+                                      twoLetterISOLanguageName: "en"' data-dojo-type="CandidatePortal/Cookie/CookieBanner"></div>
+<footer class="main-content-width">
+<nav>
+<ul aria-describedby="col_1_0" class="footer-links">
+<li class="header-label" id="col_1_0">
+<h3></h3>
+</li>
+<li>
+<a href="https://www.caci.co.uk/about-caci/" target="_blank" title="About us">About us</a>
+</li>
+</ul>
+</nav>
+</footer><div aria-label="Privacy Policy © {0}" class="footer" role="region">
+<div class="toggle">
+<span>© 2009–2025 Dayforce HCM, Inc. All Rights Reserved.</span><a href="/CandidatePortal/en-GB/caciltd/Site/CANDIDATEPORTAL/Branding/PrivacyPolicyDayforce" target="_blank">Privacy Policy</a>
+<a href="javascript:void(0);" id="cookiePreferencesFooterLink">Cookie Preferences</a>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">Globalize.culture("en-GB");</script>
+<script src="/CandidatePortal/Content/CandidatePortal/scripts/js?v=20nbXiIygiMNWUfyy3IOQ1F5uP3tB3-tfWJF0wJ8k-c1"></script>
+<script type="text/javascript">
+        $(function () {
+            // GA Page Tracking
+            platformAnalytics.trackPage('/CandidatePortalJobPostingListingPage');
+        });
+    </script>
+<script type="text/javascript">
+        $(function () {
+            document.body.addEventListener('keydown', handleFirstTab, true);
+
+            function handleFirstTab(e) {
+                if (e.keyCode === 9 || e.keyCode === 16) {
+                    document.body.classList.add('user-is-tabbing');
+                    document.body.removeEventListener('keyup', handleFirstTab);
+                    document.body.addEventListener('mousedown', handleMouseUpOnce, true);
+                }
+            }
+
+            function handleMouseUpOnce() {
+                document.body.classList.remove('user-is-tabbing');
+                document.body.removeEventListener('mousedown', handleMouseUpOnce);
+                document.body.addEventListener('keyup', handleFirstTab, true);
+            }
+        });
+    </script>
+<script type="text/javascript">
+            $(function () {
+                function trackShareProcess(eventCategory, eventLabel, elem) {
+                    var isDisabled = elem.parentNode.classList.contains("disabled");
+                    if (!isDisabled) {
+                        platformAnalytics.trackEvent
+                            .process({
+                                eventCategory: eventCategory,
+                                eventLabel: eventLabel
+                            });
+                    }
+                }
+
+                // track linkedin share click.
+                $('.st_linkedin_large').click(function () {
+                    trackShareProcess('CandidatePortal:PostingLinkedInShare', 'User has clicked to share posting on LinkedIn', this);
+                });
+                // track twitter share click.
+                $('.st_twitter_large').click(function () {
+                    trackShareProcess('CandidatePortal:PostingTwitterShare', 'User has clicked to share posting on Twitter', this);
+                });
+                // track twitter share click.
+                $('.st_facebook_large').click(function () {
+                    trackShareProcess('CandidatePortal:PostingFacebookShare', 'User has clicked to share posting on Facebook', this);
+                });
+                // track twitter share click.
+                $('.st_googleplus_large').click(function () {
+                    trackShareProcess('CandidatePortal:PostingGooglePlusShare', 'User has clicked to share posting on Google Plus', this);
+                });
+                // track twitter share click.
+                $('.st_email_large').click(function () {
+                    trackShareProcess('CandidatePortal:PostingEmailShare', 'User has clicked to share posting via Email', this);
+                });
+            });
+        </script>
+<script type="text/javascript">
+
+        $(function () {
+            document.documentElement.onscroll = document.body.onscroll = function () {
+                let scrollCurrentVerticalPostion = document.documentElement.scrollTop;
+                let backToTopButton = document.getElementById('backToTopButton');
+                if (scrollCurrentVerticalPostion > 200) {
+                    backToTopButton.className = 'showBackToTop dfI_G02_ArrowUp';
+                } else {
+                    backToTopButton.className = 'hideBackToTop dfI_G02_ArrowUp';
+                }
+            };
+
+            window.onClickBackToTop = function () {
+                document.querySelector('body').scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('backToTopButton').className = 'hidden dfI_G02_ArrowUp';
+            }
+
+        });
+
+    </script>
+<div aria-label="Back to top button" class="hideBackToTop dfI_G02_ArrowUp" data-automation-id="btnBackToTop" id="backToTopButton" onclick="onClickBackToTop()" onkeydown="onClickBackToTop()" role="button" tabindex="0"></div>
+</body>
