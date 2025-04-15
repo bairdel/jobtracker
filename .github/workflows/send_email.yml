@@ -42,7 +42,7 @@ jobs:
         run: ls -l
       - uses: actions/upload-artifact@v4
         with:
-          name: email.txt
+          name: email.html
           path: emailcontent
 
   SendMail:
@@ -52,7 +52,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with:
-          name: email.txt
+          name: email.html
           path: emailcontent
       # - run: |
       #     echo 'CONTENT_ENV<<EOF' >> $GITHUB_ENV
@@ -94,7 +94,7 @@ jobs:
           # body: ${{ env.CONTENT_ENV }} \n \n ${{env.emailcontent}} 
           # Optional HTML body read from file:
           # html_body: file://README.md
-          html_body: file://emailcontent/email.txt
+          html_body: file://emailcontent/email.html
           # html_body: echo $emailcontent
           # Optional carbon copy recipients:
           # cc: kyloren@example.com,leia@example.com
