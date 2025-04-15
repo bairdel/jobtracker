@@ -29,16 +29,17 @@ jobs:
           pip install requests
           pip install --upgrade certifi
           pip install beautifulsoup4
-      - name: Run Python script
-        id: checkchanges
-        run: |
-          echo 'email<<EOF' >> $GITHUB_OUTPUT
-          python checkchanges.py >> $GITHUB_OUTPUT
-          echo 'EOF' >> $GITHUB_OUTPUT
+      # - name: Run Python script
+      #   id: checkchanges
+      #   run: |
+      #     echo 'email<<EOF' >> $GITHUB_OUTPUT
+      #     python checkchanges.py >> $GITHUB_OUTPUT
+      #     echo 'EOF' >> $GITHUB_OUTPUT
 
 
       - run: mkdir -p emailcontent
-      - run: python checkchanges.py > emailcontent/email.txt
+      - run: python checkchanges.py
+      # - run: python checkchanges.py > emailcontent/email.txt
       - uses: actions/upload-artifact@v4
         with:
           name: email.txt

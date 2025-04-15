@@ -61,16 +61,20 @@ for w in websites:
             f.write(str(body))
 
 
-print("sending this to you in an email")
-print("example: this website " + websites[0] + " has changed. wow!")
-print("another line here!")
-print("")
-print(" that was a gap")
-for key, value in changed.items():
-    print(f"{key}: {value}")
-    print("   ")
+# print("sending this to you in an email")
+# print("example: this website " + websites[0] + " has changed. wow!")
+# print("another line here!")
+# print("")
+# print(" that was a gap")
+# for key, value in changed.items():
+#     print(f"{key}: {value}")
+#     print("   ")
 
-
+with open("./emailcontent/email.txt", "w") as f:
+    f.write("this is the email now")
+    for key, value in changed.items():
+        f.write(f"{key}: {value}")
+        f.write("   ")
 # env_file = os.getenv('GITHUB_ENV')
 
 # with open(env_file, "a") as myfile:
