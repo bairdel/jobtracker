@@ -22,8 +22,6 @@ jobs:
         uses: actions/setup-python@v5 
         with:
           python-version: '3.10'
-      - name: see folder structure
-        run: ls -l
       - name: install requirements
         run: |
           pip install requests
@@ -40,6 +38,8 @@ jobs:
       - run: mkdir -p emailcontent
       - run: python checkchanges.py
       # - run: python checkchanges.py > emailcontent/email.txt
+      - name: see folder structure
+        run: ls -l
       - uses: actions/upload-artifact@v4
         with:
           name: email.txt

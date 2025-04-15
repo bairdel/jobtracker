@@ -70,8 +70,8 @@ for w in websites:
 #     print(f"{key}: {value}")
 #     print("   ")
 
-with open("./emailcontent/email.txt", "w") as f:
-    f.write("this is the email now")
+with open("./emailcontent/email.txt", "w", encoding='utf-8') as f:
+    f.write("this is the email now\n")
     for key, value in changed.items():
         f.write(f"{key}: {value}")
         f.write("   ")
