@@ -21,6 +21,7 @@ for w in websites:
 
     my_file = Path("./latest-content/"+ name + ".html")
     if my_file.is_file():
+        print(name + " now")
         # compare
 
         # open saved version of the page
@@ -48,12 +49,14 @@ for w in websites:
         #     print(tag.get_text())
         #     print()
         # compare the two versions of the page
+
         diff = difflib.unified_diff(first, second, fromfile='saved_page', tofile='str(body)', lineterm='', n=0)
         lines = list(diff)[2:]
         added = [line[1:] for line in lines if line[0] == '+']
         removed = [line[1:] for line in lines if line[0] == '-']
 
         additions =[]
+        print(len(lines))
 
         # print('additions:')
         # for line in added:
@@ -64,12 +67,12 @@ for w in websites:
             if line not in removed:
                 # print(line)
                 additions.append(line)
-
+        # print(additions)
         changed[w] = additions
-
 
         # replace html with newest version
         with open("./latest-content/"+ name + ".html", "w", encoding='utf-8') as f:
+            print("opening " + name)
             f.write(str(body))
     else:
         print("not found")
@@ -92,7 +95,7 @@ for w in websites:
 # for key, value in changed.items():
 #     print(f"{key}: {value}")
 #     print("   ")
-print(changed)
+# print(changed)
 
 with open("./emailcontent/email.html", "w", encoding='utf-8') as f:
     f.write("this is the email now\n")

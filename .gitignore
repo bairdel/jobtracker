@@ -1,5 +1,5 @@
-/emailcontent
-/emailcontent/email.html
+./emailcontent
+./emailcontent/email.html
 /latest-content/*
 
 # Byte-compiled / optimized / DLL files
