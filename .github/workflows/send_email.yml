@@ -41,7 +41,7 @@ jobs:
       - run: python checkchanges.py
       # - run: python checkchanges.py > emailcontent/email.txt
       - name: see folder structure
-        run: ls -l
+        run: ls ./latest-content -l
       - uses: actions/upload-artifact@v4
         with:
           name: email.html

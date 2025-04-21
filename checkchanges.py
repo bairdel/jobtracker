@@ -15,8 +15,9 @@ with open("./websitesToCheck.txt", "r") as f:
 changed = {}
 # print(websites)
 for w in websites:
+    print()
     try: 
-        page = urllib.request.urlopen(w)
+        # page = urllib.request.urlopen(w)
         page = requests.get(w)
         name = urlparse(w).netloc
 
@@ -78,7 +79,7 @@ for w in websites:
                 print("writing to " + name)
                 f.write(str(body))
         else:
-            print(name + "not found")
+            print(name + " not found")
             # print(page.read())
             soup = bs4(page.content, 'html.parser')
             comments = soup.find_all(string=lambda text: isinstance(text, Comment))
@@ -90,7 +91,7 @@ for w in websites:
                 f.write(str(body))
 
     except Exception as e:
-        print(e)
+        print(f"{w} FAILED: {e}")
 
 
 # print("sending this to you in an email")
