@@ -21,7 +21,7 @@ for w in websites:
 
     my_file = Path("./latest-content/"+ name + ".html")
     if my_file.is_file():
-        print(name + " now")
+        print("requesting " + name)
         # compare
 
         # open saved version of the page
@@ -68,14 +68,15 @@ for w in websites:
                 # print(line)
                 additions.append(line)
         # print(additions)
-        changed[w] = additions
+        if len(additions) != 0:
+            changed[w] = additions
 
         # replace html with newest version
         with open("./latest-content/"+ name + ".html", "w", encoding='utf-8') as f:
-            print("opening " + name)
+            print("writing to " + name)
             f.write(str(body))
     else:
-        print("not found")
+        print(name + "not found")
         # print(page.read())
         soup = bs4(page.content, 'html.parser')
         comments = soup.find_all(string=lambda text: isinstance(text, Comment))
