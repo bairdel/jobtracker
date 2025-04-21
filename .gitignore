@@ -1,6 +1,6 @@
 ./emailcontent
 ./emailcontent/email.html
-/latest-content/*
+# /latest-content/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
