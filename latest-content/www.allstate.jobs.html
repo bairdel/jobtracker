@@ -149,30 +149,30 @@
 				}
 			});
 		</script>
-</div></div></div></div><section class="avia_codeblock_section avia_code_block_0" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_codeblock" itemprop="text"> <script>
-  $(document).ready(function() {
- const targetNode = document.querySelector('.search-results-table');
-
-const config = { attributes: true, childList: true, subtree: true };
-
-const callback = function(mutationsList, observer) {
-    observer.disconnect(); // Disconnect the observer temporarily
-    
-    $('.job').each(function() {
-        var locatio_type = $(this).find('.child.locationtype').detach();
-        $(this).find('.jobTitle a').after(locatio_type);
-    });
-    
-    observer.observe(targetNode, config); // Reconnect the observer
-};
-
-const observer = new MutationObserver(callback);
-
-observer.observe(targetNode, config);
-
-
-});
-
+</div></div></div></div><section class="avia_codeblock_section avia_code_block_0" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_codeblock" itemprop="text"> <script>
+  $(document).ready(function() {
+ const targetNode = document.querySelector('.search-results-table');
+
+const config = { attributes: true, childList: true, subtree: true };
+
+const callback = function(mutationsList, observer) {
+    observer.disconnect(); // Disconnect the observer temporarily
+    
+    $('.job').each(function() {
+        var locatio_type = $(this).find('.child.locationtype').detach();
+        $(this).find('.jobTitle a').after(locatio_type);
+    });
+    
+    observer.observe(targetNode, config); // Reconnect the observer
+};
+
+const observer = new MutationObserver(callback);
+
+observer.observe(targetNode, config);
+
+
+});
+
 </script> </div></section>
 
 </div></div></div>  </div></div> <div class="container_wrap footer_color" id="footer">
@@ -185,7 +185,7 @@ observer.observe(targetNode, config);
 <div class="footer-bottom-wrap">
 <div class="socialFooterLinks">
 <img alt="Allstate logo. " class="mainFooterLogo" src="https://cdn-static.findly.com/wp-content/uploads/sites/2003/2021/11/17092627/logo-blue.svg"/>
-<p>Connect with us
+<p>Connect with us
 </p><ul>
 <li><a aria-label="Tiktok open in new window" class="footer-tiktok" href="https://www.tiktok.com/@allstate" target="_blank"><i class="fa-brands fa-tiktok fa-fw" onclick="ProcessMetrics('SocialIcons', ['tiktok']);"></i></a></li>
 <li><a aria-label="Facebook open in new window" class="footer-facebook" href="https://www.facebook.com/Allstate" target="_blank"><i class="fa-brands fa-facebook-f fa-fw" onclick="ProcessMetrics('SocialIcons', ['facebook']);"></i></a></li>
@@ -208,83 +208,83 @@ observer.observe(targetNode, config);
 </div>
 
 
-</div><span class="seperator extralight-border"></span></section><section class="widget_text widget clearfix widget_custom_html" id="custom_html-19"><div class="textwidget custom-html-widget"><style>
-/** Use Any Font workaround **/
-@font-face {
-  font-family: 'allstatesansw-black';
-  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-black.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-black.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-Black.otf') format('otf');
-}
-
-.allstatesansw-black{font-family: 'allstatesansw-black' !important;}
-
-@font-face {
-  font-family: 'allstatesansw-blacki';
-  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-blacki.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-blacki.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-BlackItalic.otf') format('otf');
-}
-
-.allstatesansw-blacki{font-family: 'allstatesansw-blacki' !important;}
-
-@font-face {
-  font-family: 'allstatesansw-bold';
-  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-bold.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-bold.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-Bold.otf') format('otf'); 
-}
-
-.allstatesansw-bold{font-family: 'allstatesansw-bold' !important;}
-
-@font-face {
-  font-family: 'allstatesansw-boldi';
-  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-boldi.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-boldi.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-BoldItalic.otf') format('otf');
-}
-
-.allstatesansw-boldi{font-family: 'allstatesansw-boldi' !important;}
-
-@font-face {
-  font-family: 'allstatesansw-light';
-  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-light.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-light.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-Light.otf') format('otf');
-}
-
-.allstatesansw-light{font-family: 'allstatesansw-light' !important;}
-
-@font-face {
-  font-family: 'allstatesansw-lighti';
-  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-lighti.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-lighti.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-LightItalic.otf') format('otf');
-}
-
-.allstatesansw-lighti{font-family: 'allstatesansw-lighti' !important;}
-
-@font-face {
-  font-family: 'allstatesansw-medium';
-  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-medium.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-medium.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-Medium.otf') format('otf');
-}
-
-.allstatesansw-medium{font-family: 'allstatesansw-medium' !important;}
-
-@font-face {
-  font-family: 'allstatesansw-medi';
-  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-medi.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-medi.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-MediumItalic.otf') format('otf');
-}
-
-.allstatesansw-medi{font-family: 'allstatesansw-medi' !important;}
-
-@font-face {
-  font-family: 'allstatesansw-regul';
-  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-regul.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-regul.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-Regular.otf') format('otf');
-}
-
-.allstatesansw-regul{font-family: 'allstatesansw-regul' !important;}
-
-@font-face {
-  font-family: 'allstatesansw-reguli';
-  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-reguli.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-reguli.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-RegularItalic.otf') format('otf');
-}
-
-.allstatesansw-reguli{font-family: 'allstatesansw-reguli' !important;}
-	
-@font-face {
-  font-family: 'socialsupp';
-  src: url('https://cdn-static.findly.com/wp-content/uploads/sites/3328/2024/08/07181146/social-supp.woff') format('woff'), url('https://cdn-static.findly.com/wp-content/uploads/sites/3328/2024/08/07181148/social-supp.ttf') format('ttf');
-}
-/** End Use Any Font workaround **/
+</div><span class="seperator extralight-border"></span></section><section class="widget_text widget clearfix widget_custom_html" id="custom_html-19"><div class="textwidget custom-html-widget"><style>
+/** Use Any Font workaround **/
+@font-face {
+  font-family: 'allstatesansw-black';
+  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-black.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-black.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-Black.otf') format('otf');
+}
+
+.allstatesansw-black{font-family: 'allstatesansw-black' !important;}
+
+@font-face {
+  font-family: 'allstatesansw-blacki';
+  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-blacki.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-blacki.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-BlackItalic.otf') format('otf');
+}
+
+.allstatesansw-blacki{font-family: 'allstatesansw-blacki' !important;}
+
+@font-face {
+  font-family: 'allstatesansw-bold';
+  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-bold.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-bold.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-Bold.otf') format('otf'); 
+}
+
+.allstatesansw-bold{font-family: 'allstatesansw-bold' !important;}
+
+@font-face {
+  font-family: 'allstatesansw-boldi';
+  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-boldi.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-boldi.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-BoldItalic.otf') format('otf');
+}
+
+.allstatesansw-boldi{font-family: 'allstatesansw-boldi' !important;}
+
+@font-face {
+  font-family: 'allstatesansw-light';
+  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-light.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-light.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-Light.otf') format('otf');
+}
+
+.allstatesansw-light{font-family: 'allstatesansw-light' !important;}
+
+@font-face {
+  font-family: 'allstatesansw-lighti';
+  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-lighti.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-lighti.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-LightItalic.otf') format('otf');
+}
+
+.allstatesansw-lighti{font-family: 'allstatesansw-lighti' !important;}
+
+@font-face {
+  font-family: 'allstatesansw-medium';
+  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-medium.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-medium.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-Medium.otf') format('otf');
+}
+
+.allstatesansw-medium{font-family: 'allstatesansw-medium' !important;}
+
+@font-face {
+  font-family: 'allstatesansw-medi';
+  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-medi.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-medi.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-MediumItalic.otf') format('otf');
+}
+
+.allstatesansw-medi{font-family: 'allstatesansw-medi' !important;}
+
+@font-face {
+  font-family: 'allstatesansw-regul';
+  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-regul.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-regul.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-Regular.otf') format('otf');
+}
+
+.allstatesansw-regul{font-family: 'allstatesansw-regul' !important;}
+
+@font-face {
+  font-family: 'allstatesansw-reguli';
+  src: url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-reguli.woff2') format('woff2'), url('https://cdn.smashfly.com/prod/allstate/fonts/allstatesansw-reguli.woff') format('woff'), url('https://cdn.smashfly.com/prod/allstate/fonts/AllstateSans-RegularItalic.otf') format('otf');
+}
+
+.allstatesansw-reguli{font-family: 'allstatesansw-reguli' !important;}
+	
+@font-face {
+  font-family: 'socialsupp';
+  src: url('https://cdn-static.findly.com/wp-content/uploads/sites/3328/2024/08/07181146/social-supp.woff') format('woff'), url('https://cdn-static.findly.com/wp-content/uploads/sites/3328/2024/08/07181148/social-supp.ttf') format('ttf');
+}
+/** End Use Any Font workaround **/
 </style></div><span class="seperator extralight-border"></span></section></div>
 </div>
 
@@ -293,20 +293,20 @@ observer.observe(targetNode, config);
 </div>
 </div>
 <script type="text/javascript">_satellite.pageBottom();</script>
-<script class="optanon-category-C0003" type="text/plain">
-    (function(o,l) {
-        window.oliviaChatData = window.oliviaChatData || [];
-        window.oliviaChatBaseUrl = o;
-        window.oliviaChatData.push(['setKey', l]);
-        window.oliviaChatData.push(['start']);
-        var apply = document.createElement('script');
-        apply.type = 'text/javascript';
-        apply.async = true;
-        apply.src = 
-'https://dokumfe7mps0i.cloudfront.net/static/site/js/widget-client.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(apply, s);
-    })('https://olivia.paradox.ai', 'yyspietzcpvytjyhmqte');
+<script class="optanon-category-C0003" type="text/plain">
+    (function(o,l) {
+        window.oliviaChatData = window.oliviaChatData || [];
+        window.oliviaChatBaseUrl = o;
+        window.oliviaChatData.push(['setKey', l]);
+        window.oliviaChatData.push(['start']);
+        var apply = document.createElement('script');
+        apply.type = 'text/javascript';
+        apply.async = true;
+        apply.src = 
+'https://dokumfe7mps0i.cloudfront.net/static/site/js/widget-client.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(apply, s);
+    })('https://olivia.paradox.ai', 'yyspietzcpvytjyhmqte');
 </script> <script>
 		( function ( body ) {
 			'use strict';
@@ -357,4 +357,4 @@ var ubermenu_data = {"remove_conflicts":"on","reposition_on_load":"off","intent_
 		</script>
 <a aria-hidden="true" data-av_icon="" data-av_iconfont="entypo-fontello" href="#top" id="scroll-top-link" title="Scroll to top"><span class="avia_hidden_link_text">Scroll to top</span></a>
 <div id="fb-root"></div>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"49021e70cb","applicationID":"121917868","transactionName":"Z1NWNkIED0cDABAIWF4ZdQFEDA5aTRcBDEdcV0AHHQcUXQ4HARM=","queueTime":0,"applicationTime":1336,"atts":"SxRVQAoeHEk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"49021e70cb","applicationID":"121917868","transactionName":"Z1NWNkIED0cDABAIWF4ZdQFEDA5aTRcBDEdcV0AHHQcUXQ4HARM=","queueTime":0,"applicationTime":978,"atts":"SxRVQAoeHEk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>

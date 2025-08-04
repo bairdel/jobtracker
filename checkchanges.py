@@ -15,7 +15,7 @@ with open("./websitesToCheck.txt", "r") as f:
 changed = {}
 names = []
 # print(websites)
-for w in websites:
+for w in websites[]:
     print()
     try: 
         # page = urllib.request.urlopen(w)
@@ -109,12 +109,14 @@ for w in websites:
 with open("./emailcontent/email.html", "w", encoding='utf-8') as f:
     f.write(f"{len(names)} changed websites\n")
     for k in names: 
-        f.write(name + "\n")
+        f.write(k + "\n")
     f.write("\n---------------------------------------------\n")
     for key, value in changed.items():
         f.write(f"<h2>{key}</h2>")
         for items in value:
-            f.write('<p>%s</p><br>' %items)
+            whitespace = "\r\n\t"
+            items.strip(whitespace)
+            f.write('<p>%s</p>' %items)
         f.write("   ")
 # env_file = os.getenv('GITHUB_ENV')
 
