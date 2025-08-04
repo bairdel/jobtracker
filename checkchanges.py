@@ -15,7 +15,7 @@ with open("./websitesToCheck.txt", "r") as f:
 changed = {}
 names = []
 # print(websites)
-for w in websites[]:
+for w in websites:
     print()
     try: 
         # page = urllib.request.urlopen(w)
