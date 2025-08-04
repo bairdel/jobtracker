@@ -13,6 +13,7 @@ with open("./websitesToCheck.txt", "r") as f:
     websites = f.readlines()
 
 changed = {}
+names = []
 # print(websites)
 for w in websites:
     print()
@@ -73,6 +74,7 @@ for w in websites:
             # print(additions)
             if len(additions) != 0:
                 changed[w] = additions
+                names.append(name)
 
             # replace html with newest version
             with open("./latest-content/"+ name + ".html", "w", encoding='utf-8') as f:
@@ -105,7 +107,10 @@ for w in websites:
 # print(changed)
 
 with open("./emailcontent/email.html", "w", encoding='utf-8') as f:
-    f.write("this is the email now\n")
+    f.write(f"{len(names)} changed websites\n")
+    for k in names: 
+        f.write(name + "\n")
+    f.write("\n---------------------------------------------\n")
     for key, value in changed.items():
         f.write(f"<h2>{key}</h2>")
         for items in value:
