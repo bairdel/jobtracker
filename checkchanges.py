@@ -14,6 +14,7 @@ with open("./websitesToCheck.txt", "r") as f:
 
 changed = {}
 names = []
+badCharacters = ['Id', '{', '}', '"', 'ID', 'Request', "var ", "Error", '=']
 # print(websites)
 for w in websites:
     print()
@@ -69,8 +70,11 @@ for w in websites:
             # print('additions, ignoring position')
             for line in added:
                 if line not in removed:
-                    # print(line)
-                    additions.append(line)
+                    not_contains = all(item not in line for item in badCharacters)
+                    line = line.strip()
+                    if not_contains and line != '':
+                        print(line)
+                        additions.append(line)
             # print(additions)
             if len(additions) != 0:
                 changed[w] = additions
@@ -95,6 +99,9 @@ for w in websites:
     except Exception as e:
         print(f"{w} FAILED: {e}")
 
+print(changed)
+changed = dict(sorted(changed.items(), key=lambda item: len(item), reverse=True))
+print(changed)
 
 # print("sending this to you in an email")
 # print("example: this website " + websites[0] + " has changed. wow!")
@@ -106,18 +113,23 @@ for w in websites:
 #     print("   ")
 # print(changed)
 
-with open("./emailcontent/email.html", "w", encoding='utf-8') as f:
-    f.write(f"{len(names)} changed websites\n")
-    for k in names: 
-        f.write(k + "\n")
-    f.write("\n---------------------------------------------\n")
-    for key, value in changed.items():
-        f.write(f"<h2>{key}</h2>")
-        for items in value:
-            whitespace = "\r\n\t"
-            items.strip(whitespace)
-            f.write('<p>%s</p>' %items)
-        f.write("   ")
+def writeToFile(names, changed):
+
+    with open("./emailcontent/email.html", "w", encoding='utf-8') as f:
+        f.write(f"{len(names)} changed websites\n")
+        for k in names: 
+            f.write(k + "\n")
+        f.write("\n---------------------------------------------\n")
+        for key, value in changed.items():
+            f.write(f"<h2>{key}</h2>")
+            for items in value:
+                whitespace = "\r\n\t"
+                items.strip(whitespace)
+                f.write('<p>%s</p>' %items)
+            f.write("   ")
+
+writeToFile(names, changed)
+
 # env_file = os.getenv('GITHUB_ENV')
 
 # with open(env_file, "a") as myfile:

@@ -7,140 +7,140 @@
 </a>
 <div class="groupLogo navbar-brand ml-3 my-auto">
 </div>
-<script>
-   var groupLogo = "";
-   theImage = "<span>Part of</span><img class=\"w-50 partOfOtherLogo\" style=\"\" src=\"" + groupLogo + "\">";
-   if (groupLogo) {
-       $(".groupLogo").html(theImage);
-   } else {
-       $(".groupLogo").remove();
-   }
-   $( document ).ready(function() {
-      
-      $(".theLogoOverRide").show();
-      
-      var logoGlobalCore_ClientLogo2 = "";
-      
-      if ((logoGlobalCore_ClientLogo2 != "") && (logoGlobalCore_ClientLogo2 != "PLACEHOLDER")) {
-          $("#logoGlobalCore_ClientLogo2").css("height", logoGlobalCore_ClientLogo2);
-          $("#logoGlobalCore_ClientLogo2").css("maxHeight", "unset");
-      }
-      
-   });
-       
-    $(document).ready(function(){
-        if (navigator.userAgent.search("Firefox/") > - 1){
-          $('footer').find('.partOfOtherLogo').removeClass("w-50");
-          $('footer').find('.partOfOtherLogo').addClass("w-75");
-          $('footer').find('.groupLogo').addClass("w-25");
-          $('.navbar').find('.partOfOtherLogo').removeClass("w-50");
-          $('.navbar').find('.partOfOtherLogo').addClass("w-25");
-          $('.navbar').find('.groupLogo').addClass("w-50");
-          $('.navbar').find('#navbarResponsive').addClass("w-100");
-
-          //console.log("FireFox")
-        } else {
-          $('footer').find('.partOfOtherLogo').addClass("w-50");
-          $('footer').find('.partOfOtherLogo').removeClass("w-75");
-          $('footer').find('.groupLogo').removeClass("w-25");
-          $('.navbar-custom').find('.groupLogo').removeClass("w-50");
-          $('.navbar-custom').find('#navbarResponsive').removeClass("w-100");
-          //console.log("Anything Else")
-        };
-    });
+<script>
+   var groupLogo = "";
+   theImage = "<span>Part of</span><img class=\"w-50 partOfOtherLogo\" style=\"\" src=\"" + groupLogo + "\">";
+   if (groupLogo) {
+       $(".groupLogo").html(theImage);
+   } else {
+       $(".groupLogo").remove();
+   }
+   $( document ).ready(function() {
+      
+      $(".theLogoOverRide").show();
+      
+      var logoGlobalCore_ClientLogo2 = "";
+      
+      if ((logoGlobalCore_ClientLogo2 != "") && (logoGlobalCore_ClientLogo2 != "PLACEHOLDER")) {
+          $("#logoGlobalCore_ClientLogo2").css("height", logoGlobalCore_ClientLogo2);
+          $("#logoGlobalCore_ClientLogo2").css("maxHeight", "unset");
+      }
+      
+   });
+       
+    $(document).ready(function(){
+        if (navigator.userAgent.search("Firefox/") > - 1){
+          $('footer').find('.partOfOtherLogo').removeClass("w-50");
+          $('footer').find('.partOfOtherLogo').addClass("w-75");
+          $('footer').find('.groupLogo').addClass("w-25");
+          $('.navbar').find('.partOfOtherLogo').removeClass("w-50");
+          $('.navbar').find('.partOfOtherLogo').addClass("w-25");
+          $('.navbar').find('.groupLogo').addClass("w-50");
+          $('.navbar').find('#navbarResponsive').addClass("w-100");
+
+          //console.log("FireFox")
+        } else {
+          $('footer').find('.partOfOtherLogo').addClass("w-50");
+          $('footer').find('.partOfOtherLogo').removeClass("w-75");
+          $('footer').find('.groupLogo').removeClass("w-25");
+          $('.navbar-custom').find('.groupLogo').removeClass("w-50");
+          $('.navbar-custom').find('#navbarResponsive').removeClass("w-100");
+          //console.log("Anything Else")
+        };
+    });
 </script>
-<style>
-    .groupLogo  { position:relative; }
-    .groupLogo span { display:block; font-weight:bold; font-size:15px; }
-    a.navbar-brand {
-        display:contents;
-    }
-    }
+<style>
+    .groupLogo  { position:relative; }
+    .groupLogo span { display:block; font-weight:bold; font-size:15px; }
+    a.navbar-brand {
+        display:contents;
+    }
+    }
 </style>
 <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button">
 <span class="navbar-toggler-icon"><i aria-hidden="true" class="fa fa-lg fa-bars" title="Menu"></i></span>
 </button>
 <div class="collapse navbar-collapse" id="navbarResponsive">
 <ul class="navbar-nav ml-auto" id="NavNew">
-<script>
-    $(function() {
-   //Get Links for links array
-   links.forEach(function(el){$("#NavNew").append(" <li class='nav-item'  style='background-color: transparent;'><a class='nav-link' href='" + el[1] + "'>" + el[0] + "</a></li>");})
-});
+<script>
+    $(function() {
+   //Get Links for links array
+   links.forEach(function(el){$("#NavNew").append(" <li class='nav-item'  style='background-color: transparent;'><a class='nav-link' href='" + el[1] + "'>" + el[0] + "</a></li>");})
+});
 </script>
-<style>
-    .navbar-custom { z-index:5 !important; }
-    nav { z-index:5 !important; }
+<style>
+    .navbar-custom { z-index:5 !important; }
+    nav { z-index:5 !important; }
 </style>
-<style>
-    @media screen and (max-width:991px) {
-        .btn {
-            margin-left: 0px  !important;;
-        };
-    };
+<style>
+    @media screen and (max-width:991px) {
+        .btn {
+            margin-left: 0px  !important;;
+        };
+    };
 </style>
-<script>
-$(function () {
-    var btnColor = 'primary';
-    var html = "<li class='nav-item' style='background-color:transparent'><a class='btn btn-" + btnColor.toLowerCase() + " text-white ml-2 invert-checker' href='/oneaccount/account/logintype/4198' title='Register / Signup for Job Alerts' id='reg-log-btn'>Register / Job alerts</a></li>";
-    $('#NavNew').append(html);
-    if ($("#NavNew .nav-item").length == 2) {
-            $("#NavNew .nav-item:first").hide();
-        };
-});
+<script>
+$(function () {
+    var btnColor = 'primary';
+    var html = "<li class='nav-item' style='background-color:transparent'><a class='btn btn-" + btnColor.toLowerCase() + " text-white ml-2 invert-checker' href='/oneaccount/account/logintype/4198' title='Register / Signup for Job Alerts' id='reg-log-btn'>Register / Job alerts</a></li>";
+    $('#NavNew').append(html);
+    if ($("#NavNew .nav-item").length == 2) {
+            $("#NavNew .nav-item:first").hide();
+        };
+});
 </script>
 </ul>
 </div>
 </div>
 </nav>
 </div>
-<style>
-        #search-form-area p { font-size: 20px; }
+<style>
+        #search-form-area p { font-size: 20px; }
     </style>
-<script>
-    const config = { attributes: false, childList: true, subtree: true };
-    const callback = function(mutationsList, observer) {
-        setDefaults();
-        
-    }
-   
-    function setDefaults(){
-           //Get All Inputs
-            
-            $("form#searchFormShown :input").each(function(){
-               
-            //Check FOr Vals on Query String 
-            var urlParams = new URLSearchParams(window.location.search);
-            var value = urlParams.get($(this).attr("id"));
-            if(value !== undefined ){
-                $(this).val(value);
-                 console.log($(this).attr("id"));
-                console.log(value);
-                 console.log($(this).val());
-            }
-                
-            }); 
-        
-    }
-        $(function(){
-           $("form#searchFormShown select").each(function(){
-               
-            var targetNode = document.getElementById($(this).attr("id"));
-             var observer = new MutationObserver(callback);
-            observer.observe(targetNode, config);
-                
-            }); 
-            setDefaults();
-          
-            // allows users to hit the enter key to execute the search
-            $('#keyword').keypress(function (e) {
-            var key = e.which;
-            if(key == 13) {
-                $('#searchbtn').click();
-                return false;  
-            }}); 
-            
-        })
+<script>
+    const config = { attributes: false, childList: true, subtree: true };
+    const callback = function(mutationsList, observer) {
+        setDefaults();
+        
+    }
+   
+    function setDefaults(){
+           //Get All Inputs
+            
+            $("form#searchFormShown :input").each(function(){
+               
+            //Check FOr Vals on Query String 
+            var urlParams = new URLSearchParams(window.location.search);
+            var value = urlParams.get($(this).attr("id"));
+            if(value !== undefined ){
+                $(this).val(value);
+                 console.log($(this).attr("id"));
+                console.log(value);
+                 console.log($(this).val());
+            }
+                
+            }); 
+        
+    }
+        $(function(){
+           $("form#searchFormShown select").each(function(){
+               
+            var targetNode = document.getElementById($(this).attr("id"));
+             var observer = new MutationObserver(callback);
+            observer.observe(targetNode, config);
+                
+            }); 
+            setDefaults();
+          
+            // allows users to hit the enter key to execute the search
+            $('#keyword').keypress(function (e) {
+            var key = e.which;
+            if(key == 13) {
+                $('#searchbtn').click();
+                return false;  
+            }}); 
+            
+        })
     </script>
 <div class="container-fluid makeitRainGold" id="search-box-banner" style="position:relative;background-image: url('https://apmgroup.cascaderecruitmentplusmanagement.co.uk/Content/ClientImages/3347/APMGroup-banner-vsp.jpg');background-position:center 30%;background-size:cover;" title="Background Lifestyle Image">
 <div class="row h-100 py-5" style="min-height:30vh">
@@ -148,11 +148,11 @@ $(function () {
 <div class="row h-100">
 <div class="col-12 py-5 align-self-center text-center" id="search-form-area">
 <h1 class="text-white display-4">Find your perfect job!</h1>
-<p class="pb-0 mb-0 text-white">
-                        Below you'll find all of our current openings.
+<p class="pb-0 mb-0 text-white">
+                        Below you'll find all of our current openings.
                     </p>
-<p class="pt-0 pb-0 mb-0 text-white">
-                        Have a look and see if any suit you.
+<p class="pt-0 pb-0 mb-0 text-white">
+                        Have a look and see if any suit you.
                     </p>
 <div class="col-lg-8 mx-auto mt-3">
 <form>
@@ -177,48 +177,48 @@ $(function () {
 </div>
 </div>
 </div>
-<style type="text/css">
-        .makeitRainGold:before {
-            position:absolute;
-            top:0;
-            left:0;
-            content: ' ';
-            width:100%;
-            height:100%;
-            background-color: rgb(0, 0,153);
-            opacity: 0.6;
-        }
-        .makeitRainGold-primary:before {
-            background-color: #000099 !important;
-        }
-        .makeitRainGold-secondary:before {
-            background-color: #f8971d !important;
-        }
-        
-         @media only screen and (max-width: 400px){
-#search-form-area {
-padding-top: 1rem !important;
- }
-}
+<style type="text/css">
+        .makeitRainGold:before {
+            position:absolute;
+            top:0;
+            left:0;
+            content: ' ';
+            width:100%;
+            height:100%;
+            background-color: rgb(0, 0,153);
+            opacity: 0.6;
+        }
+        .makeitRainGold-primary:before {
+            background-color: #000099 !important;
+        }
+        .makeitRainGold-secondary:before {
+            background-color: #f8971d !important;
+        }
+        
+         @media only screen and (max-width: 400px){
+#search-form-area {
+padding-top: 1rem !important;
+ }
+}
     </style>
-<script type="text/javascript">
-        var bgColor = 'black';
-        switch (bgColor.toLowerCase()) {
-            case 'primary': 
-            case 'secondary': 
-                $("#search-box-banner").addClass("makeitRainGold-" + bgColor);
-                break;
-            default: 
-                $("head").append("<style type='text/css'>.makeitRainGold:before { background-color: " + bgColor + " !important; }</style>");
-                break;
-        }
-        var input = document.getElementById("keywords");
-            input.addEventListener("keypress", function(event) {
-              if (event.key === "Enter") {
-                event.preventDefault();
-                document.getElementById("searchbtn").click();
-              }
-            });
+<script type="text/javascript">
+        var bgColor = 'black';
+        switch (bgColor.toLowerCase()) {
+            case 'primary': 
+            case 'secondary': 
+                $("#search-box-banner").addClass("makeitRainGold-" + bgColor);
+                break;
+            default: 
+                $("head").append("<style type='text/css'>.makeitRainGold:before { background-color: " + bgColor + " !important; }</style>");
+                break;
+        }
+        var input = document.getElementById("keywords");
+            input.addEventListener("keypress", function(event) {
+              if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("searchbtn").click();
+              }
+            });
     </script>
 <div class="row downarrow d-show">
 <div class="col-12 d-flex justify-content-center">
@@ -227,42 +227,42 @@ padding-top: 1rem !important;
 </a>
 </div>
 </div>
-<style>
-
-html {
-    scroll-behavior:smooth !important;
-}
-
-body {
-    scroll-behavior:smooth !important;
-}
-.downarrow {
-    margin-top: -70px;
-    margin-bottom: 50px;
-}
-
-.bounce {
--moz-animation: bounce 1.5s infinite;
--webkit-animation: bounce 1.5s infinite;
- animation: bounce 3s infinite;
-}
-
-.arrowopacity {
-    opacity: 0.5;
-}
-
-@media only screen and (max-width: 500px){
-  .downarrow {
-      margin-top: -90px!important;
-      }
-      
-  .bounce {
-      -moz-animation: none;
-      -webkit-animation: none;
-      animation: none;
-    }
-}
-
+<style>
+
+html {
+    scroll-behavior:smooth !important;
+}
+
+body {
+    scroll-behavior:smooth !important;
+}
+.downarrow {
+    margin-top: -70px;
+    margin-bottom: 50px;
+}
+
+.bounce {
+-moz-animation: bounce 1.5s infinite;
+-webkit-animation: bounce 1.5s infinite;
+ animation: bounce 3s infinite;
+}
+
+.arrowopacity {
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 500px){
+  .downarrow {
+      margin-top: -90px!important;
+      }
+      
+  .bounce {
+      -moz-animation: none;
+      -webkit-animation: none;
+      animation: none;
+    }
+}
+
 </style>
 <div class="text-center mt-5" id="loadingSpinner">
 <div class="spinner-border text-center" role="status">
@@ -272,182 +272,182 @@ body {
 <div class="container">
 <div class="row py-5">
 <div class="col-12">
-<script>
-    var converting = false;
-    function convertDates() {
-        if (!converting) {
-            $(".notConverted p[data-bind='ExpiryDate']").each(function () {
-                converting = true;
-                try {
-                    if (!$(this).parent().parent().parent().hasClass("vacancy-search-result-item-template")) {
-                        var ref = $(this).parent().parent().parent().find(".ref").text();
-                        var selctor = ".ref:contains(" + ref + ")";
-                        if ($(selctor).length <= 1) {
-                            $(this).parent().removeClass("notConverted");
-                        }
-                        else {
-                            $(this).parent().parent().parent().remove();
-                        }
-                    }
-                } catch (Exception) {
-                    console.log(Exception.message);
-                }
-            })
-
-            FormatJobDescription();
-            
-            var logo = $(".vacancy-search-result-item:last .topright");
-            if (logo.text() == "") {
-                logo.addClass("d-none");
-            }
-
-            var iconColour = "primary";
-            iconColour = iconColour.toLowerCase();
-            if ((iconColour == "primary") || (iconColour == "secondary") || (iconColour == "black") || (iconColour == "white")) {
-                theColour = "";
-                theColour = iconColour;
-                if (theColour) {
-                    $(".vacancy-search-result-item .row .col-1 i").removeClass("text-primary").addClass("text-" + theColour);
-                }
-            }
-
-            var titleColour = "primary";
-            titleColour = titleColour.toLowerCase();
-            if ((titleColour == "primary") || (titleColour == "secondary") || (titleColour == "black")) {
-                theIconColour = "";
-                theIconColour = titleColour;
-                if (theIconColour) {
-                    $(".vacancy-search-result-item .card-title").removeClass("text-primary").addClass("text-" + theIconColour);
-                    $(".vacancy-search-result-item .readMore").addClass("text-" + theIconColour);
-                }
-            }
-
-
-
-
-
-            converting = false;
-        }
-    }
-    var changing = false;
-    function doItAll() {
-        if (!changing) {
-            changing = true;
-
-
-
-            changing = false;
-        }
-    }
-
-
-    function hasColour() {
-        var theData = "primary";
-        if ((theData == "secondary") || (theData == "success") || (theData == "light") || (theData == "dark")) {
-            $(".resButton").addClass("btn-outline-" + theData + "").removeClass("btn-outline-primary");
-        }
-    }
-
-
-    $(function () {
-        hasColour();
-        $("#results").bind("DOMSubtreeModified", convertDates);
-        //   $("#results").bind("DOMSubtreeModified", doItAll);
-        $("#results").bind("DOMSubtreeModified", hasColour);
-        // $("#results").bind("DOMSubtreeModified", checkColoursFromData);
-
-    })
-    $(function () {
-        $("#nosearchvals").attr("href", "/oneaccount/account/logintype/0?cid=" + cid);
-    })
-    var coloursChange = false;
-
-    function checkColoursFromData() {
-        if (!coloursChange) {
-            coloursChange = true;
-
-
-            coloursChange = false;
-
-        }
-    }
-
-    function FormatJobDescription() {
-        var vacancy = $(".vacancy-search-result-item:last .JobDescription");
-        var jobDescription = $(".vacancy-search-result-item:last .JobDescription").text();
-        var applyURL = $(".vacancy-search-result-item:last .apply-link").attr("href");
-
-        if (jobDescription.length > 140) {
-            vacancy.html(jobDescription.substr(0, 100) + '... <a class="readMore" target="_blank" href="' + applyURL + '"><strong>read more</strong></a>');
-        } else if (jobDescription.length <= 0) {
-            vacancy.html('<a class="readMore" href="' + applyURL + '">View the full advert and apply</a>');
-        }
-    }
-    
-    var initNumResults = 0;
-    var updatedNumResults = 0;
-    var myInterval;
-
-    function CheckTitleAndLogo(){
-        updatedNumResults = $('.checkForContent').length;
-           
-       if (updatedNumResults > initNumResults){
-           initNumResults = updatedNumResults;
-
-            $(".checkForContent").each(function(){
-                var databindDiv = $(this).find("div");
-                var hasLogo = false;
-                var title = $(this).next(".titleOfJobToEnlarge").find(".card-title").html();
-                
-                if (title != ''){
-                    if ($(databindDiv) != undefined){
-                        var logoDiv = $(databindDiv).html();
-                        if (logoDiv != undefined && logoDiv != ""){
-                            hasLogo = true;
-                        }
-                    }
-                    if (hasLogo){
-                        $(this).next(".titleOfJobToEnlarge").addClass("col-lg-9 col-8");
-                        $(this).next(".titleOfJobToEnlarge").removeClass("col-12");
-                    }
-                    else{
-                         $(this).next(".titleOfJobToEnlarge").removeClass("col-lg-9 col-8");
-                         $(this).next(".titleOfJobToEnlarge").addClass("col-12");
-                    }
-                }
-            });
-       }
-    }
-   
-   $(document).ready(function () {
-
-       initNumResults = $('.checkForContent').length;
-       
-       myInterval = setInterval(function () {
-           CheckTitleAndLogo();
-       }, 500);
-       
-    });
-        
-    $(document).ready(function(){
-       setTimeout(function(){
-        $('.topright').find('img').attr('alt', 'Company Logo');
-   },4000);
-});
+<script>
+    var converting = false;
+    function convertDates() {
+        if (!converting) {
+            $(".notConverted p[data-bind='ExpiryDate']").each(function () {
+                converting = true;
+                try {
+                    if (!$(this).parent().parent().parent().hasClass("vacancy-search-result-item-template")) {
+                        var ref = $(this).parent().parent().parent().find(".ref").text();
+                        var selctor = ".ref:contains(" + ref + ")";
+                        if ($(selctor).length <= 1) {
+                            $(this).parent().removeClass("notConverted");
+                        }
+                        else {
+                            $(this).parent().parent().parent().remove();
+                        }
+                    }
+                } catch (Exception) {
+                    console.log(Exception.message);
+                }
+            })
+
+            FormatJobDescription();
+            
+            var logo = $(".vacancy-search-result-item:last .topright");
+            if (logo.text() == "") {
+                logo.addClass("d-none");
+            }
+
+            var iconColour = "primary";
+            iconColour = iconColour.toLowerCase();
+            if ((iconColour == "primary") || (iconColour == "secondary") || (iconColour == "black") || (iconColour == "white")) {
+                theColour = "";
+                theColour = iconColour;
+                if (theColour) {
+                    $(".vacancy-search-result-item .row .col-1 i").removeClass("text-primary").addClass("text-" + theColour);
+                }
+            }
+
+            var titleColour = "primary";
+            titleColour = titleColour.toLowerCase();
+            if ((titleColour == "primary") || (titleColour == "secondary") || (titleColour == "black")) {
+                theIconColour = "";
+                theIconColour = titleColour;
+                if (theIconColour) {
+                    $(".vacancy-search-result-item .card-title").removeClass("text-primary").addClass("text-" + theIconColour);
+                    $(".vacancy-search-result-item .readMore").addClass("text-" + theIconColour);
+                }
+            }
+
+
+
+
+
+            converting = false;
+        }
+    }
+    var changing = false;
+    function doItAll() {
+        if (!changing) {
+            changing = true;
+
+
+
+            changing = false;
+        }
+    }
+
+
+    function hasColour() {
+        var theData = "primary";
+        if ((theData == "secondary") || (theData == "success") || (theData == "light") || (theData == "dark")) {
+            $(".resButton").addClass("btn-outline-" + theData + "").removeClass("btn-outline-primary");
+        }
+    }
+
+
+    $(function () {
+        hasColour();
+        $("#results").bind("DOMSubtreeModified", convertDates);
+        //   $("#results").bind("DOMSubtreeModified", doItAll);
+        $("#results").bind("DOMSubtreeModified", hasColour);
+        // $("#results").bind("DOMSubtreeModified", checkColoursFromData);
+
+    })
+    $(function () {
+        $("#nosearchvals").attr("href", "/oneaccount/account/logintype/0?cid=" + cid);
+    })
+    var coloursChange = false;
+
+    function checkColoursFromData() {
+        if (!coloursChange) {
+            coloursChange = true;
+
+
+            coloursChange = false;
+
+        }
+    }
+
+    function FormatJobDescription() {
+        var vacancy = $(".vacancy-search-result-item:last .JobDescription");
+        var jobDescription = $(".vacancy-search-result-item:last .JobDescription").text();
+        var applyURL = $(".vacancy-search-result-item:last .apply-link").attr("href");
+
+        if (jobDescription.length > 140) {
+            vacancy.html(jobDescription.substr(0, 100) + '... <a class="readMore" target="_blank" href="' + applyURL + '"><strong>read more</strong></a>');
+        } else if (jobDescription.length <= 0) {
+            vacancy.html('<a class="readMore" href="' + applyURL + '">View the full advert and apply</a>');
+        }
+    }
+    
+    var initNumResults = 0;
+    var updatedNumResults = 0;
+    var myInterval;
+
+    function CheckTitleAndLogo(){
+        updatedNumResults = $('.checkForContent').length;
+           
+       if (updatedNumResults > initNumResults){
+           initNumResults = updatedNumResults;
+
+            $(".checkForContent").each(function(){
+                var databindDiv = $(this).find("div");
+                var hasLogo = false;
+                var title = $(this).next(".titleOfJobToEnlarge").find(".card-title").html();
+                
+                if (title != ''){
+                    if ($(databindDiv) != undefined){
+                        var logoDiv = $(databindDiv).html();
+                        if (logoDiv != undefined && logoDiv != ""){
+                            hasLogo = true;
+                        }
+                    }
+                    if (hasLogo){
+                        $(this).next(".titleOfJobToEnlarge").addClass("col-lg-9 col-8");
+                        $(this).next(".titleOfJobToEnlarge").removeClass("col-12");
+                    }
+                    else{
+                         $(this).next(".titleOfJobToEnlarge").removeClass("col-lg-9 col-8");
+                         $(this).next(".titleOfJobToEnlarge").addClass("col-12");
+                    }
+                }
+            });
+       }
+    }
+   
+   $(document).ready(function () {
+
+       initNumResults = $('.checkForContent').length;
+       
+       myInterval = setInterval(function () {
+           CheckTitleAndLogo();
+       }, 500);
+       
+    });
+        
+    $(document).ready(function(){
+       setTimeout(function(){
+        $('.topright').find('img').attr('alt', 'Company Logo');
+   },4000);
+});
 </script>
-<style>
-    .text-black { color: #000; }
-    .text-muted, .text-muted p { display: inline-block; margin:0; padding:0; }
-    .vacancy-search-result-item p { display:inline-block !important; }
-    .card-body p { font-size: 15px; margin-bottom: 10px; }
-    .text-muted p { font-size:12px !important; }
-    .card { box-shadow: 0 0 25px rgba(40,47,60,.05), 0 20px 25px rgba(40,47,60,.05), 0 3px 4px rgba(40,47,60,.05); }
-    .card .small { top: -2px;
-    position: relative; }
-    .brandLogoResult { display:none; }
-    .topright {position:absolute; top:20px; right:20px; }
-    .topright img { width:100px; }
-    .apply-link h2 { max-width: 75%; }
+<style>
+    .text-black { color: #000; }
+    .text-muted, .text-muted p { display: inline-block; margin:0; padding:0; }
+    .vacancy-search-result-item p { display:inline-block !important; }
+    .card-body p { font-size: 15px; margin-bottom: 10px; }
+    .text-muted p { font-size:12px !important; }
+    .card { box-shadow: 0 0 25px rgba(40,47,60,.05), 0 20px 25px rgba(40,47,60,.05), 0 3px 4px rgba(40,47,60,.05); }
+    .card .small { top: -2px;
+    position: relative; }
+    .brandLogoResult { display:none; }
+    .topright {position:absolute; top:20px; right:20px; }
+    .topright img { width:100px; }
+    .apply-link h2 { max-width: 75%; }
 </style>
 <section class="[@HideResultsDesign@]" data-bindingid="jobs">
 <div class="row card-column1s" id="results">
@@ -506,32 +506,32 @@ body {
 <div class="no-vacancy-found text-center hidden">
 <p class="font-weight-bold">Sorry we are unable to find any roles matching your criteria.</p>
 <p>Please expand your search and try again or follow the link below and sign up to receive alerts on new jobs.</p>
-<a class="btn btn-lg mt-2 resButton invert-checker btn-primary" href="" id="nosearchvals" target="_blank">
-        Register for Job Alerts
+<a class="btn btn-lg mt-2 resButton invert-checker btn-primary" href="" id="nosearchvals" target="_blank">
+        Register for Job Alerts
     </a>
 </div>
-<script>
- $(function() {
-     try{
-        $("p[data-bind='ExpiryDate']").text(moment(endDate, "DD-MM-YYYY HH:ss").fromNow());
-        hasColour();
-     } catch( Exception ){
-        // Nothing
-     }
-});
+<script>
+ $(function() {
+     try{
+        $("p[data-bind='ExpiryDate']").text(moment(endDate, "DD-MM-YYYY HH:ss").fromNow());
+        hasColour();
+     } catch( Exception ){
+        // Nothing
+     }
+});
 </script>
 <form action="/Careers/SearchVacancies" id="formVacancySearch" method="post">
-<input name="__RequestVerificationToken" type="hidden" value="6Vzny7wRZ9t94SlK2Lr2HHNv-5wuUigSm2lsfh67iMfmrh8eKCgB4KD8aFaEhPbdYUFYZCYgnGpOhD8d7gbLQKV-IvA1">
+<input name="__RequestVerificationToken" type="hidden" value="fi4fA55WIKNRdQrs-yhz82ZiXLjwaGGNYzCU3P3GGJONB59o_BZPwTlbslEKhWTXnfAPHZZiyyXPaU28BX7M8ylOLCk1">
 <input applylink","vacancytitle","location","salary","expirydate","applylink"],'currentpage':0,'pagesearchresults':false,'searchresultpagesize':0,'keyword':'','locations':['0'],'disciplines':['0']}"="" id="data" name="data" type="hidden" value="{'ClientID':3347,'OnboardingPageID':0,'DynamicFields':[],'SearchResultFields':["/>
 </input></form>
-<script>
- var cid = 3347;
- var RootURL = "/";
-        $(function() {
-            if (typeof dev === 'undefined'){
-                InitialiseVacancySearch(true, 25,false,RootURL, cid, -116383);
-            }
-});
+<script>
+ var cid = 3347;
+ var RootURL = "/";
+        $(function() {
+            if (typeof dev === 'undefined'){
+                InitialiseVacancySearch(true, 25,false,RootURL, cid, -116383);
+            }
+});
 </script>
 </div>
 </div>
@@ -546,55 +546,55 @@ body {
 </a>
 <div class="groupLogo navbar-brand ml-3 my-auto">
 </div>
-<script>
-   var groupLogo = "";
-   theImage = "<span>Part of</span><img class=\"w-50 partOfOtherLogo\" style=\"\" src=\"" + groupLogo + "\">";
-   if (groupLogo) {
-       $(".groupLogo").html(theImage);
-   } else {
-       $(".groupLogo").remove();
-   }
-   $( document ).ready(function() {
-      
-      $(".theLogoOverRide").show();
-      
-      var logoGlobalCore_ClientLogo1 = "";
-      
-      if ((logoGlobalCore_ClientLogo1 != "") && (logoGlobalCore_ClientLogo1 != "PLACEHOLDER")) {
-          $("#logoGlobalCore_ClientLogo1").css("height", logoGlobalCore_ClientLogo1);
-          $("#logoGlobalCore_ClientLogo1").css("maxHeight", "unset");
-      }
-      
-   });
-       
-    $(document).ready(function(){
-        if (navigator.userAgent.search("Firefox/") > - 1){
-          $('footer').find('.partOfOtherLogo').removeClass("w-50");
-          $('footer').find('.partOfOtherLogo').addClass("w-75");
-          $('footer').find('.groupLogo').addClass("w-25");
-          $('.navbar').find('.partOfOtherLogo').removeClass("w-50");
-          $('.navbar').find('.partOfOtherLogo').addClass("w-25");
-          $('.navbar').find('.groupLogo').addClass("w-50");
-          $('.navbar').find('#navbarResponsive').addClass("w-100");
-
-          //console.log("FireFox")
-        } else {
-          $('footer').find('.partOfOtherLogo').addClass("w-50");
-          $('footer').find('.partOfOtherLogo').removeClass("w-75");
-          $('footer').find('.groupLogo').removeClass("w-25");
-          $('.navbar-custom').find('.groupLogo').removeClass("w-50");
-          $('.navbar-custom').find('#navbarResponsive').removeClass("w-100");
-          //console.log("Anything Else")
-        };
-    });
+<script>
+   var groupLogo = "";
+   theImage = "<span>Part of</span><img class=\"w-50 partOfOtherLogo\" style=\"\" src=\"" + groupLogo + "\">";
+   if (groupLogo) {
+       $(".groupLogo").html(theImage);
+   } else {
+       $(".groupLogo").remove();
+   }
+   $( document ).ready(function() {
+      
+      $(".theLogoOverRide").show();
+      
+      var logoGlobalCore_ClientLogo1 = "";
+      
+      if ((logoGlobalCore_ClientLogo1 != "") && (logoGlobalCore_ClientLogo1 != "PLACEHOLDER")) {
+          $("#logoGlobalCore_ClientLogo1").css("height", logoGlobalCore_ClientLogo1);
+          $("#logoGlobalCore_ClientLogo1").css("maxHeight", "unset");
+      }
+      
+   });
+       
+    $(document).ready(function(){
+        if (navigator.userAgent.search("Firefox/") > - 1){
+          $('footer').find('.partOfOtherLogo').removeClass("w-50");
+          $('footer').find('.partOfOtherLogo').addClass("w-75");
+          $('footer').find('.groupLogo').addClass("w-25");
+          $('.navbar').find('.partOfOtherLogo').removeClass("w-50");
+          $('.navbar').find('.partOfOtherLogo').addClass("w-25");
+          $('.navbar').find('.groupLogo').addClass("w-50");
+          $('.navbar').find('#navbarResponsive').addClass("w-100");
+
+          //console.log("FireFox")
+        } else {
+          $('footer').find('.partOfOtherLogo').addClass("w-50");
+          $('footer').find('.partOfOtherLogo').removeClass("w-75");
+          $('footer').find('.groupLogo').removeClass("w-25");
+          $('.navbar-custom').find('.groupLogo').removeClass("w-50");
+          $('.navbar-custom').find('#navbarResponsive').removeClass("w-100");
+          //console.log("Anything Else")
+        };
+    });
 </script>
-<style>
-    .groupLogo  { position:relative; }
-    .groupLogo span { display:block; font-weight:bold; font-size:15px; }
-    a.navbar-brand {
-        display:contents;
-    }
-    }
+<style>
+    .groupLogo  { position:relative; }
+    .groupLogo span { display:block; font-weight:bold; font-size:15px; }
+    a.navbar-brand {
+        display:contents;
+    }
+    }
 </style>
 </div>
 <div class="row text-lg-left text-center m-0">
@@ -604,8 +604,8 @@ body {
 </div>
 </div>
 </div>
-<script>
-      $("a").addClass('');
+<script>
+      $("a").addClass('');
 </script>
 </div>
 <div class="row mt-3 justify-content-center justify-content-lg-start m-0">
@@ -614,80 +614,80 @@ body {
 <i alt="Find more on our social media page (opens in new tab)" class="fab fa-facebook newIconColour fa-lg" title="Social Media Icon"></i>
 </a>
 </div>
-<style>
-    .newIconColour{
-        color: !important;
-    }
-    
+<style>
+    .newIconColour{
+        color: !important;
+    }
+    
 </style>
 <div class="col-2 col-md-auto text-center text-lg-left pl-0 d-none">
 <a alt="Find more on our social media page (opens in new tab)" aria-label="Social Media Icon" class="sci" href="" target="_blank">
 <img alt="X logo" id="twitterImageIconFooter" src="https://crmdemo.networxrecruitment.net/Content/ClientImages/1985/X-svg-logo1.svg" style="; height: 20px; width: 22.4062px;"/>
 </a>
 </div>
-<script type="text/javascript">
-// setTimeout(() => {
-//     var newWidth = $(".footerIcons").width();
-//     var newHeight = $(".footerIcons").height();
-    
-//     document.getElementById("twitterImageIconFooter").style.height = newHeight + "px"
-//     document.getElementById("twitterImageIconFooter").style.width =  newWidth + "px"
-// },3000);
-
+<script type="text/javascript">
+// setTimeout(() => {
+//     var newWidth = $(".footerIcons").width();
+//     var newHeight = $(".footerIcons").height();
+    
+//     document.getElementById("twitterImageIconFooter").style.height = newHeight + "px"
+//     document.getElementById("twitterImageIconFooter").style.width =  newWidth + "px"
+// },3000);
+
 // </script>
-<style>
-    #twitterImageIconFooter{
-        margin-bottom:3px;
-    }
+<style>
+    #twitterImageIconFooter{
+        margin-bottom:3px;
+    }
 </style>
 <div class="col-2 col-md-auto text-center text-lg-left pl-0 d-none">
 <a aria-label="Link to our social media page" class="sci footerIcons" href="" target="_blank">
 <i alt="Find more on our social media page (opens in new tab)" class="fab fa-twitter newIconColour fa-lg" title="Social Media Icon"></i>
 </a>
 </div>
-<style>
-    .newIconColour{
-        color: !important;
-    }
-    
+<style>
+    .newIconColour{
+        color: !important;
+    }
+    
 </style>
 <div class="col-2 col-md-auto text-center text-lg-left pl-0 d-show">
 <a aria-label="Link to our social media page" class="sci footerIcons" href="http://www.linkedin.com/company/apmg-international" target="_blank">
 <i alt="Find more on our social media page (opens in new tab)" class="fab fa-linkedin newIconColour fa-lg" title="Social Media Icon"></i>
 </a>
 </div>
-<style>
-    .newIconColour{
-        color: !important;
-    }
-    
+<style>
+    .newIconColour{
+        color: !important;
+    }
+    
 </style>
 <div class="col-2 col-md-auto text-center text-lg-left pl-0 d-show">
 <a aria-label="Link to our social media page" class="sci footerIcons" href="https://www.youtube.com/user/APMGInternational" target="_blank">
 <i alt="Find more on our social media page (opens in new tab)" class="fab fa-youtube newIconColour fa-lg" title="Social Media Icon"></i>
 </a>
 </div>
-<style>
-    .newIconColour{
-        color: !important;
-    }
-    
+<style>
+    .newIconColour{
+        color: !important;
+    }
+    
 </style>
 <div class="col-2 col-md-auto text-center text-lg-left pl-0 d-show">
 <a aria-label="Link to our social media page" class="sci footerIcons" href="https://www.instagram.com/apmg_international" target="_blank">
 <i alt="Find more on our social media page (opens in new tab)" class="fab fa-instagram newIconColour fa-lg" title="Social Media Icon"></i>
 </a>
 </div>
-<style>
-    .newIconColour{
-        color: !important;
-    }
-    
+<style>
+    .newIconColour{
+        color: !important;
+    }
+    
 </style>
-<style>
-    .sci.glassdoor-social svg {
-        height: 16.8px;
-    }
+<style>
+    .sci.glassdoor-social svg {
+        height: 16.8px;
+    }
 </style>
 <div class="col-2 col-md-auto text-center text-lg-left pl-0 d-none">
 <a alt="Glassdoor Icon" class="sci glassdoor-social" href="#" target="_blank" title="[@iconAltTextDisplay@]">
@@ -703,55 +703,55 @@ body {
 <img alt="Footer Accreditation" class="mx-auto d-none ml-auto" src="" style="[@style@]"/>
 </a>
 </div>
-<style>
-    .accreditation > img { max-height:100px; }
-    /*@media only screen and (min-width : 992px) {*/
-    /*    .accreditation { max-width:20%;}*/
-    /*}*/
+<style>
+    .accreditation > img { max-height:100px; }
+    /*@media only screen and (min-width : 992px) {*/
+    /*    .accreditation { max-width:20%;}*/
+    /*}*/
 </style>
 <div class="col-sm-12 col-md-6 col-lg text-center accreditation my-4 my-lg-auto d-none">
 <a [@linkurl@]="" target="[@openNewTab@]">
 <img alt="Footer Accreditation" class="mx-auto d-none" src="" style="[@style@]"/>
 </a>
 </div>
-<style>
-    .accreditation > img { max-height:100px; }
-    /*@media only screen and (min-width : 992px) {*/
-    /*    .accreditation { max-width:20%;}*/
-    /*}*/
+<style>
+    .accreditation > img { max-height:100px; }
+    /*@media only screen and (min-width : 992px) {*/
+    /*    .accreditation { max-width:20%;}*/
+    /*}*/
 </style>
 <div class="col-sm-12 col-md-6 col-lg text-center accreditation my-4 my-lg-auto d-none">
 <a [@linkurl@]="" target="[@openNewTab@]">
 <img alt="Footer Accreditation" class="mx-auto d-none" src="" style="[@style@]"/>
 </a>
 </div>
-<style>
-    .accreditation > img { max-height:100px; }
-    /*@media only screen and (min-width : 992px) {*/
-    /*    .accreditation { max-width:20%;}*/
-    /*}*/
+<style>
+    .accreditation > img { max-height:100px; }
+    /*@media only screen and (min-width : 992px) {*/
+    /*    .accreditation { max-width:20%;}*/
+    /*}*/
 </style>
 <div class="col-sm-12 col-md-6 col-lg text-center accreditation my-4 my-lg-auto d-none">
 <a [@linkurl@]="" target="[@openNewTab@]">
 <img alt="Footer Accreditation" class="mx-auto d-none" src="" style="[@style@]"/>
 </a>
 </div>
-<style>
-    .accreditation > img { max-height:100px; }
-    /*@media only screen and (min-width : 992px) {*/
-    /*    .accreditation { max-width:20%;}*/
-    /*}*/
+<style>
+    .accreditation > img { max-height:100px; }
+    /*@media only screen and (min-width : 992px) {*/
+    /*    .accreditation { max-width:20%;}*/
+    /*}*/
 </style>
 <div class="col-sm-12 col-md-6 col-lg text-center accreditation my-4 my-lg-auto d-none">
 <a [@linkurl@]="" target="[@openNewTab@]">
 <img alt="Footer Accreditation" class="mx-auto d-none" src="" style="[@style@]"/>
 </a>
 </div>
-<style>
-    .accreditation > img { max-height:100px; }
-    /*@media only screen and (min-width : 992px) {*/
-    /*    .accreditation { max-width:20%;}*/
-    /*}*/
+<style>
+    .accreditation > img { max-height:100px; }
+    /*@media only screen and (min-width : 992px) {*/
+    /*    .accreditation { max-width:20%;}*/
+    /*}*/
 </style>
 </div>
 </div>
@@ -764,76 +764,76 @@ body {
 </div>
 </div>
 </div>
-<style>
-    .afterFooter p:last-child {
-        margin-bottom:0;
-    }
-    .footerLinks {
-        color:  !important;
-    }
-    
+<style>
+    .afterFooter p:last-child {
+        margin-bottom:0;
+    }
+    .footerLinks {
+        color:  !important;
+    }
+    
 </style>
-<script>
-      $("a").addClass('');
-
-
-  $('.afterFooter').children().children().children().children().children().children().addClass('footerLinks');
-
-
+<script>
+      $("a").addClass('');
+
+
+  $('.afterFooter').children().children().children().children().children().children().addClass('footerLinks');
+
+
 </script>
 </footer>
-<script>
-$(function() {
-    // Dity fontawesome fix, do not remove, sorts an issue in I.E //
-    if (window.document.documentMode) {
-        var script = '<script defer src="https://pro.fontawesome.com/releases/v5.13.1/js/all.js" integrity="sha384-RFburpZVVirucdjarLLIoBiT+LY5YuPB8XboZYWRuWpElr46csH7Ia2nsHfkfBZF" crossorigin="anonymous">';
-        $('head').append(script);
-        setTimeout(function(){ $("svg.faiefix.svg-inline--fa").addClass("mx-auto"); }, 500);
-        console.log("Hey, you are using I.E :( !");
-    }
-});
+<script>
+$(function() {
+    // Dity fontawesome fix, do not remove, sorts an issue in I.E //
+    if (window.document.documentMode) {
+        var script = '<script defer src="https://pro.fontawesome.com/releases/v5.13.1/js/all.js" integrity="sha384-RFburpZVVirucdjarLLIoBiT+LY5YuPB8XboZYWRuWpElr46csH7Ia2nsHfkfBZF" crossorigin="anonymous">';
+        $('head').append(script);
+        setTimeout(function(){ $("svg.faiefix.svg-inline--fa").addClass("mx-auto"); }, 500);
+        console.log("Hey, you are using I.E :( !");
+    }
+});
 </script>
-<script>
-//Empty
+<script>
+//Empty
 </script>
-<script>
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 </script>
-<script>
-        var autoload = true;
-        $(function(){
-        
-            try {
-                if (window.location.search.length > 0) {
-                    var QueryString = decodeURIComponent(window.location.search);
-                    QueryString = QueryString.replace("?","");
-                    var Variables = QueryString.split("&");
-                    var Vari = "";
-                    
-                    for (Vari of Variables) {
-                        var Criteria = Vari.split("=")[0];
-                        var Value = Vari.split("=")[1];
-                        if ($('#search-form-area [id=' + '"' + Criteria + '"' + ']').length > 0) {
-                            $('#search-form-area [id=' + '"' + Criteria + '"' + ']').val(Value);
-                        }
-                        }
-                    }
-                }
-            catch {
-            }
-            
-            if(autoload)
-            {
-            console.log("auto");
-            performSearch();
-        }
-        
-        
-    })
-    $(function() {
-    console.log( "ready!" );
-});
+<script>
+        var autoload = true;
+        $(function(){
+        
+            try {
+                if (window.location.search.length > 0) {
+                    var QueryString = decodeURIComponent(window.location.search);
+                    QueryString = QueryString.replace("?","");
+                    var Variables = QueryString.split("&");
+                    var Vari = "";
+                    
+                    for (Vari of Variables) {
+                        var Criteria = Vari.split("=")[0];
+                        var Value = Vari.split("=")[1];
+                        if ($('#search-form-area [id=' + '"' + Criteria + '"' + ']').length > 0) {
+                            $('#search-form-area [id=' + '"' + Criteria + '"' + ']').val(Value);
+                        }
+                        }
+                    }
+                }
+            catch {
+            }
+            
+            if(autoload)
+            {
+            console.log("auto");
+            performSearch();
+        }
+        
+        
+    })
+    $(function() {
+    console.log( "ready!" );
+});
     </script>
 </body>
