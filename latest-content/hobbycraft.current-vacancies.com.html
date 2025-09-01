@@ -2,14 +2,14 @@
 <div class="container-fluid bg-light">
 <nav class="navbar navbar-expand-lg py-4">
 <div class="container">
-<a class="navbar-brand mr-lg-3 mr-0" href="https://apmg-international.com/" target="_blank">
-<img alt="Logo" class="theLogoOverRide" id="logoGlobalCore_ClientLogo2" src="/Logo/3347/0" style="display:none; "/>
+<a class="navbar-brand mr-lg-3 mr-0" href="https://www.hobbycraft.co.uk/" target="_blank">
+<img alt="Logo" class="theLogoOverRide py-0" id="logoGlobalCore_ClientLogo2" src="/Logo/1112/0" style="display:none; max-width: 200px;"/>
 </a>
 <div class="groupLogo navbar-brand ml-3 my-auto">
 </div>
 <script>
    var groupLogo = "";
-   theImage = "<span>Part of</span><img class=\"w-50 partOfOtherLogo\" style=\"\" src=\"" + groupLogo + "\">";
+   theImage = "<span>Part of</span><img class=\"w-50 partOfOtherLogo\" style=\"max-width: 200px;\" src=\"" + groupLogo + "\">";
    if (groupLogo) {
        $(".groupLogo").html(theImage);
    } else {
@@ -82,7 +82,7 @@
 <script>
 $(function () {
     var btnColor = 'primary';
-    var html = "<li class='nav-item' style='background-color:transparent'><a class='btn btn-" + btnColor.toLowerCase() + " text-white ml-2 invert-checker' href='/oneaccount/account/logintype/4198' title='Register / Signup for Job Alerts' id='reg-log-btn'>Register / Job alerts</a></li>";
+    var html = "<li class='nav-item' style='background-color:transparent'><a class='btn btn-" + btnColor.toLowerCase() + " text-white ml-2 invert-checker' href='/oneaccount/account/logintype/1347' title='Register / Signup for Job Alerts' id='reg-log-btn'>Register / Job alerts</a></li>";
     $('#NavNew').append(html);
     if ($("#NavNew .nav-item").length == 2) {
             $("#NavNew .nav-item:first").hide();
@@ -142,17 +142,17 @@ $(function () {
             
         })
     </script>
-<div class="container-fluid makeitRainGold" id="search-box-banner" style="position:relative;background-image: url('https://apmgroup.cascaderecruitmentplusmanagement.co.uk/Content/ClientImages/3347/APMGroup-banner-vsp.jpg');background-position:center 30%;background-size:cover;" title="Background Lifestyle Image">
+<div class="container-fluid makeitRainGold" id="search-box-banner" style="position:relative;background-image: url('https://hobbycraft.networxrecruitment.net/Content/ClientImages/1112/HC-VSP-Banner.jpg');background-position:center 50%;background-size:cover;" title="Background Lifestyle Image">
 <div class="row h-100 py-5" style="min-height:30vh">
 <div class="container">
 <div class="row h-100">
 <div class="col-12 py-5 align-self-center text-center" id="search-form-area">
-<h1 class="text-white display-4">Find your perfect job!</h1>
+<h1 class="text-white display-4">Love craft? Then we'll love you!</h1>
 <p class="pb-0 mb-0 text-white">
-                        Below you'll find all of our current openings.
-                    </p>
+                        If you love craft as much as we do, then you'll fit in a treat at Hobbycraft. We need positive people with the same passion to give outstanding, expert service to our customers.<br/><br/>
+</p>
 <p class="pt-0 pb-0 mb-0 text-white">
-                        Have a look and see if any suit you.
+                        We're Europe's biggest and best art and craft chain with stores throughout the UK. We're growing fast and our plans for growth over the next few years are nothing short of phenomenal!
                     </p>
 <div class="col-lg-8 mx-auto mt-3">
 <form>
@@ -160,15 +160,15 @@ $(function () {
 <input aria-label="Role" class="form-control form-control-lg" id="keywords" placeholder="(e.g. job title, keywords)" type="text"/>
 </div>
 <div class="form-group">
-<select aria-label="location" class="form-control form-control-lg" id="Locations_All Locations" placeholder="Locations_All Locations">
+<select aria-label="location" class="form-control form-control-lg" id="Locations" placeholder="Locations">
 </select>
 </div>
 <div class="form-group">
-<select aria-label="salary range" class="d-none form-control form-control-lg" id="Salary_All Salaries" placeholder="Salary_All Salaries">
+<select aria-label="salary range" class="form-control form-control-lg" id="9384_All Stores/Sites" placeholder="9384_All Stores/Sites">
 </select>
 </div>
 <div class="form-group">
-<a alt="Search Jobs" aria-label="search" class="btn btn-block btn-lg btn-primary invert-checker" href="#" id="searchbtn" onclick="performSearch()">Search Jobs</a>
+<a alt="Search Jobs" aria-label="search" class="btn btn-block btn-lg btn-success invert-checker" href="#" id="searchbtn" onclick="performSearch()">Search Jobs</a>
 </div>
 </form>
 </div>
@@ -185,14 +185,14 @@ $(function () {
             content: ' ';
             width:100%;
             height:100%;
-            background-color: rgb(0, 0,153);
-            opacity: 0.6;
+            background-color: rgb(78, 48,56);
+            opacity: 0.7;
         }
         .makeitRainGold-primary:before {
-            background-color: #000099 !important;
+            background-color: #4e3038 !important;
         }
         .makeitRainGold-secondary:before {
-            background-color: #f8971d !important;
+            background-color: #ff4b80 !important;
         }
         
          @media only screen and (max-width: 400px){
@@ -461,12 +461,12 @@ body {
 <h5 class="mb-3 card-title h5 primary" data-bind="VacancyTitle"></h5>
 </a>
 </div>
-<div class="row d-show">
+<div class="row d-none">
 <div class="col-1">
 <i class="fas fa-map-marker-alt fa-fw fa-fw mr-1 text-primary" title=""></i>
 </div>
 <div class="col-8">
-<p data-bind="Location"></p>
+<p data-bind="Lookup9384"></p>
 </div>
 </div>
 <div class="row d-none">
@@ -479,10 +479,10 @@ body {
 </div>
 <div class="row d-show">
 <div class="col-1">
-<i class="fas fa-clock fa-fw fa-fw mr-1 text-primary" title=""></i>
+<i class="fas fa-info-circle fa-fw fa-fw mr-1 text-primary" title=""></i>
 </div>
 <div class="col">
-<p data-bind="ExpiryDate"></p>
+<p data-bind="Reference"></p>
 </div>
 </div>
 <div class="row d-show">
@@ -521,15 +521,15 @@ body {
 });
 </script>
 <form action="/Careers/SearchVacancies" id="formVacancySearch" method="post">
-<input name="__RequestVerificationToken" type="hidden" value="i27nTAFMPYNbAAsJq8N37mQm1TTMpTbNdskEj5sp779Gtv1IbS3cFhWKTFXmQwIqlFbtMAXfPYvh06UABgXJJ5SJqO41">
-<input applylink","vacancytitle","location","salary","expirydate","applylink"],'currentpage':0,'pagesearchresults':false,'searchresultpagesize':0,'keyword':'','locations':['0'],'disciplines':['0']}"="" id="data" name="data" type="hidden" value="{'ClientID':3347,'OnboardingPageID':0,'DynamicFields':[],'SearchResultFields':["/>
+<input name="__RequestVerificationToken" type="hidden" value="HIS2VNkyvWdUfblqYe1SDDxz4xXHqqIpCEtirTXoRjXOhY17Z7dKFnaixTw7ZlIdDVGPz24Dk-oX3zwqlrDL5PeHfmc1">
+<input applylink","vacancytitle","location","salary","expirydate","applylink"],'currentpage':0,'pagesearchresults':false,'searchresultpagesize':0,'keyword':'','locations':['0'],'disciplines':['0']}"="" id="data" name="data" type="hidden" value="{'ClientID':1112,'OnboardingPageID':0,'DynamicFields':[],'SearchResultFields':["/>
 </input></form>
 <script>
- var cid = 3347;
+ var cid = 1112;
  var RootURL = "/";
         $(function() {
             if (typeof dev === 'undefined'){
-                InitialiseVacancySearch(true, 25,false,RootURL, cid, -116383);
+                InitialiseVacancySearch(true, 25,false,RootURL, cid, -17731);
             }
 });
 </script>
@@ -541,14 +541,14 @@ body {
 <div class="row m-0">
 <div class="col-12 col-sm-12 col-lg-5 my-auto">
 <div class="row justify-content-center justify-content-lg-start m-0">
-<a class="navbar-brand mr-lg-3 mr-0" href="https://apmg-international.com/" target="[@openNewTab@]">
-<img alt="Logo" class="theLogoOverRide" id="logoGlobalCore_ClientLogo1" src="/Logo/3347/0" style="display:none; "/>
+<a class="navbar-brand mr-lg-3 mr-0" href="https://www.hobbycraft.co.uk/" target="[@openNewTab@]">
+<img alt="Logo" class="theLogoOverRide py-3" id="logoGlobalCore_ClientLogo1" src="/Logo/1112/0" style="display:none; max-width: 200px;"/>
 </a>
 <div class="groupLogo navbar-brand ml-3 my-auto">
 </div>
 <script>
    var groupLogo = "";
-   theImage = "<span>Part of</span><img class=\"w-50 partOfOtherLogo\" style=\"\" src=\"" + groupLogo + "\">";
+   theImage = "<span>Part of</span><img class=\"w-50 partOfOtherLogo\" style=\"max-width: 200px;\" src=\"" + groupLogo + "\">";
    if (groupLogo) {
        $(".groupLogo").html(theImage);
    } else {
@@ -610,7 +610,7 @@ body {
 </div>
 <div class="row mt-3 justify-content-center justify-content-lg-start m-0">
 <div class="col-2 col-md-auto text-center text-lg-left pl-0 d-show">
-<a aria-label="Link to our social media page" class="sci footerIcons" href="https://www.facebook.com/APMGinternationalLTD" target="_blank">
+<a aria-label="Link to our social media page" class="sci footerIcons" href="http://www.facebook.com/HobbyCraftUK" target="_blank">
 <i alt="Find more on our social media page (opens in new tab)" class="fab fa-facebook newIconColour fa-lg" title="Social Media Icon"></i>
 </a>
 </div>
@@ -640,8 +640,8 @@ body {
         margin-bottom:3px;
     }
 </style>
-<div class="col-2 col-md-auto text-center text-lg-left pl-0 d-none">
-<a aria-label="Link to our social media page" class="sci footerIcons" href="" target="_blank">
+<div class="col-2 col-md-auto text-center text-lg-left pl-0 d-show">
+<a aria-label="Link to our social media page" class="sci footerIcons" href="https://twitter.com/HobbyCraft" target="_blank">
 <i alt="Find more on our social media page (opens in new tab)" class="fab fa-twitter newIconColour fa-lg" title="Social Media Icon"></i>
 </a>
 </div>
@@ -652,18 +652,7 @@ body {
     
 </style>
 <div class="col-2 col-md-auto text-center text-lg-left pl-0 d-show">
-<a aria-label="Link to our social media page" class="sci footerIcons" href="http://www.linkedin.com/company/apmg-international" target="_blank">
-<i alt="Find more on our social media page (opens in new tab)" class="fab fa-linkedin newIconColour fa-lg" title="Social Media Icon"></i>
-</a>
-</div>
-<style>
-    .newIconColour{
-        color: !important;
-    }
-    
-</style>
-<div class="col-2 col-md-auto text-center text-lg-left pl-0 d-show">
-<a aria-label="Link to our social media page" class="sci footerIcons" href="https://www.youtube.com/user/APMGInternational" target="_blank">
+<a aria-label="Link to our social media page" class="sci footerIcons" href="http://www.youtube.com/HobbyCraft" target="_blank">
 <i alt="Find more on our social media page (opens in new tab)" class="fab fa-youtube newIconColour fa-lg" title="Social Media Icon"></i>
 </a>
 </div>
@@ -674,7 +663,18 @@ body {
     
 </style>
 <div class="col-2 col-md-auto text-center text-lg-left pl-0 d-show">
-<a aria-label="Link to our social media page" class="sci footerIcons" href="https://www.instagram.com/apmg_international" target="_blank">
+<a aria-label="Link to our social media page" class="sci footerIcons" href="http://pinterest.com/hobbycraftuk/" target="_blank">
+<i alt="Find more on our social media page (opens in new tab)" class="fab fa-pinterest newIconColour fa-lg" title="Social Media Icon"></i>
+</a>
+</div>
+<style>
+    .newIconColour{
+        color: !important;
+    }
+    
+</style>
+<div class="col-2 col-md-auto text-center text-lg-left pl-0 d-show">
+<a aria-label="Link to our social media page" class="sci footerIcons" href="http://www.instagram.com/hobbycrafthq/" target="_blank">
 <i alt="Find more on our social media page (opens in new tab)" class="fab fa-instagram newIconColour fa-lg" title="Social Media Icon"></i>
 </a>
 </div>
@@ -698,17 +698,6 @@ body {
 </div>
 <div class="col-8 col-lg-7 my-auto ml-auto mx-auto m-0">
 <div class="row justify-content-lg-end justify-content-center ml-auto ac-hold">
-<div class="col-sm-12 col-md-6 col-lg text-center accreditation my-4 my-lg-auto d-none ml-auto">
-<a [@linkurl@]="" target="[@openNewTab@]">
-<img alt="Footer Accreditation" class="mx-auto d-none ml-auto" src="" style="[@style@]"/>
-</a>
-</div>
-<style>
-    .accreditation > img { max-height:100px; }
-    /*@media only screen and (min-width : 992px) {*/
-    /*    .accreditation { max-width:20%;}*/
-    /*}*/
-</style>
 <div class="col-sm-12 col-md-6 col-lg text-center accreditation my-4 my-lg-auto d-none">
 <a [@linkurl@]="" target="[@openNewTab@]">
 <img alt="Footer Accreditation" class="mx-auto d-none" src="" style="[@style@]"/>
@@ -753,14 +742,25 @@ body {
     /*    .accreditation { max-width:20%;}*/
     /*}*/
 </style>
+<div class="col-sm-12 col-md-6 col-lg text-center accreditation my-4 my-lg-auto d-none">
+<a [@linkurl@]="" target="[@openNewTab@]">
+<img alt="Footer Accreditation" class="mx-auto d-none" src="" style="[@style@]"/>
+</a>
+</div>
+<style>
+    .accreditation > img { max-height:100px; }
+    /*@media only screen and (min-width : 992px) {*/
+    /*    .accreditation { max-width:20%;}*/
+    /*}*/
+</style>
 </div>
 </div>
 </div>
 </div>
-<div class="row afterFooter">
+<div class="row d-none afterFooter">
 <div class="col-sm-12">
 <div class="container">
-<small></small>
+<small><p>Copyright 2000</p></small>
 </div>
 </div>
 </div>
