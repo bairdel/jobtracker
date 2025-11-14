@@ -991,7 +991,7 @@ c46 117 132 292 188 380 l40 63 -43 56 c-125 162 -329 293 -548 352 -84 22
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-765" id="menu-item-765"><a href="https://bedegaming.com/bookademo/">Book a Demo</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3360" id="menu-item-3360"><a href="https://bedegaming.com/tax-strategy/">Tax Strategy</a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3382" id="menu-item-3382"><a href="https://gauselmann.de/compliance-supply-chain.html">Compliance and Supply Chain</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25" id="menu-item-25"><a href="https://bloom-digital.s3.eu-west-2.amazonaws.com/bede/wp-content/uploads/2023/02/16161749/HR-POL-Code-Of-Conduct-EN_-SLIDE-2023.pdf" rel="noopener" target="_blank">Code of Conduct</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25" id="menu-item-25"><a href="https://bloom-digital.s3.eu-west-2.amazonaws.com/bede/wp-content/uploads/2023/02/16161749/HR-POL-Code-Of-Conduct-EN_-SLIDE-2023.pdf" target="_blank">Code of Conduct</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3235" id="menu-item-3235"><a href="https://bedegaming.com/privacy-and-cookie-policy/">Privacy and Cookie Policy</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3238" id="menu-item-3238"><a href="https://bedegaming.com/website-terms-of-use/">Terms of Use</a></li>
 </ul></div> </div>
@@ -1040,15 +1040,18 @@ c46 117 132 292 188 380 l40 63 -43 56 c-125 162 -329 293 -548 352 -84 22
 </div>
 </div>
 </div>
-<div class="not-a-cookie-banner bg-white js-not-a-cookie-banner" id="popup-banner">
-<div class="inner">
-<p>We use cookies (and other similar technologies) to collect data to improve your experience on our site. By using our website, you’re agreeing to the collection of data as described in our <a href="https://bedegaming.com/privacy-and-cookie-policy/">Cookie Policy.</a></p>
-<div class="cookie-banner__btns">
-<button class="button black" id="js-cookie-accept">Accept</button>
-<button class="button white" id="js-cookie-reject">Reject</button>
-</div>
-</div>
-</div>
+
+
+
+
+
+
+
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/bloom\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="nsc_bara_new_banner_config_js_module-js-module" src="https://bedegaming.com/wp-content/nsc-bara-beautiful-cookie-banner-addon-files/cookieconsent-config/cookieconsent-config.js?ver=4.1.2-726077116" type="module"></script>
 <script id="rocket-browser-checker-js-after">
 "use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
 </script>
