@@ -1,13 +1,12 @@
 <body class="coreCSB talentlanding-page body body" id="body">
-<span aria-level="1" class="aria-pageTitleText-hidden" id="aria-pageTitleText-hidden" role="heading"></span>
 <div class="outershell" id="outershell">
 <div aria-labelledby="cookieManagerModalLabel" class="cookiePolicy cookiemanager" role="region" style="display:none">
 <div class="centered">
 <p>We use cookies to offer you the best possible website experience. Your cookie preferences will be stored in your browser’s local storage. This includes cookies necessary for the website's operation. Additionally, you can freely decide and change any time whether you accept cookies or choose to opt out of cookies to improve the website's performance, as well as cookies used to display content tailored to your interests. Your experience of the site and the services we are able to offer may be impacted if you do not accept all cookies.</p>
-<button class="link cookieSmallBannerButton secondarybutton shadowfocus" data-target="#cookieManagerModal" data-toggle="modal" id="cookie-bannershow">
+<button class="link cookieSmallBannerButton secondarybutton shadowfocus" data-target="#cookieManagerModal" data-toggle="modal" id="cookie-bannershow" tabindex="1">
                 Modify Cookie Preferences</button>
 <div id="reject-accept-cookiewrapper">
-<button class="cookieSmallBannerButton cookiemanageracceptall shadowfocus" id="cookie-accept">
+<button class="cookieSmallBannerButton cookiemanageracceptall shadowfocus" id="cookie-accept" tabindex="1">
                 Accept All Cookies</button>
 </div>
 </div>
@@ -26,7 +25,6 @@
             //]]>
         </script>
 <div id="skip">
-<div id="diversion" tabindex="-1"><span class="sr-only">Press Tab to Move to Skip to Content Link</span></div>
 <a class="skipLink" href="#content" id="skipLink" title="Skip to main content"><span>Skip to main content</span></a>
 </div>
 <div class="limitwidth">
@@ -67,7 +65,7 @@
 </a>
 <div class="nav">
 <div class="dropdown mobile-search">
-<a aria-label="Search" class="dropdown-toggle" data-target="#searchSlideNav" data-toggle="collapse" href="#" id="searchToggleBtn" title="Search"><span class="mobilelink fa fa-search"></span></a>
+<button aria-label="Search" class="dropdown-toggle" data-target="#searchSlideNav" data-toggle="collapse" id="searchToggleBtn" title="Search" type="button"><span class="mobilelink fa fa-search"></span></button>
 <div class="dropdown-menu search-collapse" id="searchSlideNav">
 <div class="well well-small searchwell">
 <form action="/search/" class="form-inline jobAlertsSearchForm" lang="en-GB" method="get" name="keywordsearch" role="search" style="margin: 0;" xml:lang="en-GB">
@@ -199,8 +197,8 @@
 </li>
 </ul>
 </div>
-<script src="/platform/csb/js/slick.min.js?h=ff78e34d" type="text/javascript"></script>
-<link href="/platform/csb/css/slick.css?h=ff78e34d" rel="stylesheet" type="text/css"/>
+<script src="/platform/csb/js/accessible.slick.min.js?h=62c263b4" type="text/javascript"></script>
+<link href="/platform/csb/css/slick.css?h=62c263b4" rel="stylesheet" type="text/css"/>
 <script type="text/javascript">
 
         //<![CDATA[
@@ -210,12 +208,14 @@
                     slidesToScroll: 1,
                     autoplay: false,
                     autoplaySpeed: 0 * 1000,
+                    useAutoplayToggleButton: false,
                     adaptiveHeight: true,
                     dots: true,
                     arrows: true,
                     fade: true,
                     focusOnSelect: true,
                     focusOnChange: true,
+                    regionLabel: "Image carousel",
                     nextArrow: '<button type="button" class="slick-next pull-right" aria-label="Next Slide"><i class="fa fa-angle-right fontcolor72228158" aria-hidden="true"><span style="display:none"></span></i></button>',
                     prevArrow: '<button type="button" class="slick-prev pull-left" aria-label="Previous Slide"><i class="fa fa-angle-left fontcolor72228158" aria-hidden="true"><span style="display:none"></span></i></button>'
             });
@@ -313,8 +313,8 @@
 <span class="alert-icon-frequency-error fa fa-exclamation-circle"></span><div aria-live="polite" class="frequency-error-message" id="frequency-error-feedback"></div>
 </div>
 <span class="subscribe-frequency-label">
-<label aria-hidden="true" for="j_idt357" id="labelFrequencySpinBtn">Select how often (in days) to receive an alert:</label>
-<input aria-labelledby="labelFrequencySpinBtn" class="form-control subscribe-frequency frequencySpinBtn" id="j_idt357" max="99" maxlength="2" min="1" name="frequency" oninput="j2w.Agent.setValidFrequency(this)" required="required" type="number" value="7"/>
+<label aria-hidden="true" for="j_idt920" id="labelFrequencySpinBtn">Select how often (in days) to receive an alert:</label>
+<input aria-labelledby="labelFrequencySpinBtn" class="form-control subscribe-frequency frequencySpinBtn" id="j_idt920" max="99" maxlength="2" min="1" name="frequency" oninput="j2w.Agent.setValidFrequency(this)" required="required" type="number" value="7"/>
 </span>
 <div class="savesearch-buttons-wrapper">
 <button class="btn savesearch-link" id="savesearch-link" tabindex="0"><i aria-hidden="true" class="icon-envelope glyphicon-envelope"></i> Create Alert</button>
@@ -333,8 +333,8 @@
 <div aria-live="polite" class="frequency-error-message"></div>
 </div>
 <span class="subscribe-frequency-label">
-<label aria-hidden="true" for="j_idt368" id="labelFrequencySpinBtn">Select how often (in days) to receive an alert:</label>
-<input aria-labelledby="labelFrequencySpinBtn" class="form-control subscribe-frequency frequencySpinBtn" id="j_idt368" max="99" maxlength="2" min="1" name="frequency" oninput="j2w.Agent.setValidFrequency(this)" required="required" type="number" value="7"/>
+<label aria-hidden="true" for="j_idt931" id="labelFrequencySpinBtn">Select how often (in days) to receive an alert:</label>
+<input aria-labelledby="labelFrequencySpinBtn" class="form-control subscribe-frequency frequencySpinBtn" id="j_idt931" max="99" maxlength="2" min="1" name="frequency" oninput="j2w.Agent.setValidFrequency(this)" required="required" type="number" value="7"/>
 </span>
 <input class="btn emailsubscribe-button" id="emailsubscribe-button" style="float: none" title="Create Alert" type="submit" value="Create Alert"/>
 </div>
@@ -390,7 +390,7 @@
 <label class="s508-hide" for="date">Date (dd/MM/y)</label><input class="filter-input" data-column="referencedate" id="date" name="date" style="width: 100%;" title="Filter: Date" type="text"/>
 </td>
 <td id="filter-submit">
-<form action="/go/Graduates/3963301/" id="searchfilter" method="get" name="searchfilter">
+<form action="/go/Graduates/3963301/#searchresults" id="searchfilter" method="get" name="searchfilter">
 <input class="btn btn-default" id="searchfilter-submit" type="submit" value="Filter"/>
 <input id="q" name="q" type="hidden"/>
 <input id="q2" name="q2" type="hidden"/>
@@ -581,28 +581,28 @@ $('#distance').watermark('');
 <div class="rightfloat">
 <ul class="disclaimer social-links" role="list">
 <li class="social-icons">
-<a aria-description="Opens in a new tab." class="social-icon btn-facebook" href="https://www.facebook.com/yorkshirewater" target="_blank" title="facebook">
+<a aria-description="Opens in a new tab." aria-label="Visit our Facebook page" class="social-icon btn-facebook" href="https://www.facebook.com/yorkshirewater" target="_blank" title="facebook">
 <svg height="48px" viewbox="0 0 24 24" width="48px">
 <path d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z" fill="#F5F5F5" id="facebook1"></path>
 </svg>
 </a>
 </li>
 <li class="social-icons">
-<a aria-description="Opens in a new tab." class="social-icon btn-twitter" href="https://twitter.com/yorkshirewater" target="_blank" title="twitter">
+<a aria-description="Opens in a new tab." aria-label="Follow us on X" class="social-icon btn-twitter" href="https://twitter.com/yorkshirewater" target="_blank" title="X">
 <svg height="35px" viewbox="0 0 1200 1227" width="35px">
 <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="#F5F5F5" id="SVGPath"></path>
 </svg>
 </a>
 </li>
 <li class="social-icons">
-<a aria-description="Opens in a new tab." class="social-icon btn-linkedin" href="https://www.linkedin.com/company/yorkshire-water/" target="_blank" title="linkedin">
+<a aria-description="Opens in a new tab." aria-label="Follow us on LinkedIn" class="social-icon btn-linkedin" href="https://www.linkedin.com/company/yorkshire-water/" target="_blank" title="linkedin">
 <svg height="48px" viewbox="0 0 48 48" width="48px">
 <path d="M41,4.1H7A2.9,2.9,0,0,0,4,7V41.1A2.9,2.9,0,0,0,7,44H41a2.9,2.9,0,0,0,2.9-2.9V7A2.9,2.9,0,0,0,41,4.1Zm-25.1,34h-6v-19h6Zm-3-21.6A3.5,3.5,0,0,1,9.5,13a3.4,3.4,0,0,1,6.8,0A3.5,3.5,0,0,1,12.9,16.5ZM38,38.1H32.1V28.8c0-2.2,0-5-3.1-5s-3.5,2.4-3.5,4.9v9.4H19.6v-19h5.6v2.6h.1a6.2,6.2,0,0,1,5.6-3.1c6,0,7.1,3.9,7.1,9.1Z" fill="#F5F5F5" id="linkedin1"></path>
 </svg>
 </a>
 </li>
 <li class="social-icons">
-<a aria-description="Opens in a new tab." class="social-icon btn-instagram" href="https://www.instagram.com/yorkshirewater/" target="_blank" title="instagram">
+<a aria-description="Opens in a new tab." aria-label="Follow us on Instagram" class="social-icon btn-instagram" href="https://www.instagram.com/yorkshirewater/" target="_blank" title="instagram">
 <svg fill="#F5F5F5" height="48px" viewbox="0 0 32 32" width="48px"><path d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z" id="instagram1"></path><path d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"></path></svg>
 </a>
 </li>
@@ -861,24 +861,25 @@ $('#distance').watermark('');
 </div>
 </div>
 <div class="modal-footer">
-<button class="link btn-default pull-left shadowfocus" data-dismiss="modal" id="cookiemanageracceptselected" type="button">Confirm My Choices
+<button class="link btn-default pull-left shadowfocus" data-dismiss="modal" id="cookiemanageracceptselected" tabindex="1" type="button">Confirm My Choices
                         </button>
 <div style="float:right">
-<button class="shadowfocus btn-primary cookiemanageracceptall" data-dismiss="modal" id="cookiemanageracceptall" type="button">Accept All Cookies</button>
+<button class="shadowfocus btn-primary cookiemanageracceptall" data-dismiss="modal" id="cookiemanageracceptall" tabindex="1" type="button">Accept All Cookies</button>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<script class="keepscript" src="https://mycareers.yorkshirewater.com/platform/js/j2w/min/j2w.cookiemanagershared.min.js?h=ff78e34d" type="text/javascript"></script>
-<script src="/platform/js/j2w/min/j2w.cookiemanager.min.js?h=ff78e34d" type="text/javascript"></script>
-<script class="keepscript" src="https://mycareers.yorkshirewater.com/platform/bootstrap/3.4.1/js/bootstrap.min.js" type="text/javascript"></script><script type="text/javascript"></script>
+<script class="keepscript" src="https://mycareers.yorkshirewater.com/platform/js/j2w/min/j2w.cookiemanagershared.min.js?h=62c263b4" type="text/javascript"></script>
+<script src="/platform/js/j2w/min/j2w.cookiemanager.min.js?h=62c263b4" type="text/javascript"></script>
+<script class="keepscript" src="https://mycareers.yorkshirewater.com/platform/bootstrap/3.4.8_NES/js/lib/dompurify/purify.min.js" type="text/javascript"></script>
+<script class="keepscript" src="https://mycareers.yorkshirewater.com/platform/bootstrap/3.4.8_NES/js/bootstrap.min.js" type="text/javascript"></script><script type="text/javascript"></script>
 <script type="text/javascript">
 		//<![CDATA[
 			$(function() 
 			{
-				var ctid = 'e9abed03-b795-4b47-90d4-7579d21834bd';
+				var ctid = '85a549e1-d5ea-4cae-9cea-319d7dd32858';
 				var referrer = '';
 				var landing = document.location.href;
 				var brand = '';
@@ -906,9 +907,9 @@ $('#distance').watermark('');
             });
             //]]>
         </script>
-<script src="/platform/js/localized/strings_en_GB.js?h=ff78e34d" type="text/javascript"></script>
-<script src="/platform/js/j2w/min/j2w.core.min.js?h=ff78e34d" type="text/javascript"></script>
-<script src="/platform/js/j2w/min/j2w.tc.min.js?h=ff78e34d" type="text/javascript"></script>
+<script src="/platform/js/localized/strings_en_GB.js?h=62c263b4" type="text/javascript"></script>
+<script src="/platform/js/j2w/min/j2w.core.min.js?h=62c263b4" type="text/javascript"></script>
+<script src="/platform/js/j2w/min/j2w.tc.min.js?h=62c263b4" type="text/javascript"></script>
 <script type="text/javascript">
 			//<![CDATA[
 				j2w.init({
@@ -940,18 +941,18 @@ $('#distance').watermark('');
 				$.ajaxSetup({
 					cache   : false,
 					headers : {
-						"X-CSRF-Token" : "0a9f5bb8-f33a-4f76-baa1-120a1fc64d7b"
+						"X-CSRF-Token" : "0d8427c8-36cd-4370-9427-1060b20fb5cc"
 					}
 				});
 			//]]>
 		</script>
-<script src="/platform/js/search/search.js?h=ff78e34d" type="text/javascript"></script>
-<script src="/platform/js/j2w/min/j2w.user.min.js?h=ff78e34d" type="text/javascript"></script>
-<script src="/platform/js/j2w/min/j2w.agent.min.js?h=ff78e34d" type="text/javascript"></script>
+<script src="/platform/js/search/search.js?h=62c263b4" type="text/javascript"></script>
+<script src="/platform/js/j2w/min/j2w.user.min.js?h=62c263b4" type="text/javascript"></script>
+<script src="/platform/js/j2w/min/j2w.agent.min.js?h=62c263b4" type="text/javascript"></script>
 <script src="/platform/js/jquery/js.cookie-2.2.1.min.js" type="text/javascript"></script>
 <script src="/platform/js/jquery/jquery.lightbox_me.js" type="text/javascript"></script>
 <script src="/platform/js/jquery/jquery.placeholder.2.0.7.min.js" type="text/javascript"></script>
-<script src="/js/override.js?locale=en_GB&amp;i=159595180" type="text/javascript"></script>
+<script src="/js/override.js?locale=en_GB&amp;i=1663587364" type="text/javascript"></script>
 <script type="text/javascript">
             const jobAlertSpans = document.querySelectorAll("[data-testid=jobAlertSpanText]");
             jobAlertSpans?.forEach((jobEl) => {
@@ -966,7 +967,7 @@ $('#distance').watermark('');
                     };
                 //]]>
             </script>
-<script src="/platform/js/tc/subscribeWidget.js?h=ff78e34d" type="text/javascript"></script>
+<script src="/platform/js/tc/subscribeWidget.js?h=62c263b4" type="text/javascript"></script>
 <script type="text/javascript">
                             //<![CDATA[
                             $(function() {
@@ -995,7 +996,7 @@ $('#distance').watermark('');
                             });
                             //]]>
                         </script>
-<script src="/platform/js/j2w/min/options-search.min.js?h=ff78e34d" type="text/javascript"></script>
+<script src="/platform/js/j2w/min/options-search.min.js?h=62c263b4" type="text/javascript"></script>
 <script type="application/javascript">
                 //<![CDATA[
                 var j2w = j2w || {};

@@ -1,15 +1,14 @@
 <body class="coreCSB search-page body body" id="body">
-<span aria-level="1" class="aria-pageTitleText-hidden" id="aria-pageTitleText-hidden" role="heading"></span>
 <div class="outershell" id="outershell">
 <div aria-labelledby="cookieManagerModalLabel" class="cookiePolicy cookiemanager" role="region" style="display:none">
 <div class="centered"><p>Cookies on BT.com</p>
 <p>We use cookies to do things like remember what you've added to your shopping basket, offer live chat support and show you content we think you'll be interested in. If you're happy with the use of cookies by BT and selected partners, click OK.</p>
-<button class="link cookieSmallBannerButton secondarybutton shadowfocus" data-target="#cookieManagerModal" data-toggle="modal" id="cookie-bannershow">
+<button class="link cookieSmallBannerButton secondarybutton shadowfocus" data-target="#cookieManagerModal" data-toggle="modal" id="cookie-bannershow" tabindex="1">
                 Modify Cookie Preferences</button>
 <div id="reject-accept-cookiewrapper">
-<button class="cookieSmallBannerButton cookiemanagerrejectall shadowfocus" id="cookie-reject">
+<button class="cookieSmallBannerButton cookiemanagerrejectall shadowfocus" id="cookie-reject" tabindex="1">
                     Reject All Cookies</button>
-<button class="cookieSmallBannerButton cookiemanageracceptall shadowfocus" id="cookie-accept">
+<button class="cookieSmallBannerButton cookiemanageracceptall shadowfocus" id="cookie-accept" tabindex="1">
                 Accept All Cookies</button>
 </div>
 </div>
@@ -38,7 +37,6 @@
 
         </script>
 <div id="skip">
-<div id="diversion" tabindex="-1"><span class="sr-only">Press Tab to Move to Skip to Content Link</span></div>
 <a class="skipLink" href="#content" id="skipLink" title="Skip to main content"><span>Skip to main content</span></a>
 </div>
 <div class="custom-mobile-header displayM center unmodified backgroundimage">
@@ -397,8 +395,8 @@
 <span class="alert-icon-frequency-error fa fa-exclamation-circle"></span><div aria-live="polite" class="frequency-error-message" id="frequency-error-feedback"></div>
 </div>
 <span class="subscribe-frequency-label">
-<label aria-hidden="true" for="j_idt181" id="labelFrequencySpinBtn">Select how often (in days) to receive an alert:</label>
-<input aria-labelledby="labelFrequencySpinBtn" class="form-control subscribe-frequency frequencySpinBtn" id="j_idt181" max="99" maxlength="2" min="1" name="frequency" oninput="j2w.Agent.setValidFrequency(this)" required="required" type="number" value="7"/>
+<label aria-hidden="true" for="j_idt521" id="labelFrequencySpinBtn">Select how often (in days) to receive an alert:</label>
+<input aria-labelledby="labelFrequencySpinBtn" class="form-control subscribe-frequency frequencySpinBtn" id="j_idt521" max="99" maxlength="2" min="1" name="frequency" oninput="j2w.Agent.setValidFrequency(this)" required="required" type="number" value="7"/>
 </span>
 <div class="savesearch-buttons-wrapper">
 <button class="btn savesearch-link" id="savesearch-link" tabindex="0"><i aria-hidden="true" class="icon-envelope glyphicon-envelope"></i> Create Alert</button>
@@ -417,8 +415,8 @@
 <div aria-live="polite" class="frequency-error-message"></div>
 </div>
 <span class="subscribe-frequency-label">
-<label aria-hidden="true" for="j_idt192" id="labelFrequencySpinBtn">Select how often (in days) to receive an alert:</label>
-<input aria-labelledby="labelFrequencySpinBtn" class="form-control subscribe-frequency frequencySpinBtn" id="j_idt192" max="99" maxlength="2" min="1" name="frequency" oninput="j2w.Agent.setValidFrequency(this)" required="required" type="number" value="7"/>
+<label aria-hidden="true" for="j_idt534" id="labelFrequencySpinBtn">Select how often (in days) to receive an alert:</label>
+<input aria-labelledby="labelFrequencySpinBtn" class="form-control subscribe-frequency frequencySpinBtn" id="j_idt534" max="99" maxlength="2" min="1" name="frequency" oninput="j2w.Agent.setValidFrequency(this)" required="required" type="number" value="7"/>
 </span>
 <input class="btn emailsubscribe-button" id="emailsubscribe-button" style="float: none" title="Create Alert" type="submit" value="Create Alert"/>
 </div>
@@ -432,14 +430,14 @@
 <div class="paginationShell clearfix" lang="en-GB" xml:lang="en-GB">
 <div class="well well-lg pagination-well pagination">
 <div class="pagination-label-row">
-<span aria-label="Results 1 – 8" class="paginationLabel">Results <b>1 – 8</b> of <b>8</b></span>
+<span aria-label="Results 1 – 6" class="paginationLabel">Results <b>1 – 6</b> of <b>6</b></span>
 <span class="srHelp" style="font-size:0px">Page 1 of 1</span>
 </div>
 </div>
 </div>
 </div>
 <div class="searchResultsShell">
-<table aria-label="Search results for United Kingdom AND Digital. Page 1 of 1, Results 1 to 8 of 8" cellpadding="0" cellspacing="0" class="searchResults full table table-striped table-hover" id="searchresults">
+<table aria-label="Search results for United Kingdom AND Digital. Page 1 of 1, Results 1 to 6 of 6" cellpadding="0" cellspacing="0" class="searchResults full table table-striped table-hover" id="searchresults">
 <thead>
 <tr id="search-results-header">
 <th aria-sort="none" id="hdrTitle" scope="col" width="30%">
@@ -473,7 +471,7 @@
 <label class="s508-hide" for="department">Department</label><input class="filter-input" data-column="department" id="department" maxlength="50" name="department" style="width: 100%;" title="Filter: Department" type="text"/>
 </td>
 <td id="filter-submit">
-<form action="/search/" id="searchfilter" method="get" name="searchfilter">
+<form action="/search/#searchresults" id="searchfilter" method="get" name="searchfilter">
 <input class="btn btn-default" id="searchfilter-submit" type="submit" value="Filter"/>
 <input id="q" name="q" type="hidden"/>
 <input id="q2" name="q2" type="hidden"/>
@@ -510,36 +508,6 @@
 </tr>
 </thead>
 <tbody>
-<tr class="data-row">
-<td class="colTitle" headers="hdrTitle">
-<span class="jobTitle hidden-phone">
-<a class="jobTitle-link" href="/BTGroup/job/Snowhill-Software-Engineer-Successfactors-Time-Off-Birm/827631902/">Software Engineer - Successfactors Time Off</a>
-</span>
-<div class="jobdetail-phone visible-phone">
-<span class="jobTitle visible-phone">
-<a class="jobTitle-link" href="/BTGroup/job/Snowhill-Software-Engineer-Successfactors-Time-Off-Birm/827631902/">Software Engineer - Successfactors Time Off</a>
-</span>
-<span class="jobLocation visible-phone">
-<span class="jobLocation">
-            Snowhill, Birmingham, United Kingdom
-            
-        </span></span>
-<span class="jobDate visible-phone">31 Oct 2025
-													                </span>
-<span class="jobFacility visible-phone"></span>
-</div>
-</td>
-<td class="colLocation hidden-phone" headers="hdrLocation">
-<span class="jobLocation">
-            Snowhill, Birmingham, United Kingdom
-            
-        </span>
-</td>
-<td class="colDepartment hidden-phone" headers="hdrDepartment">
-<span class="jobDepartment">Software Engineering</span>
-</td>
-<td class="hidden-phone"></td>
-</tr>
 <tr class="data-row">
 <td class="colTitle" headers="hdrTitle">
 <span class="jobTitle hidden-phone">
@@ -597,36 +565,6 @@
 </td>
 <td class="colDepartment hidden-phone" headers="hdrDepartment">
 <span class="jobDepartment">Software Engineering</span>
-</td>
-<td class="hidden-phone"></td>
-</tr>
-<tr class="data-row">
-<td class="colTitle" headers="hdrTitle">
-<span class="jobTitle hidden-phone">
-<a class="jobTitle-link" href="/Openreach/job/Martlesham-Heath-User-Researcher-%28Openreach-Design-Practice%29-Ipsw/1331595657/">User Researcher (Openreach Design Practice)</a>
-</span>
-<div class="jobdetail-phone visible-phone">
-<span class="jobTitle visible-phone">
-<a class="jobTitle-link" href="/Openreach/job/Martlesham-Heath-User-Researcher-%28Openreach-Design-Practice%29-Ipsw/1331595657/">User Researcher (Openreach Design Practice)</a>
-</span>
-<span class="jobLocation visible-phone">
-<span class="jobLocation">
-            Martlesham Heath, Ipswich, United Kingdom
-            
-        </span></span>
-<span class="jobDate visible-phone">7 Nov 2025
-													                </span>
-<span class="jobFacility visible-phone"></span>
-</div>
-</td>
-<td class="colLocation hidden-phone" headers="hdrLocation">
-<span class="jobLocation">
-            Martlesham Heath, Ipswich, United Kingdom
-            
-        </span>
-</td>
-<td class="colDepartment hidden-phone" headers="hdrDepartment">
-<span class="jobDepartment">Content &amp; Design</span>
 </td>
 <td class="hidden-phone"></td>
 </tr>
@@ -776,28 +714,28 @@ $('#date').watermark('Date (dd/MM/y)');
 <div class="rightfloat">
 <ul class="disclaimer social-links" role="list">
 <li class="social-icons">
-<a aria-description="Opens in a new tab." class="social-icon btn-facebook" href="https://www.facebook.com/BTCareers/" target="_blank" title="facebook">
+<a aria-description="Opens in a new tab." aria-label="Visit our Facebook page" class="social-icon btn-facebook" href="https://www.facebook.com/BTCareers/" target="_blank" title="facebook">
 <svg height="48px" viewbox="0 0 24 24" width="48px">
 <path d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z" fill="#ffffff" id="facebook1"></path>
 </svg>
 </a>
 </li>
 <li class="social-icons">
-<a aria-description="Opens in a new tab." class="social-icon btn-twitter" href="https://twitter.com/BTGroup" target="_blank" title="twitter">
+<a aria-description="Opens in a new tab." aria-label="Follow us on X" class="social-icon btn-twitter" href="https://twitter.com/BTGroup" target="_blank" title="X">
 <svg height="35px" viewbox="0 0 1200 1227" width="35px">
 <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="#ffffff" id="SVGPath"></path>
 </svg>
 </a>
 </li>
 <li class="social-icons">
-<a aria-description="Opens in a new tab." class="social-icon btn-linkedin" href="https://www.linkedin.com/company/bt" target="_blank" title="linkedin">
+<a aria-description="Opens in a new tab." aria-label="Follow us on LinkedIn" class="social-icon btn-linkedin" href="https://www.linkedin.com/company/bt" target="_blank" title="linkedin">
 <svg height="48px" viewbox="0 0 48 48" width="48px">
 <path d="M41,4.1H7A2.9,2.9,0,0,0,4,7V41.1A2.9,2.9,0,0,0,7,44H41a2.9,2.9,0,0,0,2.9-2.9V7A2.9,2.9,0,0,0,41,4.1Zm-25.1,34h-6v-19h6Zm-3-21.6A3.5,3.5,0,0,1,9.5,13a3.4,3.4,0,0,1,6.8,0A3.5,3.5,0,0,1,12.9,16.5ZM38,38.1H32.1V28.8c0-2.2,0-5-3.1-5s-3.5,2.4-3.5,4.9v9.4H19.6v-19h5.6v2.6h.1a6.2,6.2,0,0,1,5.6-3.1c6,0,7.1,3.9,7.1,9.1Z" fill="#ffffff" id="linkedin1"></path>
 </svg>
 </a>
 </li>
 <li class="social-icons">
-<a aria-description="Opens in a new tab." class="social-icon btn-instagram" href="https://www.instagram.com/lifeatbtgroup/" target="_blank" title="instagram">
+<a aria-description="Opens in a new tab." aria-label="Follow us on Instagram" class="social-icon btn-instagram" href="https://www.instagram.com/lifeatbtgroup/" target="_blank" title="instagram">
 <svg fill="#ffffff" height="48px" viewbox="0 0 32 32" width="48px"><path d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z" id="instagram1"></path><path d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"></path></svg>
 </a>
 </li>
@@ -1108,20 +1046,21 @@ $('#date').watermark('Date (dd/MM/y)');
 </div>
 </div>
 <div class="modal-footer">
-<button class="link btn-default pull-left shadowfocus" data-dismiss="modal" id="cookiemanageracceptselected" type="button">Confirm My Choices
+<button class="link btn-default pull-left shadowfocus" data-dismiss="modal" id="cookiemanageracceptselected" tabindex="1" type="button">Confirm My Choices
                         </button>
 <div style="float:right">
-<button class="shadowfocus btn-primary cookiemanagerrejectall" data-dismiss="modal" id="cookiemanagerrejectall" type="button">Reject All Cookies</button>
-<button class="shadowfocus btn-primary cookiemanageracceptall" data-dismiss="modal" id="cookiemanageracceptall" type="button">Accept All Cookies</button>
+<button class="shadowfocus btn-primary cookiemanagerrejectall" data-dismiss="modal" id="cookiemanagerrejectall" tabindex="1" type="button">Reject All Cookies</button>
+<button class="shadowfocus btn-primary cookiemanageracceptall" data-dismiss="modal" id="cookiemanageracceptall" tabindex="1" type="button">Accept All Cookies</button>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<script class="keepscript" src="https://jobs.bt.com/platform/js/j2w/min/j2w.cookiemanagershared.min.js?h=ff78e34d" type="text/javascript"></script>
-<script src="/platform/js/j2w/min/j2w.cookiemanager.min.js?h=ff78e34d" type="text/javascript"></script>
-<script class="keepscript" src="https://jobs.bt.com/platform/bootstrap/3.4.1/js/bootstrap.min.js" type="text/javascript"></script><script type="text/javascript">
+<script class="keepscript" src="https://jobs.bt.com/platform/js/j2w/min/j2w.cookiemanagershared.min.js?h=62c263b4" type="text/javascript"></script>
+<script src="/platform/js/j2w/min/j2w.cookiemanager.min.js?h=62c263b4" type="text/javascript"></script>
+<script class="keepscript" src="https://jobs.bt.com/platform/bootstrap/3.4.8_NES/js/lib/dompurify/purify.min.js" type="text/javascript"></script>
+<script class="keepscript" src="https://jobs.bt.com/platform/bootstrap/3.4.8_NES/js/bootstrap.min.js" type="text/javascript"></script><script type="text/javascript">
           // Enhance Media GFJ fix for JobPosting Schema on SF
   
 function em_gfj_seo(pagepath, hostname){
@@ -1932,7 +1871,7 @@ em_gfj_seo(window.location.pathname, window.location.hostname);
 		//<![CDATA[
 			$(function() 
 			{
-				var ctid = 'c8eaf994-b508-4d1a-bcef-1cebaef66681';
+				var ctid = '3caf6c68-daf0-4b1f-a059-ecbbc5645bf5';
 				var referrer = '';
 				var landing = document.location.href;
 				var brand = '';
@@ -1960,9 +1899,9 @@ em_gfj_seo(window.location.pathname, window.location.hostname);
             });
             //]]>
         </script>
-<script src="/platform/js/localized/strings_en_GB.js?h=ff78e34d" type="text/javascript"></script>
-<script src="/platform/js/j2w/min/j2w.core.min.js?h=ff78e34d" type="text/javascript"></script>
-<script src="/platform/js/j2w/min/j2w.tc.min.js?h=ff78e34d" type="text/javascript"></script>
+<script src="/platform/js/localized/strings_en_GB.js?h=62c263b4" type="text/javascript"></script>
+<script src="/platform/js/j2w/min/j2w.core.min.js?h=62c263b4" type="text/javascript"></script>
+<script src="/platform/js/j2w/min/j2w.tc.min.js?h=62c263b4" type="text/javascript"></script>
 <script type="text/javascript">
 			//<![CDATA[
 				j2w.init({
@@ -1994,26 +1933,26 @@ em_gfj_seo(window.location.pathname, window.location.hostname);
 				$.ajaxSetup({
 					cache   : false,
 					headers : {
-						"X-CSRF-Token" : "7f4173a3-39e9-4017-8d51-bd21683a1103"
+						"X-CSRF-Token" : "cc99f38e-d8b8-4775-8018-6c813f2e034e"
 					}
 				});
 			//]]>
 		</script>
-<script src="/platform/js/search/search.js?h=ff78e34d" type="text/javascript"></script>
-<script src="/platform/js/j2w/min/j2w.user.min.js?h=ff78e34d" type="text/javascript"></script>
-<script src="/platform/js/j2w/min/j2w.employee.min.js?h=ff78e34d" type="text/javascript"></script>
-<script src="/platform/js/j2w/min/j2w.agent.min.js?h=ff78e34d" type="text/javascript"></script>
+<script src="/platform/js/search/search.js?h=62c263b4" type="text/javascript"></script>
+<script src="/platform/js/j2w/min/j2w.user.min.js?h=62c263b4" type="text/javascript"></script>
+<script src="/platform/js/j2w/min/j2w.employee.min.js?h=62c263b4" type="text/javascript"></script>
+<script src="/platform/js/j2w/min/j2w.agent.min.js?h=62c263b4" type="text/javascript"></script>
 <script src="/platform/js/jquery/js.cookie-2.2.1.min.js" type="text/javascript"></script>
 <script src="/platform/js/jquery/jquery.lightbox_me.js" type="text/javascript"></script>
 <script src="/platform/js/jquery/jquery.placeholder.2.0.7.min.js" type="text/javascript"></script>
-<script src="/js/override.js?locale=en_GB&amp;i=655075609" type="text/javascript"></script>
+<script src="/js/override.js?locale=en_GB&amp;i=1974455681" type="text/javascript"></script>
 <script type="text/javascript">
             const jobAlertSpans = document.querySelectorAll("[data-testid=jobAlertSpanText]");
             jobAlertSpans?.forEach((jobEl) => {
               jobEl.textContent = window?.jsStr?.tcjobresultscreatejobalertsdetailstext || "";
             });
         </script>
-<script src="/platform/js/j2w/min/j2w.apply.min.js?h=ff78e34d" type="text/javascript"></script>
+<script src="/platform/js/j2w/min/j2w.apply.min.js?h=62c263b4" type="text/javascript"></script>
 <script type="text/javascript">
                 //<![CDATA[
                     var subscribeWidgetSetup = {
@@ -2022,7 +1961,7 @@ em_gfj_seo(window.location.pathname, window.location.hostname);
                     };
                 //]]>
             </script>
-<script src="/platform/js/tc/subscribeWidget.js?h=ff78e34d" type="text/javascript"></script>
+<script src="/platform/js/tc/subscribeWidget.js?h=62c263b4" type="text/javascript"></script>
 <script type="text/javascript">
                             //<![CDATA[
                             $(function() {
@@ -2051,7 +1990,7 @@ em_gfj_seo(window.location.pathname, window.location.hostname);
                             });
                             //]]>
                         </script>
-<script src="/platform/js/j2w/min/options-search.min.js?h=ff78e34d" type="text/javascript"></script>
+<script src="/platform/js/j2w/min/options-search.min.js?h=62c263b4" type="text/javascript"></script>
 <script type="application/javascript">
                 //<![CDATA[
                 var j2w = j2w || {};
