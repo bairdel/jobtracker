@@ -141,6 +141,12 @@
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/spectra-one\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
+<style id="fast-smooth-scroll-css" type="text/css">
+		html { scroll-behavior: smooth; }
+		@media (prefers-reduced-motion: reduce) {
+			html { scroll-behavior: auto; }
+		}
+	</style>
 <script type="text/javascript">
 _linkedin_partner_id = "7407618";
 window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
@@ -157,7 +163,7 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);
 </script>
 <noscript>
 <img alt="" height="1" src="https://px.ads.linkedin.com/collect/?pid=7407618&amp;fmt=gif" style="display:none;" width="1"/>
-</noscript><span class="swt-svg swt-scroll-top"><svg fill="none" height="14" viewbox="0 0 12 14" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M1 6L6 1M6 1L11 6M6 1V13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span><script id="wp-block-template-skip-link-js-after">
+</noscript><script id="wp-block-template-skip-link-js-after">
 	( function() {
 		var skipLinkTarget = document.querySelector( 'main' ),
 			sibling,
@@ -199,41 +205,14 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);
 	}() );
 	
 </script>
-<script id="page-scroll-to-id-plugin-script-js-extra">
-var mPS2id_params = {"instances":{"mPS2id_instance_0":{"selector":"a[href*='#']:not([href='#'])","autoSelectorMenuLinks":"true","excludeSelector":"a[href^='#tab-'], a[href^='#tabs-'], a[data-toggle]:not([data-toggle='tooltip']), a[data-slide], a[data-vc-tabs], a[data-vc-accordion], a.screen-reader-text.skip-link","scrollSpeed":800,"autoScrollSpeed":"true","scrollEasing":"easeInOutQuint","scrollingEasing":"easeOutQuint","forceScrollEasing":"false","pageEndSmoothScroll":"true","stopScrollOnUserAction":"false","autoCorrectScroll":"true","autoCorrectScrollExtend":"false","layout":"vertical","offset":0,"dummyOffset":"false","highlightSelector":"","clickedClass":"mPS2id-clicked","targetClass":"mPS2id-target","highlightClass":"mPS2id-highlight","forceSingleHighlight":"false","keepHighlightUntilNext":"false","highlightByNextTarget":"false","appendHash":"false","scrollToHash":"true","scrollToHashForAll":"true","scrollToHashDelay":0,"scrollToHashUseElementData":"true","scrollToHashRemoveUrlHash":"false","disablePluginBelow":0,"adminDisplayWidgetsId":"true","adminTinyMCEbuttons":"true","unbindUnrelatedClickEvents":"false","unbindUnrelatedClickEventsSelector":"","normalizeAnchorPointTargets":"false","encodeLinks":"false"}},"total_instances":"1","shortcode_class":"_ps2id"};
+<script id="fast-smooth-scroll-polyfills-js-after">
+( document.documentElement && document.documentElement.style.scrollBehavior !== undefined && ( document.documentElement.style.scrollBehavior = "smooth" || true ) && document.documentElement.style.scrollBehavior === "smooth" && ( document.documentElement.style.removeProperty( "scroll-behavior" ) || true ) ) || document.write( '<script src="https://www.logiq.co.uk/wp-content/plugins/fast-smooth-scroll/build/index.js?ver=d9070204e5a198205c12"></scr' + 'ipt>' );
 </script>
-<script id="page-scroll-to-id-plugin-script-js" src="https://www.logiq.co.uk/wp-content/plugins/page-scroll-to-id/js/page-scroll-to-id.min.js?ver=1.7.9"></script>
 <script id="wp-hooks-js" src="https://www.logiq.co.uk/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6"></script>
 <script id="wp-i18n-js" src="https://www.logiq.co.uk/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6"></script>
 <script id="wp-i18n-js-after">
 wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 </script>
 <script id="spectra-one-js" src="https://www.logiq.co.uk/wp-content/themes/spectra-one/assets/js/script.js?ver=1.1.7"></script>
-<script id="spectra-one-js-after">
-	function docReady(fn) {
-		// see if DOM is already available
-		if (document.readyState === "complete" || document.readyState === "interactive") {
-			// call on next available tick
-			setTimeout(fn, 1);
-		} else {
-			document.addEventListener("DOMContentLoaded", fn);
-		}
-	}
-
-	const scrollTop = document.querySelector('.swt-scroll-top');
-	docReady(function() {
-		scrollTop.addEventListener('click', function() {
-			window.scrollTo({top: 0, behavior: 'smooth'});
-		})
-	});
-
-	window.addEventListener("scroll", function(){
-		if( window.scrollY >= 100 ) {
-			scrollTop.style.transform  = 'scale(1)';
-		} else {
-			scrollTop.style.transform  = 'scale(0)';
-		}
-	}, true);
-</script>
 <script id="googlesitekit-consent-mode-js" src="https://www.logiq.co.uk/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-consent-mode-bc2e26cfa69fcd4a8261.js"></script>
 </body>
