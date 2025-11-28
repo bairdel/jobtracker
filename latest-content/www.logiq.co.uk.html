@@ -164,7 +164,7 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);
 </script>
 <noscript>
 <img alt="" height="1" src="https://px.ads.linkedin.com/collect/?pid=7407618&amp;fmt=gif" style="display:none;" width="1"/>
-</noscript><script id="wp-block-template-skip-link-js-after">
+</noscript><span class="swt-svg swt-scroll-top"><svg fill="none" height="14" viewbox="0 0 12 14" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M1 6L6 1M6 1L11 6M6 1V13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></span><script id="wp-block-template-skip-link-js-after">
 	( function() {
 		var skipLinkTarget = document.querySelector( 'main' ),
 			sibling,
@@ -215,9 +215,35 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);
 wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 </script>
 <script id="spectra-one-js" src="https://www.logiq.co.uk/wp-content/themes/spectra-one/assets/js/script.js?ver=1.1.7"></script>
+<script id="spectra-one-js-after">
+	function docReady(fn) {
+		// see if DOM is already available
+		if (document.readyState === "complete" || document.readyState === "interactive") {
+			// call on next available tick
+			setTimeout(fn, 1);
+		} else {
+			document.addEventListener("DOMContentLoaded", fn);
+		}
+	}
+
+	const scrollTop = document.querySelector('.swt-scroll-top');
+	docReady(function() {
+		scrollTop.addEventListener('click', function() {
+			window.scrollTo({top: 0, behavior: 'smooth'});
+		})
+	});
+
+	window.addEventListener("scroll", function(){
+		if( window.scrollY >= 100 ) {
+			scrollTop.style.transform  = 'scale(1)';
+		} else {
+			scrollTop.style.transform  = 'scale(0)';
+		}
+	}, true);
+</script>
 <script id="googlesitekit-consent-mode-js" src="https://www.logiq.co.uk/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-consent-mode-bc2e26cfa69fcd4a8261.js"></script>
 <script id="gforms_recaptcha_recaptcha-js-extra">
-var gforms_recaptcha_recaptcha_strings = {"nonce":"87f4865a1d","disconnect":"Disconnecting","change_connection_type":"Resetting","spinner":"https:\/\/www.logiq.co.uk\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","connection_type":"classic","disable_badge":"1","change_connection_type_title":"Change Connection Type","change_connection_type_message":"Changing the connection type will delete your current settings.  Do you want to proceed?","disconnect_title":"Disconnect","disconnect_message":"Disconnecting from reCAPTCHA will delete your current settings.  Do you want to proceed?","site_key":"6LeOUWYqAAAAACSjcLmEQ_IF6rFI8QTE1xXe9v7U"};
+var gforms_recaptcha_recaptcha_strings = {"nonce":"1fb8367f3b","disconnect":"Disconnecting","change_connection_type":"Resetting","spinner":"https:\/\/www.logiq.co.uk\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","connection_type":"classic","disable_badge":"1","change_connection_type_title":"Change Connection Type","change_connection_type_message":"Changing the connection type will delete your current settings.  Do you want to proceed?","disconnect_title":"Disconnect","disconnect_message":"Disconnecting from reCAPTCHA will delete your current settings.  Do you want to proceed?","site_key":"6LeOUWYqAAAAACSjcLmEQ_IF6rFI8QTE1xXe9v7U"};
 </script>
 <script data-wp-strategy="defer" defer="" id="gforms_recaptcha_recaptcha-js" src="https://www.google.com/recaptcha/api.js?render=6LeOUWYqAAAAACSjcLmEQ_IF6rFI8QTE1xXe9v7U&amp;ver=2.1.0"></script>
 <script data-wp-strategy="defer" defer="" id="gforms_recaptcha_frontend-js" src="https://www.logiq.co.uk/wp-content/plugins/gravityformsrecaptcha/js/frontend.min.js?ver=2.1.0"></script>
