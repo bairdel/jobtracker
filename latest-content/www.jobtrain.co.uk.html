@@ -65,7 +65,7 @@
 <div class="page-header page-header--primary" data-testid="container-back-to-page-header" role="banner">
 <div class="page-header-back-link" data-testid="div-page-header-back-link">
 </div>
-<script nonce="laZs2xjrwkvVjESRyqLxxKxSjwixvFaR5Ag9m1Nr4vU=" src="/bailiegroup/assets/scripts/components/pageTitle.js?v=UAQM5O_Qpi32h8ZuJAwLXjbWQ5LTbHPb0UrHfGj40_w"></script>
+<script nonce="1ureXbHPfc1vY00xp2CZmD2BahkHq7lrpu0zZbq4hZg=" src="/bailiegroup/assets/scripts/components/pageTitle.js?v=UAQM5O_Qpi32h8ZuJAwLXjbWQ5LTbHPb0UrHfGj40_w"></script>
 <h1 class="h3 jt-page-title" data-testid="h1-jt-page-title">Jobs for you</h1>
 </div>
 </div>
@@ -76,14 +76,14 @@
 <input data-request-url="/bailiegroup/Session/SessionAlive" id="requestSessionAliveUrl" type="hidden"/>
 <input data-request-url="/bailiegroup/Account/LogOut" id="requestLogoutUrl" type="hidden"/>
 <input data-request-url="/bailiegroup/Account" id="requestLogInUrl" type="hidden"/>
-<script data-script-type="global-variable-container" nonce="laZs2xjrwkvVjESRyqLxxKxSjwixvFaR5Ag9m1Nr4vU=">
+<script data-script-type="global-variable-container" nonce="1ureXbHPfc1vY00xp2CZmD2BahkHq7lrpu0zZbq4hZg=">
         var Is_Candidate_LoggedIn='0'
 ;
     </script>
-<script nonce="laZs2xjrwkvVjESRyqLxxKxSjwixvFaR5Ag9m1Nr4vU=" src="/bailiegroup/assets/scripts/LayoutBody/LayoutBody.js?v=q8viofeVfd-ebFuu9zktoojoYkKvBcQV9AOChBk1SeU"></script>
+<script nonce="1ureXbHPfc1vY00xp2CZmD2BahkHq7lrpu0zZbq4hZg=" src="/bailiegroup/assets/scripts/LayoutBody/LayoutBody.js?v=q8viofeVfd-ebFuu9zktoojoYkKvBcQV9AOChBk1SeU"></script>
 
 <div class="page-container home-job" data-testid="jt-body-content-container-home-job" id="body-content" role="main">
-<script data-script-type="global-variable-container" nonce="laZs2xjrwkvVjESRyqLxxKxSjwixvFaR5Ag9m1Nr4vU=">
+<script data-script-type="global-variable-container" nonce="1ureXbHPfc1vY00xp2CZmD2BahkHq7lrpu0zZbq4hZg=">
         var JOBALERT_RETURN_URL='/bailiegroup/Account/RegisterStep1?returnUrl=%2Fbailiegroup%2FJobAlerts'
 var SAVE_FAVOURITJob_URL='/bailiegroup/MyJobs?favourit=1'
 var greatStuffMessage='Great stuff!'
@@ -130,6 +130,7 @@ var schoolSubject_ariaDescribed='Filter the list of jobs by school subject'
 <input id="hiddenSearchFilterSchoolLocations" type="hidden" value=""/>
 <input id="hiddenSearchFilterSchoolSubject" type="hidden" value=""/>
 <input id="hiddenSearchFilterJoblevel" type="hidden" value=""/>
+<input id="hiddenSearchFilterJobType" type="hidden" value=""/>
 <input data-request-url="/bailiegroup/JobAlerts/SaveJobAlert" id="saveAlertUrl" type="hidden"/>
 <input data-vacancies-url="/bailiegroup/Home/Job" id="vacanciesUrl" type="hidden"/>
 <input data-city-name-url="/bailiegroup/Home/SearchCity" id="cityNameUrl" type="hidden"/>
@@ -151,7 +152,7 @@ var schoolSubject_ariaDescribed='Filter the list of jobs by school subject'
 <form action="/bailiegroup/JobAlerts/SaveJobAlert" method="post"><input id="jobAlertLocationId" name="LocationId" type="hidden" value=""/><input id="jobAlertSalaryId" name="SalaryId" type="hidden" value=""/><input id="jobAlertwhat" name="What" type="hidden" value=""/><input id="jobAlertwhere" name="where" type="hidden" value=""/><input data-val="true" data-val-required="The IsHomeAlert field is required." id="jobAlertisHome" name="IsHomeAlert" type="hidden" value=""/> <a class="btn btn-primary btn-wide jobAlert job-alert-btn cursor-pointer" data-testid="a-btn-create-alerts" role="button" tabindex="0">
 <i class="material-icons" data-recite-translate-skip="true">notifications_none</i> <span>Create alerts</span>
 </a>
-<input name="__RequestVerificationToken" type="hidden" value="CfDJ8CIDeqUNgktCrCCWKBX-6982e6PihBoLCzRnn0lfe6qzsKSG3yAHgk_Hf5xivYbFqDdyXxTfz7mHgzN-UADpOFc7diNCw7lMKlhzofrDjd0kIQtE0L8mpu4znOcvDKS61LQZvIwEXG85E8Jf6kqSmwU"/></form> </div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8CIDeqUNgktCrCCWKBX-69-qCDLNVNutRvdWemFSEntVvdrD3XxTHKL0y_PmWFILxs_J95QpQo9iTkeZISrI4peMZvulAaIw20ZKIsFOQiTqE03nzK2Jx1TbxAPKtt7wJVOVNJ2G0Js-s7NqGbhNXdw"/></form> </div>
 </div>
 </div>
 <div class="col-12 job-search__filter-col pl-md-40 pr-md-0" id="page-menu-hold">
@@ -188,8 +189,8 @@ var schoolSubject_ariaDescribed='Filter the list of jobs by school subject'
 </span>
 </div>
 
-<div class="form-group select2-parent-container end-custom-navigation">
-<label for="searchFilterDistance"> Distance</label>
+<div class="form-group select2-parent-container end-custom-navigation select-distance">
+<label for="searchFilterDistance" id="searchFilterDistanceLabel"> Distance</label>
 <div class="form-select">
 <select aria-label="Set a distance from the location or postcode that you are willing to travel for work" class="form-control form-control--bb vacancies-select2" data-testid="select-distance" id="searchFilterDistance" name="distance" required="" tabindex="-1">
 <option data-testid="option-please-select" disabled="" selected="" value="">Please Select</option>
@@ -284,7 +285,7 @@ var schoolSubject_ariaDescribed='Filter the list of jobs by school subject'
 <form action="/bailiegroup/JobAlerts/SaveJobAlert" method="post"><input id="LocationId" name="LocationId" type="hidden" value=""><input id="SalaryId" name="SalaryId" type="hidden" value=""><input id="What" name="What" type="hidden" value=""/><input id="where" name="where" type="hidden" value=""/><input data-val="true" data-val-required="The IsHomeAlert field is required." id="IsHomeAlert" name="IsHomeAlert" type="hidden" value=""/> <span>Create a </span>
 <a class="jobAlert" href="#">job alert</a>
 <span> for this search</span>
-<input name="__RequestVerificationToken" type="hidden" value="CfDJ8CIDeqUNgktCrCCWKBX-6982e6PihBoLCzRnn0lfe6qzsKSG3yAHgk_Hf5xivYbFqDdyXxTfz7mHgzN-UADpOFc7diNCw7lMKlhzofrDjd0kIQtE0L8mpu4znOcvDKS61LQZvIwEXG85E8Jf6kqSmwU"/></input></input></form> </li>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8CIDeqUNgktCrCCWKBX-69-qCDLNVNutRvdWemFSEntVvdrD3XxTHKL0y_PmWFILxs_J95QpQo9iTkeZISrI4peMZvulAaIw20ZKIsFOQiTqE03nzK2Jx1TbxAPKtt7wJVOVNJ2G0Js-s7NqGbhNXdw"/></input></input></form> </li>
 </ul>
 </div>
 <div class="job-search__results-items onecardperline" data-testid="div-result-items" id="searchResultsItems">
@@ -305,10 +306,10 @@ var schoolSubject_ariaDescribed='Filter the list of jobs by school subject'
 <span>Get alerts</span>
 </button>
 </div>
-<script nonce="laZs2xjrwkvVjESRyqLxxKxSjwixvFaR5Ag9m1Nr4vU=" src="/bailiegroup/assets/scripts/vacancies/vacancies.js?v=_-cW4VgLuxiCW-cYhHqMUE98dlYqb4hXtGatG1Yvzbk"></script>
-<script nonce="laZs2xjrwkvVjESRyqLxxKxSjwixvFaR5Ag9m1Nr4vU=" src="/bailiegroup/lib/bootstrap/dist/js/bootstrap.min.js?v=0GFOvM75KbNqWDYueC1o8zIyxi_JUGnIIHcSjd5jNFs"></script>
-<script nonce="laZs2xjrwkvVjESRyqLxxKxSjwixvFaR5Ag9m1Nr4vU=" src="/bailiegroup/assets/scripts/CMS/bootstrap-autocomplete.min.js?v=Nbal3vjT51eSK3FLo4LcURzwe7uRvZXvJtbIu5-hrQI"></script>
-<script nonce="laZs2xjrwkvVjESRyqLxxKxSjwixvFaR5Ag9m1Nr4vU=" src="/bailiegroup/assets/scripts/CMS/jtAutoComplete.js?v=a-PIxlTRIOp_DJKby4a_2uuap34Lslo2PNU0Iw69jU4"></script>
+<script nonce="1ureXbHPfc1vY00xp2CZmD2BahkHq7lrpu0zZbq4hZg=" src="/bailiegroup/assets/scripts/vacancies/vacancies.js?v=pRh0y-r5lK2oyYTaa0li-g2bfsulGna_WC3zwoVuKFE"></script>
+<script nonce="1ureXbHPfc1vY00xp2CZmD2BahkHq7lrpu0zZbq4hZg=" src="/bailiegroup/lib/bootstrap/dist/js/bootstrap.min.js?v=0GFOvM75KbNqWDYueC1o8zIyxi_JUGnIIHcSjd5jNFs"></script>
+<script nonce="1ureXbHPfc1vY00xp2CZmD2BahkHq7lrpu0zZbq4hZg=" src="/bailiegroup/assets/scripts/CMS/bootstrap-autocomplete.min.js?v=Nbal3vjT51eSK3FLo4LcURzwe7uRvZXvJtbIu5-hrQI"></script>
+<script nonce="1ureXbHPfc1vY00xp2CZmD2BahkHq7lrpu0zZbq4hZg=" src="/bailiegroup/assets/scripts/CMS/jtAutoComplete.js?v=a-PIxlTRIOp_DJKby4a_2uuap34Lslo2PNU0Iw69jU4"></script>
 </div>
 </div>
 <div class="footer-container" data-testid="jt-footer-container-home-job">
@@ -347,13 +348,13 @@ var schoolSubject_ariaDescribed='Filter the list of jobs by school subject'
 </div>
 </footer>
 </div>
-<script nonce="laZs2xjrwkvVjESRyqLxxKxSjwixvFaR5Ag9m1Nr4vU=" src="/bailiegroup/assets/scripts/Footer/footer.js?v=1atnrJExzJkCiz0qa1PUBaI2DLubH9yJ7EOpTiUM6Ts"></script>
+<script nonce="1ureXbHPfc1vY00xp2CZmD2BahkHq7lrpu0zZbq4hZg=" src="/bailiegroup/assets/scripts/Footer/footer.js?v=1atnrJExzJkCiz0qa1PUBaI2DLubH9yJ7EOpTiUM6Ts"></script>
 
 <div class="jt-client-tracking-code-container" data-testid="jt-client-tracking-code-container-home-job">
 </div>
 <div class="jt-tracking-code-container" data-testid="jt-tracking-code-container-home-job">
 
-<script nonce="laZs2xjrwkvVjESRyqLxxKxSjwixvFaR5Ag9m1Nr4vU=" src="/bailiegroup/assets/scripts/components/jtrecite.js?v=fE1Hao6-6mBagl7cpDYJz3x6hIrChHNSRf8Oj6KywyM"></script>
+<script nonce="1ureXbHPfc1vY00xp2CZmD2BahkHq7lrpu0zZbq4hZg=" src="/bailiegroup/assets/scripts/components/jtrecite.js?v=fE1Hao6-6mBagl7cpDYJz3x6hIrChHNSRf8Oj6KywyM"></script>
 </div>
 </div>
 
